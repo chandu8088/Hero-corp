@@ -1,0 +1,26 @@
+<div class="image-text-slider" id="service-slider">
+    <div class="service-carousel-container explore">
+        <div class="slider--wrap" data-sly-use.listUse="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='servcarousel'}"
+        data-sly-list="${listUse}">
+            <div class="service--slider position-relative">
+                <div class="client--img position-absolute">
+                    <img src="${item.properties.personimg}" alt="">
+                </div>
+                <div class="testimonial--wrap position-relative">
+                    <img src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/top-quote.svg"
+                        alt="" class="top-q position-absolute">
+                    <p>
+                        ${item.properties.pertestimony}
+                    </p>
+                    <img src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/bottom-quote.svg"
+                        alt="" class="bottom-q position-absolute">
+                </div>
+                <div class="name--wrapper">
+                    <p>
+                        ${item.properties.testimonialname}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

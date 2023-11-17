@@ -1,0 +1,763 @@
+<!-- Step 2 Content, default hidden on page load. -->
+<section id="step-2" class="form-step d-none">
+    <div class="d-flex exchange-form-wrap">
+        <div class="d-flex flex-column exchange-bike-left-nav form-step-two"
+            data-sly-use.listLeftnav2="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='vehiclecondition'}"
+            data-sly-list="${listLeftnav2}">
+            <div class="d-flex flex-column exchg-left-nav-items" data-target="${item.properties.datatarget}">
+                <div class="exchg-nav-heading">${item.properties.vcleftnavTitle @ context ='html'}</div>
+                <div id="${item.properties.datatarget == 'silencerList' ? 'selectedSilencer' :(item.properties.datatarget == 'startingList' ? 'selectedStarting' : (item.properties.datatarget == 'lightsList' ? 'selectedLights' : (item.properties.datatarget == 'tyresList' ? 'selectedTyres' : (item.properties.datatarget == 'rearTyresList' ? 'selectedRearTyres' : (item.properties.datatarget == 'partsList' ? 'selectedParts' : '')))))}"
+                    class="exchg-nav-subheading"></div>
+            </div>
+        </div>
+        <div id="silencerList" class="d-flex flex-column exchg-vehicle-content">
+            <div class="exchange-sticky-header">
+                <div class="exchg-content-title mb-sm-3">${properties.squestion @ context ='html'}</div>
+            </div>
+            <div class="d-flex my-sm-3 flex-wrap exchg-content-options-wrap">
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="silencer1" type="radio" name="silencerRadio" value="Smoke" data-target="startingList"
+                        data-from="silencerList">
+                    <label class="text-center m-auto pb-sm-1" for="silencer1"><img
+                            src="${properties.optionicon1 @ context ='uri'}" class="exchg-cond-images d-sm-block d-none"
+                            alt="${properties.option1alttxt}"><img src="${properties.optionicon1mob @ context ='uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="${properties.option1alttxt}">${properties.optioncaption1}</label>
+                </div>
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="silencer2" type="radio" name="silencerRadio" value="No Smoke" data-target="startingList"
+                        data-from="silencerList">
+                    <label class="text-center m-auto pb-sm-1" for="silencer2"><img
+                            src="${properties.optionicon2 @ context ='uri'}" class="exchg-cond-images d-sm-block d-none"
+                            alt="${properties.option2alttxt}"><img src="${properties.optionicon2mob @ context ='uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="${properties.option2alttxt}">${properties.optioncaption2}</label>
+                </div>
+            </div>
+            <div class="check-popup-text" data-toggle="modal" data-target="#checkModal" data-check-id="silencerModel">
+                ${properties.silencerctalabel}</div>
+            <div class="d-flex exchg-tips-wrapper"
+                data-sly-use.listLeftnav1="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='sbottommulti'}"
+                data-sly-list="${listLeftnav1}">
+                <div class="hidden tips-inner-wrap">
+                    <img src="${item.properties.snoteicon @ context ='uri'}" class="exchg-tips-gif" alt="gif tips">
+                    <div class="exchg-tips-text">${item.properties.sbottomnote @ context ='html'}</div>
+                </div>
+            </div>
+        </div>
+        <div id="startingList" class="d-flex flex-column exchg-vehicle-content">
+            <div class="exchange-sticky-header">
+                <div class="exchg-content-title mb-sm-3">${properties.stquestion @ context='html'}</div>
+            </div>
+            <div class="d-flex my-sm-3 flex-wrap exchg-content-options-wrap">
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="starting1" type="radio" name="startingRadio" value="Starts Normally"
+                        data-target="lightsList" data-from="startingList">
+                    <label class="text-center m-auto pb-sm-1" for="starting1"><img
+                            src="${properties.stoptionicon1 @ context ='uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 1 Silencer"><img
+                            src="${properties.stoptionicon1mob @ context ='uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 1 Silencer">${properties.stoptioncaption1}</label>
+                </div>
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="starting2" type="radio" name="startingRadio" value="Not starting"
+                        data-target="lightsList" data-from="startingList">
+                    <label class="text-center m-auto pb-sm-1" for="starting2"><img
+                            src="${properties.stoptionicon2 @ context ='uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 2 Silencer"><img
+                            src="${properties.stoptionicon2mob @ context ='uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 2 Silencer">${properties.stoptioncaption2}</label>
+                </div>
+            </div>
+            <div class="check-popup-text" data-toggle="modal" data-target="#checkModal" data-check-id="startingModel">
+                ${properties.startctalabel}</div>
+            <div class="d-flex exchg-tips-wrapper"
+                data-sly-use.listLeftnav1="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='sbottommulti'}"
+                data-sly-list="${listLeftnav1}">
+                <div class="hidden tips-inner-wrap">
+                    <img src="${item.properties.snoteicon @ context ='uri'}" class="exchg-tips-gif" alt="gif tips">
+                    <div class="exchg-tips-text">${item.properties.sbottomnote @ context ='html'}</div>
+                </div>
+            </div>
+        </div>
+        <div id="lightsList" class="d-flex flex-column exchg-vehicle-content">
+            <div class="exchange-sticky-header">
+                <div class="exchg-content-title mb-sm-3">${properties.lquestion @ context ='html'}
+                </div>
+            </div>
+            <div class="d-flex my-sm-3 flex-wrap exchg-content-options-wrap">
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="lights1" type="radio" name="lightsRadio" value="Working" data-target="tyresList"
+                        data-from="lightsList">
+                    <label class="text-center m-auto pb-sm-1" for="lights1"><img
+                            src="${properties.loptionicon1 @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 1 Silencer"><img
+                            src="${properties.loptionicon1mob @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 1 Silencer">${properties.loptioncaption1}</label>
+                </div>
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="lights2" type="radio" name="lightsRadio" value="Not working" data-target="tyresList"
+                        data-from="lightsList">
+                    <label class="text-center m-auto pb-sm-1" for="lights2"><img
+                            src="${properties.loptionicon2 @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 2 Silencer"><img
+                            src="${properties.loptionicon2mob @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 2 Silencer">${properties.loptioncaption2}</label>
+                </div>
+            </div>
+            <div class="check-popup-text" data-toggle="modal" data-target="#checkModal" data-check-id="lightsModel">
+                ${properties.lightctalabel}</div>
+            <div class="d-flex exchg-tips-wrapper"
+                data-sly-use.listLeftnav1="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='sbottommulti'}"
+                data-sly-list="${listLeftnav1}">
+                <div class="hidden tips-inner-wrap">
+                    <img src="${item.properties.snoteicon @ context ='uri'}" class="exchg-tips-gif" alt="gif tips">
+                    <div class="exchg-tips-text">${item.properties.sbottomnote @ context ='html'}</div>
+                </div>
+            </div>
+        </div>
+        <div id="tyresList" class="d-flex flex-column exchg-vehicle-content">
+            <div class="exchange-sticky-header">
+                <div class="exchg-content-title mb-sm-3">${properties.tyquestion @ context ='html'}</div>
+            </div>
+            <div class="d-flex my-sm-3 flex-wrap exchg-content-options-wrap">
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="tyres1" type="radio" name="tyresRadio" value="Ok" data-target="rearTyresList"
+                        data-from="tyresList">
+                    <label class="text-center m-auto pb-sm-1" for="tyres1"><img
+                            src="${properties.tyoptionicon1 @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 1 Silencer"><img
+                            src="${properties.tyoptionicon1mob @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 1 Silencer">${properties.tyoptioncaption1}</label>
+                </div>
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="tyres2" type="radio" name="tyresRadio" value="Worn out / Cracks / Puncture"
+                        data-target="rearTyresList" data-from="tyresList">
+                    <label class="text-center m-auto pb-sm-1" for="tyres2"><img
+                            src="${properties.tyoptionicon2 @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 2 Silencer"><img
+                            src="${properties.tyoptionicon2mob @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 2 Silencer">${properties.tyoptioncaption2}</label>
+                </div>
+            </div>
+            <div class="check-popup-text" data-toggle="modal" data-target="#checkModal" data-check-id="tyresModel">
+                ${properties.tyrectalabel}</div>
+            <div class="d-flex exchg-tips-wrapper"
+                data-sly-use.listLeftnav1="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='sbottommulti'}"
+                data-sly-list="${listLeftnav1}">
+                <div class="hidden tips-inner-wrap">
+                    <img src="${item.properties.snoteicon @ context ='uri'}" class="exchg-tips-gif" alt="gif tips">
+                    <div class="exchg-tips-text">${item.properties.sbottomnote @ context ='html'}</div>
+                </div>
+            </div>
+        </div>
+        <div id="rearTyresList" class="d-flex flex-column exchg-vehicle-content">
+            <div class="exchange-sticky-header">
+                <div class="exchg-content-title mb-sm-3">${properties.reartyquestion @ context ='html'}</div>
+            </div>
+            <div class="d-flex my-sm-3 flex-wrap exchg-content-options-wrap">
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="rearTyres1" type="radio" name="rearTyresRadio" value="Ok" data-target="partsList"
+                        data-from="rearTyresList">
+                    <label class="text-center m-auto pb-sm-1" for="rearTyres1"><img
+                            src="${properties.reartyoptionicon1 @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 1 Silencer"><img
+                            src="${properties.reartyoptionicon1mob @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 1 Silencer">${properties.reartyoptioncaption1}</label>
+                </div>
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="rearTyres2" type="radio" name="rearTyresRadio" value="Worn out / Cracks / Puncture"
+                        data-target="partsList" data-from="rearTyresList">
+                    <label class="text-center m-auto pb-sm-1" for="rearTyres2"><img
+                            src="${properties.reartyoptionicon2 @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 2 Silencer"><img
+                            src="${properties.reartyoptionicon2mob @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 2 Silencer">${properties.reartyoptioncaption2}</label>
+                </div>
+            </div>
+            <div class="check-popup-text" data-toggle="modal" data-target="#checkModal" data-check-id="rearTyresModel">
+                ${properties.reartyrectalabel}</div>
+            <div class="d-flex exchg-tips-wrapper"
+                data-sly-use.listLeftnav1="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='sbottommulti'}"
+                data-sly-list="${listLeftnav1}">
+                <div class="hidden tips-inner-wrap">
+                    <img src="${item.properties.snoteicon @ context ='uri'}" class="exchg-tips-gif" alt="gif tips">
+                    <div class="exchg-tips-text">${item.properties.sbottomnote @ context ='html'}</div>
+                </div>
+            </div>
+        </div>
+        <div id="partsList" class="d-flex flex-column exchg-vehicle-content">
+            <div class="exchange-sticky-header">
+                <div class="exchg-content-title mb-sm-3">${properties.bpquestion @ context ='html'}</div>
+            </div>
+            <div class="d-flex my-sm-3 flex-wrap exchg-content-options-wrap">
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="parts1" class="btn-navigate-form-step" type="radio" name="partsRadio" value="Ok"
+                        data-target="partsList" data-from="partsList">
+                    <label class="text-center m-auto pb-sm-1" for="parts1"><img
+                            src="${properties.bpoptionicon1 @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 1 Silencer"><img
+                            src="${properties.bpoptionicon1mob @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 1 Silencer">${properties.bpoptioncaption1}</label>
+                </div>
+                <div class="exchg-content-options exchg-options-condition-wrap">
+                    <input id="parts2" class="btn-navigate-form-step" type="radio" name="partsRadio"
+                        value="Scratch / Dent / Cracks" data-target="partsList" data-from="partsList">
+                    <label class="text-center m-auto pb-sm-1" for="parts2"><img
+                            src="${properties.bpoptionicon2 @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-block d-none" alt="step 2 Silencer"><img
+                            src="${properties.bpoptionicon2mob @ context = 'uri'}"
+                            class="exchg-cond-images d-sm-none d-block"
+                            alt="step 2 Silencer">${properties.bpoptioncaption2}</label>
+                </div>
+            </div>
+            <div class="check-popup-text" data-toggle="modal" data-target="#checkModal" data-check-id="partsModel">
+                ${properties.bprectalabel}</div>
+            <div class="d-flex exchg-tips-wrapper"
+                data-sly-use.listLeftnav1="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='sbottommulti'}"
+                data-sly-list="${listLeftnav1}">
+                <div class="hidden tips-inner-wrap">
+                    <img src="${item.properties.snoteicon @ context ='uri'}" class="exchg-tips-gif" alt="gif tips">
+                    <div class="exchg-tips-text">${item.properties.sbottomnote @ context ='html'}</div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header position-relative justify-content-center p-sm-4">
+                        <h5 class="modal-title exchg-modal-header" id="exampleModalLongTitle">${properties.showhead @
+                            context = 'html'}</h5>
+                        <img src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/modal-close.svg"
+                            class="exchange-cross-button" alt="modal close" data-dismiss="modal">
+                    </div>
+                    <div class="modal-body px-sm-4 py-sm-0">
+                        <div class="exchg-nav-heading">${properties.showpara1 @ context = 'html'}</div>
+                        <div class="d-flex mt-sm-2 pt-sm-1 mt-2 justify-content-sm-center">
+                            <div class="exchg-happy-subheading">
+                                ${properties.showpara2 @ context ='html'}
+                            </div>
+                        </div>
+
+                        <div id="silencerModel" class="exchg-modal-contents-wrap">
+                            <div class="modal-content-heading">
+                                ${properties.sproblemhead @ context ='html'}
+                            </div>
+                            <div class="d-flex flex-column px-sm-4 pb-sm-4 pt-sm-2">
+                                <ul class="pt-sm-1 pl-sm-4 mb-sm-4 pt-3 pl-5 mb-3 pr-3">
+                                    ${properties.sproblemsol @ context = 'html'}
+                                </ul>
+                                <div class="d-flex modal-image-gaps"
+                                    data-sly-use.imgmulti1="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='smodalimgmulti'}"
+                                    data-sly-list="${imgmulti1}">
+                                    <div class="text-center">
+                                        <img src="${item.properties.smodalimg @ context = 'uri'}"
+                                            class="p-sm-4 my-sm-1 d-sm-block d-none"
+                                            alt="${item.properties.smodalimgalt}">
+                                        <img src="${item.properties.smodalimgmob @ context = 'uri'}"
+                                            class="p-sm-4 my-sm-1 d-sm-none d-block"
+                                            alt="${item.properties.smodalimgalt}">
+                                        <div class="${itemList.count == 1 ? 'modal-text-green' : 'modal-text-red'}">
+                                            ${item.properties.smodalimgcaption}</div>
+                                    </div>
+                                </div>
+                                <div data-sly-test="${properties.smodalbtmnote}" class="d-flex exclamation-wrapper">
+                                    <img src="${properties.smodalbtmnotegif @ context = 'uri'}"
+                                        class="exchg-exclamation-gif" alt="gif exclamation">
+                                    <div class="modal-lists-text">${properties.smodalbtmnote @ context = 'html'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="startingModel" class="exchg-modal-contents-wrap">
+                            <div class="modal-content-heading">
+                                ${properties.stproblemhead @ context = 'html'}
+                            </div>
+                            <div class="d-flex flex-column px-sm-4 pb-sm-4 pt-sm-2">
+                                <ul class="pt-sm-1 pl-sm-4 mb-sm-4 pt-3 pl-5 mb-3 pr-3">
+                                    ${properties.stproblemsol @ context = 'html'}
+                                </ul>
+                                <div class="d-flex modal-image-gaps"
+                                    data-sly-use.imgmulti2="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='stmodalimgmulti'}"
+                                    data-sly-list="${imgmulti2}">
+                                    <div class="text-center">
+                                        <img src="${item.properties.stmodalimg @ context = 'uri'}"
+                                            class="p-sm-4 my-sm-1 d-sm-block d-none"
+                                            alt="${item.properties.stmodalimgalt}">
+                                        <img src="${item.properties.stmodalimgmob @ context = 'uri'}"
+                                            class="p-sm-4 my-sm-1 d-sm-none d-block"
+                                            alt="${item.properties.stmodalimgalt}">
+                                        <div class="${itemList.count == 1 ? 'modal-text-green' : 'modal-text-red'}">
+                                            ${item.properties.stmodalimgcaption}</div>
+                                    </div>
+                                </div>
+                                <div data-sly-test="${properties.stmodalbtmnote}" class="d-flex exclamation-wrapper">
+                                    <img src="${properties.stmodalbtmgif @ context = 'uri'}"
+                                        class="exchg-exclamation-gif" alt="gif exclamation">
+                                    <div class="modal-lists-text">${properties.stmodalbtmnote @ context = 'html'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="lightsModel" class="exchg-modal-contents-wrap">
+                            <div class="modal-content-heading">
+                                ${properties.lproblemhead @ context = 'html'}
+                            </div>
+                            <div class="d-flex flex-column px-sm-4 pb-sm-4 pt-sm-2">
+                                <ul class="pt-sm-1 pl-sm-4 mb-sm-4 pt-3 pl-5 mb-3 pr-3">
+                                    ${properties.lproblemsol @ context = 'html'}
+                                </ul>
+                                <div class="d-flex modal-image-gaps"
+                                    data-sly-use.imgmulti3="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='lmodalimgmulti'}"
+                                    data-sly-list="${imgmulti3}">
+                                    <div class="text-center">
+                                        <img src="${item.properties.lmodalimg @ context = 'uri'}"
+                                            class="p-sm-4 my-sm-1 d-sm-block d-none"
+                                            alt="${item.properties.lmodalimgalt}">
+                                        <img src="${item.properties.lmodalimgmob @ context = 'uri'}"
+                                            class="p-sm-4 my-sm-1 d-sm-none d-block"
+                                            alt="${item.properties.lmodalimgalt}">
+                                        <div class="${itemList.count == 1 ? 'modal-text-green' : 'modal-text-red'}">
+                                            ${item.properties.lmodalimgcaption}</div>
+                                    </div>
+                                </div>
+                                <div data-sly-test="${properties.lmodalbtmnote}" class="d-flex exclamation-wrapper">
+                                    <img src="${properties.lmodalbtmgif @ context = 'uri'}"
+                                        class="exchg-exclamation-gif" alt="gif exclamation">
+                                    <div class="modal-lists-text">${properties.lmodalbtmnote @ context = 'html'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tyresModel" class="exchg-modal-contents-wrap">
+
+                            <div class="modal-content-heading">
+                                ${properties.typroblemhead @ context ='html'}
+                            </div>
+                            <div class="d-flex flex-column px-sm-4 pb-sm-4 pt-sm-2">
+                                <ul class="pt-sm-1 pl-sm-4 mb-sm-4 pt-3 pl-5 mb-3 pr-3">
+                                    ${properties.typroblemsol @ context = 'html'}
+                                </ul>
+                                <div class="d-flex modal-image-gaps"
+                                    data-sly-use.imgmulti4="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='tymodalimgmulti'}"
+                                    data-sly-list="${imgmulti4}">
+                                    <div class="text-center">
+                                        <img src="${item.properties.tymodalimg @ context = 'uri'}"
+                                            class="modal-image-tyres-allign d-sm-block d-none"
+                                            alt="${item.properties.tymodalimgalt}">
+                                        <img src="${item.properties.tymodalimgmob @ context = 'uri'}"
+                                            class="modal-image-tyres-allign d-sm-none d-block"
+                                            alt="${item.properties.tymodalimgalt}">
+                                        <div class="${itemList.count == 1 ? 'modal-text-green' : 'modal-text-red'}">
+                                            ${item.properties.tymodalimgcaption}</div>
+                                    </div>
+                                </div>
+                                <div data-sly-test="${properties.tymodalbtmnote}" class="d-flex exclamation-wrapper">
+                                    <img src="${properties.tymodalbtmnotegif @ context = 'uri'}"
+                                        class="exchg-exclamation-gif" alt="gif exclamation">
+                                    <div class="modal-lists-text">${properties.tymodalbtmnote @ context = 'html'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="rearTyresModel" class="exchg-modal-contents-wrap">
+
+                            <div class="modal-content-heading">
+                                ${properties.typroblemhead @ context ='html'}
+                            </div>
+                            <div class="d-flex flex-column px-sm-4 pb-sm-4 pt-sm-2">
+                                <ul class="pt-sm-1 pl-sm-4 mb-sm-4 pt-3 pl-5 mb-3 pr-3">
+                                    ${properties.typroblemsol @ context = 'html'}
+                                </ul>
+                                <div class="d-flex modal-image-gaps"
+                                    data-sly-use.imgmulti4="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='tymodalimgmulti'}"
+                                    data-sly-list="${imgmulti4}">
+                                    <div class="text-center">
+                                        <img src="${item.properties.tymodalimg @ context = 'uri'}"
+                                            class="modal-image-tyres-allign d-sm-block d-none"
+                                            alt="${item.properties.tymodalimgalt}">
+                                        <img src="${item.properties.tymodalimgmob @ context = 'uri'}"
+                                            class="modal-image-tyres-allign d-sm-none d-block"
+                                            alt="${item.properties.tymodalimgalt}">
+                                        <div class="${itemList.count == 1 ? 'modal-text-green' : 'modal-text-red'}">
+                                            ${item.properties.tymodalimgcaption}</div>
+                                    </div>
+                                </div>
+                                <div data-sly-test="${properties.tymodalbtmnote}" class="d-flex exclamation-wrapper">
+                                    <img src="${properties.tymodalbtmnotegif @ context = 'uri'}"
+                                        class="exchg-exclamation-gif" alt="gif exclamation">
+                                    <div class="modal-lists-text">${properties.tymodalbtmnote @ context = 'html'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="partsModel" class="exchg-modal-contents-wrap">
+                            <div class="modal-content-heading">
+                                ${properties.bpproblemhead @ context ='html'}
+                            </div>
+                            <div class="d-flex flex-column px-sm-4 pb-sm-4 pt-sm-2">
+                                <ul class="pt-sm-1 pl-sm-4 mb-sm-4 pt-3 pl-5 mb-3 pr-3">
+                                    ${properties.bpproblemsol @ context = 'html'}
+                                </ul>
+                                <div class="d-flex modal-image-gaps"
+                                    data-sly-use.imgmulti5="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='bpmodalimgmulti'}"
+                                    data-sly-list="${imgmulti5}">
+                                    <div class="text-center">
+                                        <img src="${item.properties.bpmodalimg @ context = 'uri'}"
+                                            class="p-sm-4 my-sm-1 d-sm-block d-none"
+                                            alt="${item.properties.bpmodalimgalt}">
+                                        <img src="${item.properties.bpmodalimgmob @ context = 'uri'}"
+                                            class="p-sm-4 my-sm-1 d-sm-none d-block m-auto"
+                                            alt="${item.properties.bpmodalimgalt}">
+                                        <div class="${itemList.count == 1 ? 'modal-text-green' : 'modal-text-red'}">
+                                            ${item.properties.bpmodalimgcaption}</div>
+                                    </div>
+                                </div>
+                                <div data-sly-test="${properties.bpmodalbtmnote}" class="d-flex exclamation-wrapper">
+                                    <img src="${properties.bpmodalbtmnotegif @ context = 'uri'}"
+                                        class="exchg-exclamation-gif" alt="gif exclamation">
+                                    <div class="modal-lists-text">${properties.bpmodalbtmnote @ context = 'html'}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="exchg-loader-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered modal-mob-bottom" role="document">
+        <div class="modal-content modal-mob-content">
+            <div class="container">
+                <div class="after-success-loader d-none">
+                    <img class="loader-bike" src="${properties.verpoploadgif @ context = 'uri'}">
+                    <img class="loader-line" src="${properties.verpoploadlinegif @ context ='uri'}">
+                    <div class="loader-text">${properties.verloadertxt}</div>
+                    <img class="position-absolute before-calc-popper" src="${properties.priceclgif @ context = 'uri'}"
+                        alt="party popper" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Step 3 Content, default hidden on page load. -->
+<section id="step-3" class="form-step d-none">
+
+    <div class="exchange-form-container">
+        <div class="exchange-left">
+            <div class="exchange-text">
+                ${properties.cdleftheadtxt @ context = 'html'}
+            </div>
+            <img class="exchange-pwd-img" src="${properties.leftimg1 @ context = 'uri'}">
+            <img class="exchange-form-img" src="${properties.leftimg2 @ context = 'uri'}">
+        </div>
+        <div class="exchange-midline"></div>
+        <div class="exchange-right">
+            <div class="ex-form-tab-content addressPan">
+                <div class="exchange-text">${properties.cdrightheadtxt @ context = 'html'}</div>
+                <form id="exchangeUserValidation" class="suggestions-form" autocomplete="off">
+                    <div class="form--wrap">
+                        <div class="form-group cust-form-group">
+                            <span class="form-span exchange-span">${properties.nametitle}<sup>*</sup></span>
+                            <input type="text" class="form-control campaign-input cust-form-control full-name"
+                                data-validation-msg-req="This field is required" id="exchangefullname" required
+                                placeholder="${properties.nameplaceholdertext}" name="fullname" maxlength="50"
+                                oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g, '');">
+                            <!-- <span class="error--message">First Name Required</span> -->
+                        </div>
+                    </div>
+
+                    <div class="form--wrap">
+                        <div class="form-group cust-form-group">
+                            <span class="form-span exchange-span">${properties.existmobtitle}<sup>*</sup></span>
+                            <input type="text" class="form-control campaign-input cust-form-control mobile-number "
+                                data-validation-msg-req="This field is required" id="exchangemobnumber" required
+                                placeholder="${properties.mobileplaceholder}" name="mobile"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                maxlength="10">
+                            <!-- <span class="error--message">Required</span>
+                            <span class="validate--msg">Invalid Number</span> -->
+                        </div>
+                    </div>
+
+                    <div class="form--wrap">
+                        <div class="form-group">
+                            <label data-sly-test="${properties.cdcheckbox1text}"
+                                class="form-checkbox-wrap ex-form-updates-label my-0 cust-form-group">${properties.cdcheckbox1text
+                                @ context = 'html'}
+                                <input id="formWhatsappRadio" type="checkbox" name="stepwhatsapp">
+                                <span class="form-checkbox-mark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form--wrap">
+                        <label data-sly-test="${properties.cdcheckbox2text}"
+                            class="form-checkbox-wrap ex-form-updates-label mb-1 cust-form-group">${properties.cdcheckbox2text
+                            @ context ='html'}
+                            <input id="formAgreementRadio" type="checkbox" required name="agreement">
+                            <span class="form-checkbox-mark"></span>
+                        </label>
+
+                    </div>
+
+                    <div class="form--wrap">
+                        <input type="button" class="campaign-btn btn-red-gradient btn w-100 book-test-submit"
+                            id="exchange-userdata" value="${properties.submitlabel}" name="submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="otp-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-mob-bottom" role="document">
+            <div class="modal-content modal-mob-content">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center otp-verfication">
+                        <div class="col-12 col-md-8 col-lg-12">
+                            <img src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/modal-close.svg"
+                                class="exchange-cross-button" alt="modal close" data-dismiss="modal">
+                            <div class="card-body">
+                                <div class="exchg-modal-header text-center mb-3">${properties.verpophead}
+                                </div>
+                                <div class="b1-text-std text-center mt-2 d-flex justify-content-center">
+                                    ${properties.verpoptext}<span
+                                        class="b1-heavy-text-std verifyNumber d-sm-block d-none">9620503010
+                                    </span>
+                                    <img class="edit-number-exchg d-sm-block d-none"
+                                        src="/content/dam/hero-aem-website/in/exchange---assets/exchg_edit_number.png">
+                                </div>
+                                <div class="d-sm-none d-flex justify-content-center align-items-center">
+                                    <div class="b1-heavy-text-std verifyNumber mt-3 mr-1 ml-0 mb-0">9620503010 </div>
+                                    <img class="edit-number-exchg mt-3 ml-3"
+                                        src="/content/dam/hero-aem-website/in/exchange---assets/exchg_edit_number.png">
+                                </div>
+                                <div class="card-text text-center mt-2">
+                                    <form class="otp-form">
+                                        <input class="otp-field" type="tel" name="opt-field[]" maxlength=1>
+                                        <input class="otp-field" type="tel" name="opt-field[]" maxlength=1>
+                                        <input class="otp-field" type="tel" name="opt-field[]" maxlength=1>
+                                        <input class="otp-field" type="tel" name="opt-field[]" maxlength=1>
+                                        <input class="otp-field" type="tel" name="opt-field[]" maxlength=1>
+                                        <input class="otp-field" type="tel" name="opt-field[]" maxlength=1>
+                                        <!-- Store OTP Value -->
+                                        <input class="otp-value" type="hidden" name="opt-value">
+                                        <div class="d-block mt-4">
+                                            <button class="campaign-btn btn-red-gradient btn w-50"
+                                                id="otp-verification-proceed" type="button"
+                                                data-component-relativePath="${currentNode.path @ addSelectors=['exchangegetprice'],extension='json'}">
+                                                Verify</button>
+                                        </div>
+                                        <div class="check-popup-text mt-4 mb-2 text-center" id="resendStepperOtp" data-component-relativePath="${currentNode.path @ addSelectors=['exgetmodelmapprice'],extension='json'}">
+                                            Resend OTP
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center my-5 otp-verified d-none">
+                        <img class="success-img" src="${properties.verpopsuccessgif @ context = 'uri'}">
+                        <div class="success-text h4-heavy-heading-std">${properties.verpopsuccess}</div>
+                    </div>
+                    <div class="text-center px-2 otp-failed d-none">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 32px;">&times;</span>
+                        </button>
+                        <img class="failed-img" src="${properties.verpopfailgif @ context = 'uri'}">
+                        <div class="failed-text h4-heavy-heading-std px-sm-5 px-4 mx-sm-0 mx-3">${properties.verpopfail}
+                        </div>
+                    </div>
+                    <div class="after-success-loader d-none">
+                        <img class="loader-bike" src="${properties.verpoploadgif @ context = 'uri'}">
+                        <img class="loader-line" src="${properties.verpoploadlinegif @ context = 'uri'}">
+                        <div class="loader-text">${properties.verloadertxt}</div>
+                        <img class="position-absolute before-calc-popper" src="${properties.priceclgif @ context = 'uri'}"
+                        alt="party popper" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<input type="hidden" value="${currentPage.path}" id="exchange-jounery-servlet" name="defaultservlet" />
+<!-- Step 4 Content, default hidden on page load. -->
+<section id="step-4" class="form-step d-none">
+    <div class="d-flex m-sm-4 p-sm-3 outer-calc-wrap">
+        <div class="calculate-left-wrap">
+            <div class="d-flex">
+                <div class="calc-intro-text"></div>
+            </div>
+            <div class="exchg-calculate-wrap">
+                <div id="calculatingId" class="calc-cont-text">${properties.vvloadertext @ context ='html'}</div>
+                <div id="estimatedId" class="calc-estimate-text">${properties.vvpricetext @ context ='html'}</div>
+                <div id="calcPriceWrap">
+                    <div class="calc-price-text"></div>
+                    <div class="calc-estimate-text">${properties.vvpricetext @ context ='html'}</div>
+                </div>
+                <img class="position-absolute d-none" src="${properties.priceclgif @ context = 'uri'}"
+                    alt="party popper" />
+            </div>
+            <div class="calc-assess-text">
+                ${properties.vvehiclecondtxt @ context = 'html'}<span id="calc-condition"></span>&nbsp;condition.
+            </div>
+            <div class="calc-vehicle-details-wrap d-sm-flex d-none">
+                <div id="calcBrand" class="modal-lists-text"></div>
+                <div id="calcState" class="modal-lists-text"> </div>
+                <div id="calcCity" class="modal-lists-text"></div>
+            </div>
+            <div class="calc-vehicle-details-wrap d-sm-none d-flex flex-column">
+                <div id="calcBrand" class="modal-lists-text"></div>
+                <div class="d-flex mt-2">
+                    <div id="calcState" class="modal-lists-text"> </div>
+                    <div id="calcCity" class="modal-lists-text"></div>
+                </div>
+            </div>
+            <div class="exchg-nav-heading exchg-asterisk-note">
+                Note:* <span class="exchg-resale-text">indicates that our estimated <span data-toggle="modal"
+                        data-target="#resaleModal" class="exchg-resale-modal-text">resale value</span> for your
+                    vehicle</span>
+            </div>
+        </div>
+        <div class="d-flex flex-column calculate-right-wrap">
+            <div class="exchg-modal-header exchg-manual-italic-header">${properties.vvrighthead @ context ='html'}</div>
+            <div class="d-flex flex-column calc-exchg-steps"
+                data-sly-use.rightmulti="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='exstepsmulti'}"
+                data-sly-list="${rightmulti}">
+                <div class="exchange-sell-wrap d-flex">
+                    <img class="d-sm-block d-none" src="${item.properties.stepdeskicon @ context = 'uri'}"
+                        alt="exchange sell" />
+                    <img class="d-sm-none d-block exchg-sell-calc"
+                        src="${item.properties.stepmobicon @ context = 'uri'}" alt="exchange sell" />
+                    <div>
+                        <div class="exchange-sell-heading">${item.properties.vvrightstephead @ context = 'html'}</div>
+                        <div class="exchange-sell-subheading">${item.properties.vvrightsteptxt @ context = 'html'}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="exchg-dealer-main-heading text-center">
+        <div class="headerbackground-multicolor multicolor p-0">
+            <h2 class="overview-heading multicolor text-uppercase font-italic mt-sm-4 pt-sm-3 mt-3 h2-heading-std  ">
+                <span style="color: #303030;">${properties.vvdealertitle @ context = 'html'}</span>
+            </h2>
+        </div>
+    </div>
+    <div class="d-flex exchg-dealers-wrap explore"
+        data-component-relativePath="${currentNode.path @ addSelectors=['exchangedealerlist'],extension='json'}">
+    </div>
+
+
+    <div class="exchg-wheeler-main-heading text-center">
+        <div class="headerbackground-multicolor multicolor p-0">
+            <h2 class="overview-heading multicolor text-uppercase font-italic mt-sm-4 pt-sm-3 mt-3 h2-heading-std  ">
+                <span style="color: #303030;">${properties.vvwheelertitle @ context = 'html'}</span>
+            </h2>
+        </div>
+    </div>
+    <div class="exchg-wheeler-wrap" id="exchange-wheeler-wrapper">
+        <div class="d-flex exchg-wheeler-carousel explore" data-wheelerList="${properties.wheelerspricelist}">
+        </div>
+        <div class="exchg-nav-heading exchg-resale-wrap">
+            <span class="exchg-resale-text">* All prices are ex-showroom (Mumbai, Maharashtra), T&C apply</span>
+        </div>
+        <div class="exchg-form-viewall add-view-allign" data-toggle="modal" data-target="#wheelerModal">
+            ${properties.wheelerviewlabel}<img class="blue-right-arrow"
+                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/blue-right-arrow.svg" />
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="wheelerModal" tabindex="-1" role="dialog" aria-labelledby="exampleWheelerModal"
+            aria-hidden="true"
+            data-component-relativePath="${currentNode.path @ addSelectors=['submitexchange'],extension='json'}">
+            <div class="modal-dialog modal-dialog-centered wheeler-modal-dialog" role="document">
+                <div class="modal-content wheeler-modal-content">
+                    <div class="modal-header position-relative justify-content-center p-sm-4">
+                        <h5 class="modal-title exchg-modal-header" id="exampleWheelerModal">${properties.vvwheelertitle
+                            @ context = 'html'}</h5>
+                        <img src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/modal-close.svg"
+                            class="exchange-cross-button" alt="modal close" data-dismiss="modal">
+                    </div>
+                    <div class="modal-body wheeler-modal-body">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="wheelerConfirmModal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleWheelerConfirm" aria-hidden="true"
+            data-component-relativePath="${currentNode.path @ addSelectors=['exchangeprospect'],extension='json'}">
+            <div class="modal-dialog modal-dialog-centered wheeler-confirm-modal-dialog" role="document">
+                <div class="modal-content wheeler-confirm-modal-content">
+                    <div class="modal-body wheeler-confirm-modal-body">
+                        <div class="wheeler-confirm-heading">${properties.popupheading @ context = 'html'}</div>
+                        <div class="confirm-selected-wrap">
+                            <div class="wheeler-confirm-dealer">${properties.popupdealerlabel} <span
+                                    id="confirmDealerText"></span></div>
+                            <div class="wheeler-confirm-dealer">${properties.popupwheelerlabel} <span
+                                    id="confirmModelText"></span></div>
+                        </div>
+                        <div class="d-flex wheeler-confirm-butons">
+                            <div class="btn callback-btn btn-white" data-dismiss="modal">${properties.popupcta1}</div>
+                            <div class="btn booknow-btn"
+                                data-component-relativePath="${currentNode.path @ addSelectors=['exchangeenquiry'],extension='json'}">
+                                ${properties.popupcta2}</div>
+                        </div>
+                    </div>
+                    <div class="modal-body wheeler-congrats-modal d-none">
+                        <div class="wheeler-confirm-congrats">${properties.popupsucess @ context = 'html'}</div>
+                        <div class="wheeler-confirm-success">${properties.popupsucesstext @ context = 'html'}
+                        </div>
+                        <img class="position-absolute" src="${properties.popupsucessgif @ context ='uri'}"
+                            alt="party popper" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="resaleModal" tabindex="-1" role="dialog" aria-labelledby="exampleResaleModal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered resale-modal-dialog" role="document">
+                <div class="modal-content resale-modal-content">
+                    <div class="modal-header position-relative justify-content-center px-sm-4 pt-sm-4 pb-sm-2 border-bottom-0">
+                        <h5 class="modal-title exchg-modal-header" id="exampleResaleModal">Resale Value</h5>
+                        <img src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/modal-close.svg"
+                            class="exchange-cross-button" alt="modal close" data-dismiss="modal">
+                    </div>
+                    <div class="modal-body resale-modal-body modal-lists-text px-sm-4 pt-sm-1 pb-sm-4">
+                        1.The resale value of the two-wheeler as estimated by "Wheels of Trust" valuation methodology is
+                        indicative and may vary based actual condition of the vehicle and market demand.
+                        </br>
+                        </br>
+                        2.Wheels of Trust cannot be held responsible for any losses incurred or liability arising by
+                        relying on this indicative resale value.
+                        </br>
+                        </br>
+                        3.The user allows Wheels of Trust to share their information with automotive dealers for
+                        contacting them with offers and services.
+                        </br>
+                        </br>
+                        4.Wheels of Trust is a registered trademark of Hero MotoCorp Ltd. Engaged in the pre- owned
+                        two-wheeler services. The user allows Wheels of Trust to use this information for their internal
+                        analytics for refining their service offerings.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

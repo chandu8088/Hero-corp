@@ -1,0 +1,71 @@
+#overview {
+    .hero-section-video .playerButtons {
+      gap: 15px;
+      position: absolute;
+      bottom: 5%;
+      right: 2.5%;
+      z-index: 1;
+
+      @media (max-width: 768px) {
+        right: 0;
+        bottom: 1%;
+      }
+    }
+  
+    .hero-section-video .playerButtons a {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .hero-section-video .playerButtons a img {
+      width: 100%;
+      @media (max-width: 768px) {
+        width: 50%;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 1440px) {
+    #xtreme-teaser {
+      .hero-section-video .playerButtons a {
+        width: 40px;
+        height: 40px;
+      }
+  
+      .grey-bg-mobile {
+        display: none;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    #xtreme-teaser {
+      .hero-section-video .playerButtons {
+        bottom: unset;
+        top: 79%;
+        left: 13%;
+      }
+  
+      .hero-section-video .playerButtons a {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) and (orientation: portrait) {
+    #xtreme-teaser {
+      .hero-section-video .playerButtons {
+        bottom: unset;
+        top: 57%;
+        right: 10px;
+        gap: 5px;
+        left: unset;
+      }
+  
+      .hero-section-video .playerButtons a {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }

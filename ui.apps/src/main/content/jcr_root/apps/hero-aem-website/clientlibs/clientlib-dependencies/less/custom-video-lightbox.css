@@ -1,0 +1,34 @@
+#custom-vg-popup .slbIframeCont {
+    width: 66.75em;
+    margin-top: 84px;
+}
+
+#custom-vg-popup .slbCloseBtn {
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
+    background: rgba(255, 255, 255, 0.20);
+    margin-top: 85px;
+    right: -34px !important;
+    color: #fff;
+}
+
+#custom-vg-popup .slbArrows {
+    display: none;
+}
+
+#custom-vg-popup .slbIframe {
+    border: 2px solid var(--textcolor-white, #FFF);
+    background: #FFF;
+}
+
+@media (max-width:768px) {
+    #custom-vg-popup .slbCloseBtn {
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        margin-top: 38px;
+        right: 16px !important;
+    }
+}
+    

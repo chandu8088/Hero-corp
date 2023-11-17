@@ -1,0 +1,183 @@
+#service-slider {
+    .service-carousel-container {
+        padding: 0 59px;
+        margin: 0 auto;
+
+        @media(max-width:768px) {
+            padding-left: 28px;
+            padding-right: 31px;
+        }
+
+        .client--img {
+            max-width: 257px;
+            max-height: 257px;
+            width: 100%;
+            z-index: 1;
+            left: 60px;
+            bottom: 42px;
+
+            @media(max-width:768px) {
+                max-width: 57px;
+                max-height: 57px;
+                left: 19px;
+                bottom: 19px;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+                border: 6.74px rgba(124, 124, 124, 0.13) solid;
+
+                @media(max-width:768px) {
+                    border-width: 1.5px;
+                }
+            }
+        }
+
+        .testimonial--wrap {
+            padding: 105px 198px 87px 412px;
+            background: #EDEDED;
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
+
+            @media(max-width:768px) {
+                padding: 32px 29px 70px 28px;
+            }
+
+            p {
+                text-transform: capitalize;
+                line-height: 1.2;
+                font-size: 24px;
+                font-family: var(--font-tstar-medium);
+
+                @media(max-width:768px) {
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+
+            .top-q {
+                top: 69px;
+                left: 366px;
+
+                @media(max-width:768px) {
+                    top: 10px;
+                    left: 22px;
+                    width: 18px;
+                    height: 14px;
+                }
+            }
+
+            .bottom-q {
+                bottom: 82px;
+                right: 143px;
+
+                @media(max-width:768px) {
+                    right: 22px;
+                    bottom: 55px;
+                    width: 18px;
+                    height: 14px;
+                }
+            }
+        }
+
+        .name--wrapper {
+            background: #D9D9D9;
+            border-bottom-left-radius: 14px;
+            border-bottom-right-radius: 14px;
+
+            p {
+                padding: 17px 0px 17px 412px;
+                line-height: 1.2;
+                font-size: 32px;
+                text-align: left;
+                color: #303030;
+                font-family: var(--font-tstar-heavy);
+                font-style: italic;
+
+                @media (max-width: 1365px){
+                    padding: 17px 0% 17px 34%;
+                    text-align: left;
+                }
+
+                @media(max-width:768px) {
+                    padding: 7px 70px 7px 87px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        opacity: 1 !important;
+    }
+
+    .slick-arrow {
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        z-index: 1;
+        box-shadow: 0px 10.5263px 39.4737px rgba(120, 120, 120, 0.15);
+        backdrop-filter: blur(6.57895px);
+
+        @media(max-width:768px) {
+            height: 24px;
+            width: 24px;
+        }
+
+        &:hover {
+            background: #EE2326;
+
+            &::before {
+                background: url(/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/right-white.svg);
+            }
+        }
+
+        &::before {
+            content: '';
+            background: url(/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/left-black.svg);
+            display: block;
+            height: 14px;
+            width: 18px;
+            margin: 0 auto;
+            background-repeat: no-repeat;
+        }
+
+        &.slick-prev {
+            left: -19px;
+
+            @media(max-width:768px) {
+                left: -12px;
+            }
+
+            &:hover {
+                background: #EE2326;
+
+                &::before {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &.slick-next {
+            right: -19px;
+
+            @media(max-width:768px) {
+                right: -12px;
+            }
+
+            &::before {
+                transform: rotate(180deg);
+            }
+
+            &:hover {
+                background: #EE2326;
+
+                &::before {
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+}

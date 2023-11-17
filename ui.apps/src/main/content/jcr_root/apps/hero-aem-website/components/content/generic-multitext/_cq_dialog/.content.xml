@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Generic Multitext Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <container
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <variant
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/select"
+                                                        class="cq-dialog-dropdown-showhide"
+                                                        cq-dialog-dropdown-showhide-target=".show-hide-textfield"
+                                                        fieldDescription="Select Tab Variant."
+                                                        fieldLabel="Variant"
+                                                        name="./layoutvariation">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <framework
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Sustainability Framework"
+                                                                value="sustainabilityframework"/>
+                                                            <target
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Sustainability Target"
+                                                                value="sustainabilitytarget"/>
+                                                        </items>
+                                                    </variant>
+                                                    <framework
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/container"
+                                                        class="show-hide-textfield"
+                                                        showhidetargetvalue="sustainabilityframework">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <columns
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <column
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <title
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldLabel="Enter Main Heading"
+                                                                                name="./titleHeading"
+                                                                                useFixedInlineToolbar="{Boolean}true"/>
+                                                                            <multifield
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                                composite="{Boolean}true"
+                                                                                fieldLabel="Click add button to add Sustainability Framework contents">
+                                                                                <field
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                    name="./sustainabilityFrameText">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <image
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                            fieldLabel="Enter Image path"
+                                                                                            name="./sustainabilityFrameIcons"
+                                                                                            rootPath="/content/dam"/>
+                                                                                        <frameworkheading
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                                            fieldLabel="Enter Subtitle"
+                                                                                            name="./sustainabilityFrameTitle"
+                                                                                            useFixedInlineToolbar="{Boolean}true">
+                                                                                            <rtePlugins
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceSuperType="/apps/hero-aem-website/components/content/text/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins"/>
+                                                                                            <uiSettings
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceSuperType="/apps/hero-aem-website/components/content/text/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings"/>
+                                                                                            <htmlRules jcr:primaryType="nt:unstructured">
+                                                                                                <blockHandling
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    removeSingleParagraphContainer="{Boolean}true"/>
+                                                                                            </htmlRules>
+                                                                                        </frameworkheading>
+                                                                                        <multitext
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                                            composite="{Boolean}true"
+                                                                                            fieldLabel="click to add sub contents">
+                                                                                            <field
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                                name="./innerSustainabilityFrameText">
+                                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                                    <points
+                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                        fieldLabel="Enter sub items"
+                                                                                                        name="./titlePointValues"
+                                                                                                        useFixedInlineToolbar="{Boolean}true"/>
+                                                                                                </items>
+                                                                                            </field>
+                                                                                        </multitext>
+                                                                                    </items>
+                                                                                </field>
+                                                                            </multifield>
+                                                                        </items>
+                                                                    </column>
+                                                                </items>
+                                                            </columns>
+                                                        </items>
+                                                    </framework>
+                                                    <target
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/container"
+                                                        class="show-hide-textfield"
+                                                        showhidetargetvalue="sustainabilitytarget">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <columns
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <column
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <title
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                fieldLabel="Enter Main Heading"
+                                                                                name="./titleHeadingTarget"
+                                                                                useFixedInlineToolbar="{Boolean}true"/>
+                                                                            <multifield
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                                composite="{Boolean}true"
+                                                                                fieldLabel="Click add button to add Sustainability Target contents">
+                                                                                <field
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                    name="./sustainabilityTargetMultifield">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <frameworkheading
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                                            fieldLabel="Enter Subtitle"
+                                                                                            name="./sustainabilityTargetTitle"
+                                                                                            useFixedInlineToolbar="{Boolean}true">
+                                                                                            <rtePlugins
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceSuperType="/apps/hero-aem-website/components/content/text/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins"/>
+                                                                                            <uiSettings
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceSuperType="/apps/hero-aem-website/components/content/text/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings"/>
+                                                                                            <htmlRules jcr:primaryType="nt:unstructured">
+                                                                                                <blockHandling
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    removeSingleParagraphContainer="{Boolean}true"/>
+                                                                                            </htmlRules>
+                                                                                        </frameworkheading>
+                                                                                        <framecolor
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                            fieldLabel="Enter color code for each card"
+                                                                                            name="./frameColorSustainability"
+                                                                                            useFixedInlineToolbar="{Boolean}true"/>
+                                                                                        <framecontent
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                                            fieldLabel="Enter content"
+                                                                                            name="./sustainabilityTargetContent"
+                                                                                            useFixedInlineToolbar="{Boolean}true">
+                                                                                            <rtePlugins
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceSuperType="/apps/hero-aem-website/components/content/text/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins"/>
+                                                                                            <uiSettings
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceSuperType="/apps/hero-aem-website/components/content/text/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings"/>
+                                                                                            <htmlRules jcr:primaryType="nt:unstructured">
+                                                                                                <blockHandling
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    removeSingleParagraphContainer="{Boolean}true"/>
+                                                                                            </htmlRules>
+                                                                                        </framecontent>
+                                                                                        <image
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                            fieldLabel="Enter Image path"
+                                                                                            name="./sustainabilityTargetIcons"
+                                                                                            rootPath="/content/dam"/>
+                                                                                    </items>
+                                                                                </field>
+                                                                            </multifield>
+                                                                        </items>
+                                                                    </column>
+                                                                </items>
+                                                            </columns>
+                                                        </items>
+                                                    </target>
+                                                </items>
+                                            </container>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </container>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

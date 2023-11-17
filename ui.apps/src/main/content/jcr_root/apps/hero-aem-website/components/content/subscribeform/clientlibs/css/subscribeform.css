@@ -1,0 +1,170 @@
+.investors-subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 201px;
+  background: #ee2326;
+  color: #ffffff;
+}
+
+.investors-subscribe .investor-subscribe-title {
+  font-size: 32px;
+  line-height: 38px;
+  font-family: var(--font-tstar-heavy);
+  margin-bottom: 19px;
+  width: max-content;
+}
+
+.investors-subscribe .investor-email-preferences {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.investors-subscribe .investor-email-preferences .email-preference {
+  display: flex;
+  align-items: center;
+}
+
+.investors-subscribe .investor-email-preferences .investor-subscribe-item {
+  margin: 3px 19px 3px 3px;
+  width: 18px;
+  height: 18px;
+}
+
+.investors-subscribe .investor-email-preferences .investor-subscribe-label {
+  margin-bottom: 2px;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: var(--font-tstar-heavy);
+}
+
+.investors-subscribe .subscribe-email {
+  margin-top: 32px;
+  background: rgb(95,14,15);
+  backdrop-filter: blur(3px);
+  border-radius: 49px;
+  padding: 12px 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 529px;
+}
+
+.investors-subscribe .investor-email {
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 2px 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: var(--font-tstar-regular);
+}
+
+.investors-subscribe .investor-email::placeholder {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: var(--font-tstar-regular);
+}
+
+.investors-subscribe .subscribe-btn {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 2px 0 2px 29px;
+  border-left: 1px solid rgba(217, 217, 217, 0.7);
+  font-family: var(--font-tstar-heavy);
+}
+
+@media (max-width: 1200px) and (min-width: 767px) {
+  .investors-subscribe {
+    padding: 16px 120px 22px;
+  }
+
+  .investors-subscribe .investor-email-preferences {
+    justify-content: start;
+  }
+  .investors-subscribe .investor-email-preferences .email-preference {
+    margin-right: 15px;
+    min-width: fit-content;
+    width: 35.33%;
+    max-width: calc(39% - 14px);
+  }
+
+  .investors-subscribe
+    .investor-email-preferences
+    .email-preference:nth-child(3n) {
+    margin-right: 0;
+    max-width: fit-content;
+  }
+}
+
+@media (max-width: 767px) {
+  .investors-subscribe {
+    padding: 16px 16px 22px;
+  }
+
+  .investors-subscribe .investor-subscribe-title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 7px;
+  }
+
+  .investors-subscribe .investor-email-preferences {
+    justify-content: start;
+  }
+
+  .investors-subscribe .investor-email-preferences .email-preference {
+    min-width: fit-content;
+    width: 35.33%;
+    max-width: calc(39% - 14px);
+    margin-right: 14px;
+  }
+
+  .investors-subscribe
+    .investor-email-preferences
+    .email-preference:nth-child(3n) {
+    margin-right: 0;
+    max-width: fit-content;
+  }
+
+  .investors-subscribe .investor-email-preferences .investor-subscribe-item {
+    margin: 3px 11px 3px 3px;
+  }
+
+  .investors-subscribe .investor-email-preferences .investor-subscribe-label {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+  }
+
+  .investors-subscribe .subscribe-email {
+    min-width: 100%;
+    padding: 7px 28px;
+    border-radius: 32px;
+    margin-top: 15px;
+  }
+
+  .investors-subscribe .investor-email {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 1px 0;
+  }
+
+  .investors-subscribe .investor-email::placeholder {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .investors-subscribe .subscribe-btn {
+    padding: 1px 0 1px 29px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

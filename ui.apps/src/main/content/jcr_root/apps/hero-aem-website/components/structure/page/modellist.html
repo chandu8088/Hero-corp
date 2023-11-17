@@ -1,0 +1,6 @@
+<sly data-sly-use.listUse="${'/apps/hero-aem-website/utils/getdropdownvalues.js' @ parentPath='/content/hmc/prices/in/'}"
+     data-sly-list="${listUse}">
+    <li class="font-montserrat-regular font-weight-500 " value="${item.name}" data-model-name="${item['jcr:content/pageTitle'] || item['jcr:content/jcr:title']}" data-product-path="${item.path}">
+        <a href="javascript:void(0)">${item.properties.model.toLowerCase}</a>
+    </li>
+</sly>

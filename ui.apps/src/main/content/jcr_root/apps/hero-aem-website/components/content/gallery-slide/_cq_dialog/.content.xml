@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Gallery Slides"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <gallerytype
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                                class="cq-dialog-dropdown-showhide"
+                                                cq-dialog-dropdown-showhide-target=".show-hide-textfield"
+                                                fieldDescription="Select Gallery Type please author youtube link for video type"
+                                                fieldLabel="Select Gallery Type"
+                                                name="./gallerytype">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <imagegallery
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Image Gallery"
+                                                        value="imagegallery"/>
+                                                    <videogallery
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Vedio Gallery"
+                                                        value="videogallery"/>
+                                                </items>
+                                            </gallerytype>
+                                            <multifield
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Tiles Details">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./slides">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <midimgcarousel
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            checked="false"
+                                                            name="./midimgcarousel"
+                                                            text="Middle image slide"
+                                                            uncheckedValue="0"
+                                                            value="1"/>
+                                                        <firstimgurl
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter First Image Url"
+                                                            name="./firstimgurl"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <firstimgurlmobile
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL Mobile"
+                                                            fieldLabel="Enter First Image Url Mobile"
+                                                            name="./firstimgurlmobile"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <youtubeurl1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please enter youtube embed URL"
+                                                            fieldLabel="Please enter youtube embed URL"
+                                                            name="./youtubeurl1"/>
+                                                        <firstimgurlpopup
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter First Popup Image Url"
+                                                            name="./firstimgurlpopup"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <dataindex
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Data index for the slider"
+                                                            name="./dataindex0"/>
+                                                        <imgurl
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter Image1 Url"
+                                                            name="./imgurl"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <youtubeurl2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please enter youtube embed URL"
+                                                            fieldLabel="Please enter youtube embed URL"
+                                                            name="./youtubeurl2"/>
+                                                        <imgurlpopup
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter Image1 popup Url"
+                                                            name="./imgurlpopup"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <dataindex1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Data index for the slider"
+                                                            name="./dataindex1"/>
+                                                        <imgurl2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter Image2 Url"
+                                                            name="./imgurl2"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <youtubeurl3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please enter youtube embed URL"
+                                                            fieldLabel="Please enter youtube embed URL"
+                                                            name="./youtubeurl3"/>
+                                                        <imgurl2popup
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter Image2 Popup Url"
+                                                            name="./imgurl2popup"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <dataindex2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Data index for the slider"
+                                                            name="./dataindex2"/>
+                                                        <imgurl3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter Image3 Url"
+                                                            name="./imgurl3"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <youtubeurl4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please enter youtube embed URL"
+                                                            fieldLabel="Please enter youtube embed URL"
+                                                            name="./youtubeurl4"/>
+                                                        <imgurl3popup
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter Image3 Popup Url"
+                                                            name="./imgurl3popup"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <dataindex3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Data index for the slider"
+                                                            name="./dataindex3"/>
+                                                        <imgurl4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter Image4 Url"
+                                                            name="./imgurl4"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <youtubeurl5
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please enter youtube embed URL"
+                                                            fieldLabel="Please enter youtube embed URL"
+                                                            name="./youtubeurl5"/>
+                                                        <imgurl4popup
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please add Image URL"
+                                                            fieldLabel="Enter Image4 Popup Url"
+                                                            name="./imgurl4popup"
+                                                            rootPath="/content/dam/hero-aem-website"/>
+                                                        <dataindex4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Data index for the slider"
+                                                            name="./dataindex4"/>
+                                                    </items>
+                                                </field>
+                                            </multifield>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

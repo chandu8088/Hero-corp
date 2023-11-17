@@ -1,0 +1,406 @@
+.exchange-banner {
+    .exchange-form-container {
+        height: 500px;
+        display: flex;
+        margin: auto;
+        max-width: 850px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+        border-radius: 12px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .exchange-form-container .exchange-left {
+        width: 49%;
+    }
+    
+    .exchange-form-container .exchange-text {
+        font-family: var(--font-tstar-bold);
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        padding: 44px 0px 32px;
+    }
+
+    .exchange-form-container .exchange-text p {
+        font-family: var(--font-tstar-bold);
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .exchange-form-container .exchange-left .exchange-pwd-img {
+        margin: auto;
+    }
+    
+    .exchange-form-container .exchange-left .exchange-form-img {
+        margin: auto;
+        margin-top: 57px;
+    }
+    
+    .exchange-form-container .exchange-midline {
+        width: 1px;
+        border: solid 1px;
+        border-color: #C0C0C0;
+        margin: 22px 0px;
+    }
+    
+    .exchange-form-container .exchange-right {
+        width: 49%;
+    }
+
+    .exchange-form-container .ex-form-tab-content {
+        margin: auto 51px;
+    }
+    
+    .exchange-form-container .form-checkbox-wrap {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .exchange-form-container .ex-form-updates-label {
+        color: #303030;
+        font-family: var(--font-tstar-bold);
+        font-size: 14px !important;
+        line-height: 20px;
+        margin-top: 20px;
+    }
+    
+    .exchange-form-container {
+        .form-checkbox-wrap {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    
+        .form-checkbox-wrap input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+    
+        .form-checkbox-mark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+    
+        .form-checkbox-wrap:hover input~.form-checkbox-mark {
+            background-color: #ccc;
+        }
+    
+        .form-checkbox-wrap input:checked~.form-checkbox-mark {
+            background-color: red;
+        }
+    
+        .form-checkbox-mark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    
+        .form-checkbox-wrap input:checked~.form-checkbox-mark:after {
+            display: block;
+        }
+    
+        .form-checkbox-wrap .form-checkbox-mark:after {
+            left: 3px;
+            top: 4px;
+            width: 14px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 4px 4px 0;
+            -webkit-transform: rotate(-45deg) scale(-1, 1);
+            -ms-transform: rotate(45deg);
+            transform: rotate(-45deg) scale(-1, 1);
+            border-radius: 0 3px 3px 3px;
+        }
+    }
+
+    .exchg-logged-user-text {
+        font-family: var(--font-tstar-heavy);
+        font-size: 32px;
+        line-height: 48px;
+        color: #303030;
+    }
+
+    .exchg-logged-smile-gif {
+        width: 56px;
+        margin-right: 8px;
+    }
+    
+    @media(max-width: 800px) {
+        .exchange-form-container {
+            flex-direction: column;
+            box-shadow: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            height: auto;
+        }
+    
+        .exchange-form-container .exchange-left .exchange-form-img {
+            display: none;
+        }
+    
+        .exchange-form-container .exchange-text {
+            padding: 14px 16px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    
+        .exchange-form-container .exchange-left {
+            width: 100%;
+        }
+    
+        .exchange-form-container .exchange-right {
+            width: 100%;
+            margin: auto;
+            padding: 0 16px;
+        }
+    
+        .exchange-form-container .exchange-midline {
+            display: none;
+        }
+    
+        .exchange-form-container .ex-form-updates-label {
+            margin-top: 0px;
+        }
+    }
+    
+    .otp-form .otp-field {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        border: none;
+        border-bottom: 2px solid #EDEDED;
+        outline: none;
+        margin: 0px 5px;
+        padding: 0;
+    }
+    
+    .otp-form .otp-field:focus {
+        border-bottom-color: var(--bs-dark);
+    }
+    
+    .otp-verified .success-img {
+        margin: auto;
+        width: 140px;
+    }
+    
+    .otp-verified .success-text {
+        color: green;
+        font-size: 32px !important;
+        line-height: 48px !important;
+    }
+    
+    .otp-failed .failed-text {
+        margin: auto auto 50px;
+        text-align: center;
+        color: red;
+        font-size: 32px !important;
+        line-height: 48px !important;
+    }
+    
+    .otp-failed .failed-img {
+        width: 140px;
+        margin: auto;
+    }
+    
+    .after-success-loader {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .after-success-loader, .otp-verified {
+        opacity: 0;
+        animation: fade-in 1s ease-in forwards, fade-out 7s 1s ease-out forwards;
+      }
+      
+      @keyframes fade-in {
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes fade-out {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    
+    .after-success-loader .loader-bike {
+        width: 276px;
+        margin: auto;
+    }
+    
+    .after-success-loader .loader-line {
+        width: 376px;
+        position: absolute;
+        top: 50px;
+        left: 45px;
+    }
+    
+    .after-success-loader .loader-text {
+        font-size: 16px;
+        font-family: var(--font-tstar-bold);
+        line-height: 20px;
+        width: 350px;
+        padding-bottom: 50px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .before-calc-popper {
+        bottom: 0;
+    }
+    
+    .otp-failed button{
+        padding: 15px 0px;
+    }
+    
+    @media(max-width: 786px) {
+        .modal-mob-bottom {
+            width: 100% !important;
+            margin: 0px;
+            top: unset;
+            bottom: 0 !important;
+            align-items: end;
+            min-height: 100%;
+            transition: bottom 1s !important;
+            margin: auto;
+        }
+    
+        .modal-mob-content{
+            min-height: 264px;
+            border-radius: 12px 12px 0px 0px !important;
+        }
+
+        #otp-modal .card-body {
+            padding: 16px 13px 12px;
+        }
+
+        #otp-modal .verifyNumber {
+            margin: 16px auto;
+            text-align: center;
+            font-size: 18px !important;
+            font-family: var(--font-tstar-bold) !important;
+        }
+
+        #otp-form .otp-field {
+            margin: 0px 7px;
+        }
+
+        #otp-modal .exchange-cross-button {
+            right: 35px;
+            top: 18px;
+        }
+
+        #otp-modal #otp-verification-proceed {
+            width: 100% !important;
+        }
+    
+        .otp-failed .failed-text {
+            margin: 0px 0px 23px 0px;
+        }
+    
+        #otp-modal .container{
+            padding: 5px;
+        }
+    
+        .after-success-loader .loader-bike {
+            width: 176px;
+        }
+    
+        .after-success-loader .loader-text {
+            font-size: 14px;
+            padding-bottom: 20px;
+            width: 320px;
+        }    
+    
+        .otp-failed button{
+            padding: 0px;
+        }
+    
+        .after-success-loader .loader-line {
+            top: -35px;
+            left: 55px;
+        }
+
+        .exchange-form-container .ex-form-tab-content {
+            margin: auto;
+        }
+
+        .exchg-logged-user-text {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .exchg-logged-smile-gif {
+            width: 32px;
+            margin-right: 8px;
+        }
+
+        .exchange-form-container .exchange-text p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .otp-failed .failed-img, .otp-verified .success-img {
+            width: 122px;
+        }
+
+        .otp-failed .failed-text, .otp-verified .success-text {
+            font-size: 24px !important;
+            line-height: normal !important;
+        }
+    }
+    @media(max-width: 500px){
+        .after-success-loader .loader-line {
+            width: 274px;
+            top: 25px;
+            left: 18%;
+        }
+    }
+    
+    @media(max-width: 440px){
+        .after-success-loader .loader-line {
+            left: 13%;
+        }
+    }
+    
+    @media(max-width: 400px){
+        .after-success-loader .loader-line {
+            left: 10%;
+        }
+    }
+}
+
+.exchg-non-scrollable-body {
+    position: fixed;
+    width: 100%;
+}

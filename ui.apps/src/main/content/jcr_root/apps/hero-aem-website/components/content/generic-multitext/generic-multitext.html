@@ -1,0 +1,57 @@
+<p data-sly-test="${wcmmode.edit || wcmmode.design}" class="author-note">
+    ${'hero.editcomponent' @ format=[component.title], i18n}
+</p>
+
+<sly data-sly-test="${properties.layoutvariation == 'sustainabilityframework' && properties.layoutvariation != 'sustainabilitytarget'}">
+<section id="sustainability-framework-container" class="investor-download-reports">
+    <div class="headerbackground mt-3" id="sustainability-framework-heading-cover">
+        <h2 class="download-reports-title h2-heading-std" id="sustainability-framework-background">
+            ${properties.titleHeading}</h2>
+    </div>
+    <sly data-sly-list.frameMultifield="${resource.getChildren}">
+        <sly data-sly-test="${frameMultifield.name == 'sustainabilityFrameText'}">
+            <div class="sustainability-framework-wrapper">
+                <sly data-sly-list.frameOuter="${frameMultifield.getChildren}">
+                    <div class="sustainability-framework-boxes">
+                        <div class="icon-box">
+                            <img src="${frameOuter.sustainabilityFrameIcons}" alt="icon image" class="framework-icons">
+                            <div class="icon-underline"></div>
+                            <p class="framework-heading">${frameOuter.sustainabilityFrameTitle @context = 'html'}</p>
+                        </div>
+                        <div class="text-box">
+                            <sly data-sly-list.frameItem="${frameOuter.getChildren}">
+                                <sly data-sly-test="${frameItem.name == 'innerSustainabilityFrameText'}">
+                                    <ul class="framework-text-ul" data-sly-list.frameInner="${frameItem.getChildren}">
+                                        <li><p>${frameInner.titlePointValues}</p></li>
+                                    </ul>
+                                </sly>
+                            </sly>
+                        </div>
+                    </div>
+                </sly>
+            </div>
+        </sly>
+    </sly>
+</section>
+</sly>
+<sly data-sly-test="${properties.layoutvariation == 'sustainabilitytarget'}">
+    <section id="sustainability-framework-container" class="investor-download-reports sustainability-target-container">
+        <div class="headerbackground mt-3" id="sustainability-target-heading-cover">
+            <h2 class="download-reports-title h2-heading-std" id="sustainability-target-background">
+                ${properties.titleHeadingTarget}</h2>
+        </div>
+        <div class="sustainability-framework-wrapper" id="sustainability-target-wrapper">
+            <sly data-sly-use.listUse="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='sustainabilityTargetMultifield'}" data-sly-list="${listUse}">
+                <div class="sustainability-target-boxes" style="background-color:${item.properties.frameColorSustainability  @ context = 'styleString'}">
+                    <div class="icon-box">
+                        <img src="${item.properties.sustainabilityTargetIcons}" alt="icons" class="target-icons">                     
+                        <p class="target-heading">${item.properties.sustainabilityTargetTitle @ context = 'html'}</p>
+                    </div>
+                    <div class="text-box">
+                        <p class="target-txt-content">${item.properties.sustainabilityTargetContent @ context = 'html'}</p>
+                    </div>
+                </div>
+            </sly>
+        </div>
+    </section>
+</sly>

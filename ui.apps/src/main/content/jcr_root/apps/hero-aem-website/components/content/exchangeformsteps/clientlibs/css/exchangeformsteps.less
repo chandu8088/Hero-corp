@@ -1,0 +1,2138 @@
+.exchange-banner {
+  
+    .submit-btn {
+      border: 1px solid #0e9594;
+      background-color: #0e9594;
+    }
+  
+    ul.form-stepper {
+      counter-reset: section;
+    }
+  
+    ul.form-stepper .form-stepper-circle {
+      position: relative;
+    }
+
+    .ex-form-updates-label a {
+      display: inline-block;
+    }
+  
+    .form-stepper-horizontal {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      background: #EDEDED;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.30);
+      padding: 0.75rem 18.5rem 1.8rem;
+    }
+
+    .exchg-ul-stepper-wrap {
+      padding: 0.75rem 20.5rem 1.8rem;
+    }
+  
+    ul.form-stepper>li:not(:last-of-type) {
+      margin-bottom: 0.625rem;
+      -webkit-transition: margin-bottom 0.4s;
+      -o-transition: margin-bottom 0.4s;
+      transition: margin-bottom 0.4s;
+    }
+  
+    .form-stepper-horizontal>li:not(:last-of-type) {
+      margin-bottom: 0 !important;
+    }
+  
+    .form-stepper-horizontal li {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: start;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+    }
+  
+    .form-stepper-horizontal li:not(:last-child) .exchg-multi-progress-bar {
+      position: relative;
+      height: 5px;
+      top: 37%;
+      width: 24vw;
+    }
+
+    .exchg-three-progress-bar {
+      width: 28vw !important;
+    }
+    
+  
+    .form-stepper-horizontal li:not(:last-child) .exchg-multi-progress-bar .exchg-progresse-bar {
+      position: absolute;
+      display: block;
+      height: 3px;
+      background-image: repeating-linear-gradient(to right, transparent, transparent 5px, #ee2326 5px, #ee2326 10px);
+      transform: translate(0, 35%);
+    }
+  
+  
+    .form-stepper-horizontal li .exchg-multi-progress-bar {
+      background-color: #ffffff;
+    }
+  
+    .form-stepper-horizontal li.form-stepper-completed .exchg-multi-progress-bar {
+      display: block;
+      height: 3px;
+      background-image: repeating-linear-gradient(to right, transparent, transparent 5px, #ee2326 5px, #ee2326 10px);
+      transform: translate(0, 35%);
+    }
+  
+    .form-stepper-horizontal li:last-child .exchg-multi-progress-bar {
+      flex: unset;
+    }
+  
+    ul.form-stepper li a .form-stepper-circle {
+      display: inline-block;
+      margin-right: 0;
+      line-height: 1.7rem;
+      text-align: center;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  
+    .form-stepper .form-stepper-active .form-stepper-circle {
+      color: #fff;
+    }
+  
+    .form-stepper .form-stepper-active .label {
+      font-family: var(--font-tstar-heavy);
+      color: #303030 !important;
+    }
+  
+    .form-stepper .form-stepper-active .form-stepper-circle:hover {
+      background-color: #4361ee !important;
+      color: #fff !important;
+    }
+  
+    .form-stepper .form-stepper-unfinished .form-stepper-circle {
+      background-color: #f8f7ff;
+    }
+  
+    .form-stepper .form-stepper-completed .form-stepper-circle {
+      background-color: #0e9594 !important;
+      color: #fff;
+    }
+  
+    .form-stepper .form-stepper-completed .label {
+      font-family: var(--font-tstar-heavy);
+      color: #303030 !important;
+    }
+  
+    .form-stepper .form-stepper-completed .form-stepper-circle:hover {
+      background-color: #0e9594 !important;
+      color: #fff !important;
+    }
+  
+    .form-stepper .form-stepper-active span.text-muted {
+      color: #fff !important;
+    }
+  
+    .form-stepper .form-stepper-completed span.text-muted {
+      color: #fff !important;
+    }
+  
+    .form-stepper .label {
+      font-family: var(--font-tstar-bold);
+      font-size: 14px;
+      line-height: 20px;
+      color: #A5A5A5;
+      position: absolute;
+      width: max-content;
+      left: -30px;
+    }
+  
+    .form-stepper a {
+      cursor: default;
+    }
+  
+    .exchange-bike-left-nav {
+      width: 22.199%;
+      background: #EDEDED;
+    }
+  
+    .exchg-left-nav-items {
+      padding: 20px 0 20px 40px;
+      border-bottom: 1px solid #C0C0C0;
+      cursor: pointer;
+    }
+  
+    .exchg-left-nav-items.active {
+      background: #ffffff;
+      border-right: 4px solid #EE2327;
+    }
+  
+    .exchg-nav-heading, .exchg-nav-heading p {
+      font-family: var(--font-tstar-bold);
+      font-size: 18px;
+      line-height: 24px;
+      color: #303030;
+    }
+
+    .exchg-left-nav-items.active .exchg-nav-heading p {
+      font-family: var(--font-tstar-heavy);
+    }
+
+    #checkModal .exchg-nav-heading p {
+      font-family: var(--font-tstar-heavy);
+      text-align: center;
+    }
+  
+    .exchg-nav-subheading, .exchg-nav-subheading p {
+      font-family: var(--font-tstar-bold);
+      font-size: 16px;
+      line-height: 20px;
+      color: #009FDA;
+      width: 95%;
+    }
+  
+    // 
+  
+    .searchInput, .exchg-pincode-wrap {
+      background: #fff;
+      width: 45.85%;
+      border-radius: 6px;
+      margin-top: 24px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #C0C0C0;
+    }
+
+    .exchg-pincode-span {
+      font-size: 12px;
+      line-height: 16px;
+      font-family: var(--font-tstar-medium);
+      position: absolute;
+      top: -7px;
+      left: 15px;
+      color: #303030;
+      padding: 0px 4px;
+      background-color: #FFFFFF;
+    }
+
+    .exchg-pincode-wrap {
+      position: relative;
+      width: 84.5%;
+      margin: 40px auto 36px;
+    }
+
+    .exchg-pincode-label sup {
+      font-weight: bold;
+      color: #FF0000;
+    }
+
+    .pincode-error-msg {
+      font-family: var(--font-tstar-medium);
+      font-size: 14px;
+      line-height: 20px;
+      color: #D30000;
+      position: absolute;
+      bottom: -22px;
+      left: 18px;
+    }
+
+    .pincode-error-msg::before {
+      content: "";
+      position: absolute;
+      left: -16px;
+      top: calc(50% - 20px);
+      width: 9px;
+      height: 9px;
+      background: url("/etc.clientlibs/hero-aem-website/clientlibs/clientlib-campaign/resources/icons/error.svg") no-repeat;
+      background-size: 100%;
+    }
+
+    .exchg-err-pin-border {
+      border: 1px solid #D30000;
+    }
+  
+    .searchInput input, .exchg-pincode-wrap input {
+      width: 93%;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
+      font-size: 16px;
+      font-family: var(--font-tstar-medium);
+      line-height: 20px;
+      color: #303030;
+    }
+
+    .searchInput input::placeholder, .exchg-pincode-wrap input::placeholder {
+      color: #A5A5A5;
+    }
+
+    .exchg-pincode-wrap input {
+      width: 100%;
+    }
+  
+    .searchInput.active input {
+      border-radius: 5px 5px 0 0;
+    }
+  
+    .searchInput .icon {
+      cursor: pointer;
+    }
+  
+    .exchg-vehicle-content {
+      display: none !important;
+    }
+  
+    .exchg-vehicle-content.active-tab {
+      display: flex !important;
+      margin: 22px 40px 22px 0;
+      padding: 0 0 22px 22px;
+      width: 100%;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    #vehicleList.exchg-vehicle-content.active-tab, #exchangeList.exchg-vehicle-content.active-tab, #step-2 .exchg-vehicle-content.active-tab {
+      overflow-y: hidden;
+    }
+  
+    .exchg-content-title {
+      font-family: var(--font-tstar-bold);
+      font-size: 24px;
+      line-height: 32px;
+      color: #303030;
+    }
+
+    .exchg-content-title p{
+      font-family: var(--font-tstar-bold);
+      font-size: 24px;
+      line-height: 32px;
+      color: #303030;
+    }
+  
+    .exchg-content-subtitle {
+      font-family: var(--font-tstar-bold);
+      font-size: 18px;
+      line-height: 24px;
+      color: #A5A5A5;
+    }
+
+    .exchg-content-options input {
+      position: absolute !important;
+    }
+  
+    .exchange-form-wrap {
+      height: 700px;
+    }
+
+    .exchange-form-oriented-wrap {
+      height: 800px;
+    }
+
+    .exchange-pincode-oriented-wrap {
+      width: 50%;
+    }
+  
+    .exchg-content-options-wrap, .exchg-city-content-options-wrap {
+      gap: 22px;
+      margin-bottom: 0;
+      padding-left: 1px;
+    }
+  
+    .exchg-content-options {
+      display: table !important;
+      border-radius: 12px;
+      border: 1px solid #C0C0C0;
+      width: 22.57%;
+      min-height: 92px;
+      position: relative;
+    }
+  
+    .exchg-options-alt {
+      width: 17.209%;
+      position: relative;
+    }
+    
+    .exchg-options-condition-wrap {
+      width: 31.167%;
+      position: relative;
+    }
+  
+    .exchg-content-options label, .exchg-options-condition-wrap label {
+      padding: 12px 12px !important;
+    }
+
+    .exchg-options-alt label {
+      padding: 24px 12px !important;
+    }
+
+    .exchg-options-alt input, .exchg-options-condition-wrap input, .exchg-content-options input {
+      top: 12px;
+      left: 12px;
+    }
+  
+    .exchg-cond-images {
+      margin: 22px auto 34px;
+    }
+
+    #vehicleList label img {
+      margin: auto;
+    }
+  
+    .exchange-gap-contents {
+      gap: 22px;
+      margin-top: 22px;
+    }
+  
+    .exchg-old-gap-cont {
+      gap: 28px;
+    }
+  
+    .exchg-content-imgs {
+      border-radius: 8px;
+      box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.10), 0px 6px 12px -6px rgba(24, 39, 75, 0.10);
+    }
+  
+    .exchg-old-user-wrap {
+      padding: 40px 22px;
+      border-radius: 12px;
+      box-shadow: 0px 18px 88px -4px rgba(24, 39, 75, 0.14), 0px 8px 28px -6px rgba(24, 39, 75, 0.12);
+      width: 62.226%;
+      height: fit-content;
+      margin-top: 40px;
+    }
+  
+    .exchg-old-user-options {
+      width: 37.477%;
+      border-radius: 8px;
+      border: 1px solid #C0C0C0;
+      background: url(/content/dam/hero-aem-website/in/exchange---assets/exchg-old-bg.png);
+      background-size: 100% 100%;
+      padding: 12px;
+    }
+  
+    .exchg-old-user-new {
+      width: 37.477%;
+      padding: 3.5rem 0;
+      font-size: 24px;
+      font-family: var(--font-tstar-bold);
+      line-height: 32px;
+      color: #009FDA;
+      border-radius: 8px;
+      border: 1px solid #C0C0C0;
+      cursor: pointer;
+    }
+  
+    .exchg-old-hero-icon {
+      height: fit-content;
+    }
+  
+    .exchange-old-heading {
+      font-family: var(--font-tstar-bold);
+      font-size: 24px;
+      line-height: 32px;
+      color: #303030;
+      text-align: start;
+    }
+  
+    .exchange-old-subheading {
+      font-family: var(--font-tstar-heavy);
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+      text-align: start;
+    }
+  
+    .exchange-old-vals {
+      font-family: var(--font-tstar-medium);
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+      width: 65%;
+      margin-top: 6px;
+      text-align: start;
+    }
+  
+    .check-popup-text {
+      font-family: var(--font-tstar-bold);
+      font-size: 18px;
+      line-height: 24px;
+      color: #009FDA;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  
+    .exchange-cross-button {
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      cursor: pointer;
+    }
+  
+    .exchg-modal-header {
+      color: #303030;
+      font-family: var(--font-tstar-bold);
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    .exchg-modal-header p{
+      color: #303030;
+      font-family: var(--font-tstar-bold);
+      font-size: 32px;
+      line-height: 48px;
+    }
+  
+    .exchg-smile-gif {
+      width: 40px;  
+      height: 40px;
+      margin-right: 8px;
+    }
+  
+    .exchg-exclamation-gif {
+      width: 24px;  
+      height: 24px;
+      margin-right: 8px;
+    }
+  
+    .exchg-tips-gif {
+      width: 32px;  
+      height: 32px;
+    }
+
+    .tips-inner-wrap {
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    .exchg-tips-text, .exchg-tips-text p {
+      color: #303030;
+      font-family: var(--font-tstar-bold);
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+    .exchg-happy-heading {
+      color: #303030;
+      font-family: var(--font-tstar-heavy);
+      font-size: 18px;
+      line-height: 24px;
+    }
+  
+    .exchg-happy-subheading p {
+      color: #303030;
+      font-family: var(--font-tstar-medium);
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+  
+    ul {
+      list-style: unset;
+    }
+  
+    .modal-content {
+      border-radius: 16px;
+    }
+  
+    .exchg-modal-contents-wrap {
+      border-radius: 12px;
+      background: #FFFFFF;
+      box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.10), 0px 6px 12px -6px rgba(24, 39, 75, 0.10);
+      margin-top: 32px;
+      margin-bottom: 48px;
+    }
+  
+    .modal-content-heading {
+      color: #303030;
+      font-family: var(--font-tstar-heavy);
+      font-size: 24px;
+      line-height: 32px;
+      background: #EDEDED;
+      padding: 6px 24px 10px;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .modal-content-heading p{
+      color: #303030;
+      font-family: var(--font-tstar-heavy);
+      font-size: 24px;
+      line-height: 32px;
+    }
+  
+    .modal-lists-text {
+      color: #303030;
+      font-family: var(--font-tstar-medium);
+      font-size: 18px;
+      line-height: 24px;
+    }
+  
+    .exclamation-wrapper {
+      border-radius: 8px;
+      background: rgba(3, 130, 82, 0.10);
+      padding: 8px 24px 8px;
+      margin-top: 24px;
+    }
+  
+    .exchg-tips-wrapper {
+      border-radius: 12px;
+      background: #EDEDED;
+      padding: 16px 24px 16px;
+      margin-top: 24px;
+      position: absolute;
+      bottom: 0;
+      animation: fadeOut 3s infinite alternate;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 80%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  
+    .modal-text-green {
+      font-family: var(--font-tstar-bold);
+      font-size: 18px;
+      line-height: 24px;
+      color: #038252;
+    }
+  
+    .modal-text-red {
+      font-family: var(--font-tstar-bold);
+      font-size: 18px;
+      line-height: 24px;
+      color: #D30000;
+    }
+  
+    .modal-image-gaps {
+      gap: 24px;
+    }
+  
+    .modal-image-tyres-allign {
+      padding: 24px 91px;
+    }
+
+    #tyresModel .text-center:last-child .modal-image-tyres-allign, #rearTyresModel .text-center:last-child .modal-image-tyres-allign {
+      padding: 28px 91px;
+    }
+  
+    .exchg-form-viewall {
+      color: #009FDA;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      font-family: var(--font-tstar-bold);
+      width: 30%;
+      text-align: right;
+      cursor: pointer;
+  
+      .blue-right-arrow {
+          display: inline;
+          margin-left: 15px;
+          width: 6px;
+          height: 12px;
+      }
+    }
+
+    .add-view-allign {
+      position: absolute;
+      right: 40px;
+      bottom: -56px;
+      width: auto;
+    }
+  
+    .exchg-calculate-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 240px;
+      border-radius: 12px;
+      margin: 14px auto 16px;
+      background: var(--background-gradients-black, linear-gradient(160deg, #201F1F 0%, #454141 50%, #000 100%));
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .calculate-left-wrap {
+      width: 66.097%;
+      border-radius: 12px;
+      background: #FFF;
+      padding: 30px 22px 8px;
+      box-shadow: 0px 18px 88px -4px rgba(24, 39, 75, 0.14), 0px 8px 28px -6px rgba(24, 39, 75, 0.12);
+    }
+  
+    .calc-cont-text, .calc-cont-text p {
+      font-family: var(--font-tstar-heavy);
+      font-size: 48px;
+      line-height: 58px;
+      color: #FFF;
+    }
+  
+    .calc-estimate-text, .calc-estimate-text p {
+      font-family: var(--font-tstar-bold);
+      font-size: 32px;
+      line-height: 48px;
+      color: #FFF;
+    }
+
+    .calc-estimate-text p {
+      width: 85%;
+    }
+
+    #estimatedId, #calculatingId, #calcPriceWrap .calc-estimate-text {
+      animation: fadeOut 2s ease-in-out both;
+      display: flex;
+      justify-content: center;
+    }
+
+    #calcPriceWrap .calc-price-text {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-name: fadeInBottom
+    }
+
+    @keyframes fadeInBottom {
+      from {
+          opacity: 0;
+          transform: translateY(50%);
+      }
+      to { opacity: 1 }
+    }
+  
+    .calc-price-text {
+      font-family: var(--font-tstar-heavy);
+      font-size: 52px;
+      line-height: 64px;
+      text-transform: uppercase;
+      color: #FFF;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+  
+    .calc-intro-text {
+      font-family: var(--font-tstar-bold);
+      font-size: 48px;
+      line-height: 58px;
+      color: #303030;
+      width: 100%;
+    }
+  
+    .calc-assess-text, .calc-assess-text p {
+      display: inline;
+      font-family: var(--font-tstar-medium);
+      font-size: 32px;
+      line-height: 48px;
+      color: #303030;
+    }
+  
+    .calc-vehicle-details-wrap {
+      border-radius: 12px;
+      background: #FEF8F2;
+      padding: 1rem;
+      width: fit-content;
+      margin-top: 22px;
+    }
+  
+    .calc-vehicle-details-wrap .modal-lists-text {
+      border-right: 1px solid #C0C0C0;
+      padding: 0px 28px;
+    }
+  
+    .calc-vehicle-details-wrap .modal-lists-text:first-child {
+      padding: 0px 28px 0px 0px;
+    }
+  
+    .calc-vehicle-details-wrap .modal-lists-text:last-child {
+      border-right: none;
+      padding: 0px 0px 0px 28px;
+    }
+  
+    .calculate-right-wrap {
+      width: 33.903%;
+      padding-left: 22px;
+      gap: 24px;
+    }
+  
+    .calc-exchg-steps {
+      gap: 42px;
+    }
+  
+    .exchange-sell-wrap {
+      background: #FEF8F2;
+        border-radius: 12px;
+        width: 100%;
+        padding: 1rem;
+        height: 100%;
+        gap: 12px;
+    }
+  
+    #calcPriceWrap, #calcPriceWrap {
+      display: none;
+    }
+  
+    .exchg-calculate-wrap #estimatedId {
+      display: none;
+    }
+
+    #ex-submit-city {
+      font-size: 20px;
+      font-family: var(--font-tstar-heavy);
+      font-weight: 700;
+      line-height: 28px;
+      color: #A5A5A5;
+      pointer-events: none;
+      padding: 10px 32px;
+      border: 1px solid #A5A5A5;
+  
+      @media(max-width:768px) {
+          font-size: 14px;
+          line-height: 20px;
+      }
+  
+      &:hover {
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+          transition: text-shadow 0.2s ease;
+      }
+  
+      &[disabled] {
+          color: #A5A5A5;
+          pointer-events: none;
+          cursor: unset;
+      }
+    }
+
+    .exchg-wheeler-wrap {
+      position: relative;
+    }
+
+    .exchg-dealers-wrap {
+      gap: 22px;
+      justify-content: center;
+      margin: 32px 40px 38px;
+    }
+
+    .exchg-wheeler-carousel {
+      gap: 22px;
+      justify-content: center;
+      margin: 32px 40px 70px;
+    }
+
+    .dealers-outer-wrap, .wheelers-outer-wrap {
+      width: 23.718%;
+    }
+
+    .wheelers-modal-wrap {
+      width: 30.41%;
+    }
+
+    .exchg-dealers-options {
+      padding: 16px;
+      width: 94.725%;
+      position: relative;
+      min-height: 250px;
+      border-radius: 12px;
+      border: 1px solid #C0C0C0;
+      box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.10), 0px 6px 12px -6px rgba(24, 39, 75, 0.10);
+    }
+
+    .exchg-wheelers-options {
+      padding: 16px;
+      width: 94.725%;
+      position: relative;
+      min-height: 312px;
+      border-radius: 12px;
+      border: 1px solid #C0C0C0;
+      box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.10), 0px 6px 12px -6px rgba(24, 39, 75, 0.10);
+    }
+
+    .exchg-dealers-contents, .exchg-wheelers-contents {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .exchg-dealers-contacts {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .exchg-dealers-name {
+      font-size: 24px;
+      font-family: var(--font-tstar-heavy);
+      line-height: 32px;
+      color: #303030;
+      margin-left: 34px;
+      text-align: start;
+      word-break: break-word;
+    }
+
+    .exchg-dealers-mob {
+      font-size: 18px;
+      font-family: var(--font-tstar-bold);
+      line-height: 24px;
+      color: #303030;
+      word-break: break-word;
+      text-align: start;
+    }
+
+    .exchg-dealers-location {
+      font-size: 16px;
+      font-family: var(--font-tstar-medium);
+      line-height: 20px;
+      color: #303030;
+      text-align: start;
+      word-break: break-word;
+    }
+
+    .exchg-dealer-label, .exchg-wheeler-label {
+      width: 100%;
+    }
+
+    .explore .slick-dots {
+      opacity: unset;
+      bottom: -40px;
+    }
+
+    .explore .slick-dots li {
+      width: 26px;
+      height: 6px;
+    }
+
+    .exchg-all-label-allign {
+      width: 100%;
+      text-align: center;
+      word-break: break-word;
+    }
+
+    .exchg-wheelers-tag-wrap {
+      position: relative;
+    }
+
+    .exchg-wheeler-input {
+      right: 16px;
+    }
+
+    .exchg-wheelers-img-wrap {
+      margin: 10px auto 0px;
+    }
+
+    .exchg-wheelers-tag-img {
+      margin-left: -16px;
+    }
+
+    .exchg-wheelers-tag-text {
+      position: absolute;
+      top: 0;
+      font-size: 12px;
+      font-family: var(--font-tstar-bold);
+      line-height: 16px;
+      color: #303030;
+      color: #FFFFFF;
+      padding-top: 2px;
+    }
+
+    .exchg-wheelers-name {
+      text-align: start;
+      font-family: var(--font-tstar-bold);
+      font-size: 18px;
+      line-height: 24px;
+      color: #303030;
+      margin: 8px auto;
+    }
+
+    .exchg-wheelers-price {
+      text-align: start;
+      font-family: var(--font-tstar-heavy);
+      font-size: 24px;
+      line-height: 32px;
+      color: #303030;
+    }
+
+    .wheeler-modal-body {
+      overflow-y: scroll;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 39px;
+      padding: 20px 24px;
+    }
+
+    .wheeler-confirm-modal-body, .wheeler-congrats-modal {
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      position: relative;
+    }
+
+    .confirm-selected-wrap {
+      display: flex;
+      gap: 18px;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .wheeler-modal-content {
+      max-height: 648px;
+    }
+
+    .wheeler-modal-dialog{
+      max-width: 1058px;
+    }
+
+    .pincode-modal-dialog{
+      max-width: 626px;
+    }
+
+    .pincode-modal-content {
+      min-height: 266px;
+    }
+
+    .wheeler-confirm-modal-dialog, .resale-modal-dialog {
+      max-width: 626px;
+    }
+
+    .wheeler-confirm-modal-content {
+      min-height: 354px;
+    }
+
+    .resale-modal-content {
+      min-height: 489px;
+    }
+
+    .wheeler-confirm-butons {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .wheeler-confirm-butons .btn.booknow-btn {
+      background: linear-gradient(135deg, #AC0000 0%, #F00 26.35%, #FF3B3B 50.83%, #F00 72.71%, #F00 100%);
+      color: #FFFFFF;
+      margin-right: 0px;
+      border: none;
+    }
+
+    .wheeler-confirm-butons .btn {
+      border: 1px solid #EE2326;
+      padding: 11px 36px;
+      width: 22.422%;
+      border-radius: 4px;
+      margin-right: 32px;
+      background: #FFFFFF;
+      font-family: var(--font-tstar-heavy);
+      color: var(--text-color-red);
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+
+    .wheeler-confirm-heading {
+      font-family: var(--font-tstar-heavy);
+      font-size: 32px;
+      line-height: 48px;
+      color: #303030;
+      text-align: center;
+      width: 80%;
+    }
+
+    .wheeler-confirm-heading p {
+      font-family: var(--font-tstar-heavy);
+      font-size: 32px;
+      line-height: 48px;
+      color: #303030;
+    }
+
+    .wheeler-confirm-dealer {
+      font-family: var(--font-tstar-heavy);
+      font-size: 24px;
+      line-height: 32px;
+      color: #303030;
+    }
+
+    .wheeler-confirm-dealer span {
+      font-family: var(--font-tstar-medium);
+    }
+
+    .wheeler-congrats-modal {
+      justify-content: center;
+      gap: 24px;
+      overflow: hidden;
+    }
+
+    .wheeler-confirm-congrats, .wheeler-confirm-congrats p {
+      font-family: var(--font-tstar-heavy);
+      font-size: 48px;
+      line-height: 58px;
+      color: #038252;
+    }
+
+    .wheeler-confirm-success {
+      font-family: var(--font-tstar-medium);
+      font-size: 24px;
+      line-height: 32px;
+      color: #303030;
+      width: 80%;
+      text-align: center;
+    }
+
+    .wheeler-confirm-success p {
+      font-family: var(--font-tstar-medium);
+      font-size: 24px;
+      line-height: 32px;
+      color: #303030;
+    }
+
+    #checkModal .modal-header {
+      border-bottom: none;
+    }
+
+    .active-option-checks {
+      border: 1px solid #303030;
+    }
+
+    .striked-price-value {
+      font-family: var(--font-tstar-bold);
+      font-size: 18px;
+      line-height: 32px;
+      color: #D30000;
+    }
+
+    .edit-number-exchg, #otp-modal .verifyNumber{
+      margin-left: 18px;
+    }
+
+    .exchg-resale-wrap {
+      position: absolute;
+      left: 40px;
+      bottom: -56px;
+      width: auto;
+    }
+
+    .exchg-asterisk-note {
+      width: auto;
+      padding-top: 16px;
+      padding-left: 6px;
+    }
+
+    .exchg-resale-text {
+      font-family: var(--font-tstar-medium);
+    }
+
+    .exchg-resale-modal-text {
+      color: #009FDA;
+      cursor: pointer;
+    }
+
+    .exchg-content-noresults {
+      font-family: var(--font-tstar-medium);
+      font-size: 18px;
+      line-height: 24px;
+      color: #A5A5A5;
+      margin-top: 1rem;
+    }
+
+    .exchg-landing-logout-note {
+      font-family: var(--font-tstar-medium);
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+    }
+
+    .exchg-content-options.active-option-checks label {
+      font-family: var(--font-tstar-heavy);
+    }
+
+    .exchg-error-input-border {
+      border: 1px solid #EE2326 !important;
+    }
+
+    .exchg-success-input-border {
+      border: 1px solid #038252 !important;
+    }
+
+    #clickStep1li .exchg-multi-progress-bar.progress-bar-one-third, #clickStep2li .exchg-multi-progress-bar.progress-bar-one-third, #clickStep3li .exchg-multi-progress-bar.progress-bar-one-third {
+      height: 4px;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.0) 33.3%, rgb(255, 255, 255) 33.3%), repeating-linear-gradient(to right, transparent, transparent 5px, #ee2326 5px, #ee2326 12px);
+      transform: translate(0, 25%);
+    }
+
+    #clickStep1li .exchg-multi-progress-bar.progress-bar-two-third, #clickStep2li .exchg-multi-progress-bar.progress-bar-two-third, #clickStep3li .exchg-multi-progress-bar.progress-bar-two-third {
+      height: 4px;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.0) 66.6%, rgb(255, 255, 255) 66.6%), repeating-linear-gradient(to right, transparent, transparent 5px, #ee2326 5px, #ee2326 12px);
+      transform: translate(0, 25%);
+    }
+
+    #clickStep1li .exchg-multi-progress-bar.progress-bar-full, #clickStep2li .exchg-multi-progress-bar.progress-bar-full, #clickStep3li .exchg-multi-progress-bar.progress-bar-full {
+      height: 4px;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.0) 100%, rgb(255, 255, 255) 100%), repeating-linear-gradient(to right, transparent, transparent 5px, #ee2326 5px, #ee2326 12px);
+      transform: translate(0, 25%);
+    }
+
+    .exchange-sticky-header {
+      position: sticky;
+      background-color: #FFFFFF;
+      top: -1px;
+      z-index: 1;
+    }
+
+    #step-3 #exchange-userdata {
+      margin-top: 24px;
+    }
+
+    .low-check-modal-body {
+      background-color: #FFFFFF;
+    }
+
+    .low-check-modal-content {
+      height: 95%;
+    }
+
+    @media (max-width: 2000px) {
+      .form-stepper-horizontal li:not(:last-child) .exchg-multi-progress-bar {
+        width: 21vw;
+      }
+    }
+
+    @media (max-width: 1600px) {
+      .form-stepper-horizontal li:not(:last-child) .exchg-multi-progress-bar {
+        width: 19vw;
+      }
+    }
+  
+  
+    @media (max-width: 1400px) {
+      .form-stepper-horizontal li:not(:last-child) .exchg-multi-progress-bar {
+        width: 15.5vw;
+      }
+
+      .exchg-three-progress-bar {
+        width: 22vw !important;
+      }
+    }
+  
+    @media (max-width: 1150px) {
+      .form-stepper-horizontal, .exchg-ul-stepper-wrap {
+        padding: 0.75rem 14.5rem 1.8rem;
+      }
+  
+      .exchg-options-alt, .exchg-content-options {
+        width: 25%;
+      }
+  
+      .exchg-options-condition-wrap {
+        width: 42%;
+      }
+
+      .dealers-outer-wrap, .wheelers-outer-wrap {
+        width: 32%;
+      }
+
+      .wheelers-modal-wrap {
+        width: 30%;
+      }
+
+      .wheeler-modal-dialog {
+        margin: auto 32px;
+      }
+    }
+  
+    @media (max-width: 950px) {
+      .form-stepper-horizontal li:not(:last-child) .exchg-multi-progress-bar {
+        width: 12.5vw;
+      }
+
+      .exchg-three-progress-bar {
+        width: 19vw !important;
+      }
+  
+      .form-stepper-horizontal {
+        padding: 0.75rem 13.5rem 1.8rem;
+      }
+
+      .exchg-ul-stepper-wrap {
+        padding: 0.75rem 11.5rem 1.8rem;
+      }
+  
+      .exchg-options-alt, .exchg-content-options {
+        width: 30%;
+      }
+  
+      .exchg-options-condition-wrap {
+        width: 75%;
+      }
+
+      .dealers-outer-wrap, .wheelers-outer-wrap {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 769px) {
+      .form-stepper-horizontal li:not(:last-child) .exchg-multi-progress-bar {
+        width: 14vw;
+      }
+
+      .form-stepper-horizontal {
+        padding: 0.75rem 9.5rem 1.8rem;
+        z-index: 2;
+      }
+
+      .exchg-old-user-options, .exchg-old-user-new {
+        width: 100%;
+      }
+
+      .exchange-sticky-header {
+        padding: 16px 0 8px;
+      }
+  
+      .exchg-vehicle-content.active-tab {
+        padding: 0 16px 16px;
+        margin: 0;
+        overflow-y: auto;
+      }
+  
+      .exchg-content-options-wrap, .exchg-city-content-options-wrap {
+        gap: 16px;
+        margin-top: 8px;
+        margin-bottom: 0;
+        padding-left: 0;
+      }
+
+      #checkModal .modal-header {
+        position: sticky !important;
+        background-color: #FFFFFF;
+        top: 0;
+        z-index: 1;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      .exchange-form-container .exchange-text {
+        text-align: start;
+      }
+
+      .exchange-form-container .exchange-right .exchange-text {
+        padding: 24px 0;
+      }
+    }
+  
+    @media (max-width: 576px) {
+    
+      .form-stepper-horizontal {
+        padding: 0.75rem 6rem 2.8rem;
+      }
+
+      .exchg-ul-stepper-wrap {
+        padding: 0.75rem 3rem 2.8rem;
+      }
+
+      .three-stepper-label-view {
+        width: 50% !important;
+        left: -8px !important;
+      }
+    
+      .form-stepper .label {
+        left: -5px;
+        width: 50%;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    
+      .form-stepper .form-stepper-list:last-child .label {
+        left: -10px;
+        width: 150%;
+      }
+  
+      .form-stepper-horizontal li:not(:last-child) .exchg-multi-progress-bar {
+        width: 14vw;
+      }
+
+      .exchg-three-progress-bar {
+        width: 20.5vw !important;
+      }
+  
+      .exchg-left-nav-items {
+        padding: 16px 0 16px 16px;
+      }
+  
+      .exchg-nav-heading {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .exchg-nav-heading p{
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      #checkModal .exchg-nav-heading p {
+        text-align: start;
+      }
+  
+      .exchange-bike-left-nav {
+        width: 32.38%;
+      }
+  
+      .exchg-content-title {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .exchg-content-title p{
+        font-size: 18px;
+        line-height: 24px;
+      }
+  
+      .vehicle-type-images {
+        width: 52px;
+        margin: auto;
+      }
+  
+      .exchg-tips-text, .exchg-tips-text p {
+        font-size: 14px;
+        line-height: 16px;
+      }
+  
+      .exchg-tips-wrapper {
+        padding: 8px;
+        align-items: start;
+        gap: 10px;
+        margin-right: 16px;
+        position: absolute;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+  
+      .exchg-nav-subheading, .exchg-nav-subheading p {
+        font-size: 12px;
+        line-height: 16px;
+        width: 80%;
+      }
+  
+      .searchInput {
+        width: auto;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        box-shadow: unset;
+        border-radius: 6px;
+        border: 1px solid var(--bordercolor-border-color, #C0C0C0);
+      }
+  
+      .searchInput input {
+        padding: 12px 16px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      
+      .exchg-content-subtitle {
+        font-size: 14px;
+        line-height: 20px;
+      }
+  
+      .exchg-content-options {
+        width: 46.695%;
+        position: relative;
+      }
+  
+      .exchg-options-alt {
+        width: 46.695%;
+        position: relative;
+        height: auto;
+      }
+  
+      .brand-image-exchg {
+        width: 24px;
+      }
+  
+      .exchg-options-condition-wrap {
+        width: 100%;
+        position: relative;
+        height: auto;
+      }
+
+      .exchg-content-options label, .exchg-options-alt label {
+        padding: 6px !important;
+      }
+  
+      .exchg-options-condition-wrap label {
+        padding: 11px 14px 6px !important;
+      }
+  
+      .exchg-options-alt input, .exchg-options-condition-wrap input, .exchg-content-options input {
+        top: 6px;
+        left: 6px;
+      }
+
+      .exchg-options-condition-wrap input {
+        top: 11px;
+        left: 14px;
+      }
+  
+      .exchg-cond-images {
+        margin: 0 auto 6px;
+      }
+  
+      .check-popup-text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 16px;
+      }
+
+      #exchangeLoginForms .check-popup-text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+  
+      #checkModal .modal-dialog {
+        margin: 0 -1px;
+      }
+  
+      .exchg-modal-header {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .exchg-modal-header p{
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .exchg-manual-italic-header p {
+        font-size: 28px !important;
+        font-style: italic;
+        line-height: 40px !important;
+        text-transform: uppercase;
+        font-family: var(--font-tstar-heavy);
+        text-align: center;
+      }
+  
+      .exchg-happy-heading {
+        font-size: 16px;
+        line-height: 20px;
+      }
+  
+      .exchg-happy-subheading p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: start;
+      }
+  
+      .modal-content-heading {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 6px 16px;
+      }
+
+      .modal-content-heading p{
+        font-size: 16px;
+        line-height: 24px;
+      }
+  
+      .modal-lists-text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+  
+      .modal-image-gaps {
+        gap: 10px;
+        margin: auto 16px 16px;
+      }
+  
+      .modal-text-green {
+        font-size: 14px;
+        line-height: 20px;
+      }
+  
+      .modal-text-red {
+        font-size: 14px;
+        line-height: 20px;
+      }
+  
+      .exclamation-wrapper {
+        padding: 6px 8px;
+        margin: auto 16px 16px;
+      }
+  
+      .modal-image-tyres-allign {
+        padding: 24px 8px;
+      }
+
+      #tyresModel .text-center:last-child .modal-image-tyres-allign, #rearTyresModel .text-center:last-child .modal-image-tyres-allign {
+        padding: 24px 8px;
+      }
+  
+      .outer-calc-wrap {
+        flex-direction: column;
+      }
+  
+      .calculate-left-wrap {
+        width: auto;
+        padding: 16px;
+        margin: 16px;
+      }
+  
+      .calc-intro-text {
+        font-size: 28px;
+        line-height: 40px;
+      }
+  
+      .calc-assess-text, .calc-assess-text p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+  
+      .calc-cont-text, .calc-cont-text p {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    
+      .calc-estimate-text, .calc-estimate-text p {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        padding: 0 35px;
+      }
+
+      .calc-estimate-text p {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0;
+      }
+    
+      .calc-price-text {
+        font-size: 32px;
+        line-height: 48px;
+        padding-bottom: 0;
+      }
+
+      .mob-calc-price-text-long {
+        font-size: 26px !important;
+      }
+  
+      .calc-vehicle-details-wrap #calcBrand {
+        border-right: unset;
+      }
+  
+      .calc-vehicle-details-wrap {
+        width: auto;
+      }
+  
+      .calculate-right-wrap {
+        width: auto;
+        padding: 16px;
+        gap: 16px;
+      }
+  
+     .calc-exchg-steps {
+        gap: 16px;
+      }
+  
+      .exchg-sell-calc {
+        width: 42px;
+        height: 42px;
+      }
+
+      .exchg-old-gap-cont {
+        gap: 8px;
+        flex-direction: column;
+      }
+
+      .exchange-old-heading {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .exchange-old-subheading, .exchange-old-vals {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left;
+        width: 100%;
+      }
+
+      .exchg-old-user-new {
+        width: 100%;
+        padding: 1.688rem 0;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .old-user-mob-content {
+        padding-left: 34px;
+      }
+
+      .exchg-pincode-wrap {
+        width: 100%;
+        margin: 6px auto 36px;
+      }
+
+      #examplePincodeModal {
+        padding-top: 36px;
+      }
+
+      .exchg-dealers-wrap {
+        margin: 16px 16px 38px;
+      }
+  
+      .exchg-dealers-options {
+        padding: 16px;
+        width: 96%;
+        min-height: 200px;
+        margin: 0 6px;
+      }
+  
+      .exchg-dealers-name {
+        font-size: 18px;
+        line-height: 24px;
+        margin-left: 32px;
+      }
+  
+      .exchg-dealers-mob {
+        font-size: 16px;
+        line-height: 20px;
+      }
+  
+      .exchg-dealers-location {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .exchg-all-label-allign {
+        width: 100%;
+      }
+
+      .exchg-wheeler-carousel {
+        margin: 32px 16px 70px;
+      }
+
+      .wheeler-modal-dialog, .resale-modal-dialog, .pincode-modal-dialog {
+        margin: 0 -1px;
+      }
+
+      .wheeler-modal-content {
+        max-height: 552px;
+        border-radius: 16px 16px 0 0;
+        position: absolute;
+        bottom: -12px;
+      }
+
+      .resale-modal-content {
+        max-height: 464px;
+        border-radius: 16px 16px 0 0;
+        position: absolute;
+        bottom: -18px;
+      }
+
+      .pincode-modal-content {
+        min-height: 277px;
+        border-radius: 16px 16px 0 0;
+        position: absolute;
+        bottom: -18px;
+      }
+
+      .pincode-modal-body {
+        margin-top: -12px;
+      }
+
+      .wheeler-modal-content .modal-header {
+        justify-content: space-between !important;
+      }
+
+      .wheeler-modal-body {
+        padding: 6px 12px;
+        gap: 16px;
+      }
+
+      .wheelers-outer-wrap {
+        width: 46.429%;
+      }
+
+      .exchg-wheelers-options {
+        padding: 10px;
+        min-height: 254px;
+      }
+
+      .exchg-wheeler-input {
+        right: 10px;
+      }
+
+      .exchg-wheelers-tag-img {
+        margin-left: -10px;
+        width: 86px;
+      }
+
+      .exchg-wheelers-contents {
+        gap: 10px;
+      }
+
+      .exchg-wheelers-tag-text {
+        font-size: 10px;
+        font-family: var(--font-tstar-heavy);
+        line-height: 12px;
+      }
+
+      .exchg-wheelers-img-wrap {
+        margin: auto;
+      }
+
+      .exchg-wheelers-img-wrap img {
+        width: 82px;
+      }
+
+      .exchg-wheelers-name {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 auto 20px;
+      }
+
+      .exchg-wheelers-price {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    
+      .exchg-form-viewall {
+        width: 100%;
+      }
+
+      .add-view-allign {
+        position: absolute;
+        right: 16px;
+        bottom: -32px;
+        font-size: 14px;
+        line-height: 20px;
+        width: auto;
+      }
+
+      .wheeler-confirm-modal-dialog {
+        max-width: 328px;
+        margin: auto;
+      }
+
+      .wheeler-confirm-modal-content {
+        min-height: 224px;
+      }
+
+      .wheeler-confirm-modal-body {
+        gap: 17px;
+        padding: 16px;
+      }
+
+      .wheeler-confirm-heading {
+        font-size: 24px;
+        line-height: 32px;
+        width: 100%;
+      }
+
+      .wheeler-confirm-heading p {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .confirm-selected-wrap {
+        gap: 18px;
+      }
+    
+      .wheeler-confirm-dealer {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .wheeler-confirm-butons .btn {
+        padding: 5px 0;
+        width: 21.77%;
+        margin-right: 16px;
+        font-size: 14px;
+      }
+
+      .wheeler-congrats-modal {
+        gap: 4px;
+      }
+
+      .wheeler-confirm-congrats, .wheeler-confirm-congrats p {
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      .wheeler-confirm-success {
+        font-size: 18px;
+        line-height: 24px;
+        width: 100%;
+      }
+
+      .wheeler-confirm-success p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .wheeler-congrats-modal img {
+        width: 60%;
+      }
+
+      .striked-price-value {
+        display: block;
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .calc-vehicle-details-wrap .modal-lists-text:first-child {
+        padding: 0px 16px 0px 0px;
+      }
+    
+      .calc-vehicle-details-wrap .modal-lists-text:last-child {
+        padding: 0px 0px 0px 16px;
+      }
+
+      .exchg-wheeler-wrap .explore .slick-dots {
+        bottom: -70px;
+      }
+
+      .exchg-resale-wrap {
+        left: 16px;
+        bottom: -52px;
+        width: 60%;
+      }
+      
+      .exchg-asterisk-note {
+        width: 100%;
+        padding-top: 12px;
+        padding-left: 0;
+      }
+
+      .exchg-content-noresults {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 0.5rem;
+      }
+
+      .exchg-landing-logout-note {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .exchg-calculate-wrap {
+        height: 126px;
+      }
+
+      .exchg-modal-contents-wrap {
+        margin-top: 16px;
+        margin-bottom: 0;
+      }
+
+      #checkModal .modal-content {
+        border-radius: 16px 16px 0 0;
+        position: absolute;
+        bottom: -18px;
+      }
+
+      .searchInput input, .exchg-pincode-wrap input {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .exchg-left-nav-items.active {
+        border-right: 2px solid #EE2327;
+      }
+
+      .exchange-dealers input {
+        width: 24px !important;
+        height: 24px !important;
+      }
+
+      #step-3 #exchange-userdata {
+        margin-top: 12px;
+      }
+    
+    }
+
+    @media (max-width: 500px) {
+      .form-stepper-horizontal {
+        padding: 0.75rem 4rem 2.8rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .form-stepper-horizontal {
+        padding: 0.6rem 2rem 2.4rem;
+      }
+    }
+
+    @media (max-width: 359px) {
+      .modal-image-tyres-allign {
+        padding: 24px 0px;
+      }
+
+      #tyresModel .text-center:last-child .modal-image-tyres-allign, #rearTyresModel .text-center:last-child .modal-image-tyres-allign {
+        padding: 24px 0px;
+      }
+    }
+    
+  }
+
+  @media (min-width: 576px) {
+    .exchange-banner #checkModal .modal-dialog {
+        max-width: 1058px;
+    }
+  }
+  
+  .wheeler-confirm-modal-backdrop {
+    z-index: 1051;
+  }
+
+  .wheeler-confirm-modal-main {
+    z-index: 1052;
+  }
+
+  @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    .exchange-banner input[type='radio'] {
+      --active: #EE2326;
+      --active-inner: #fff;
+      --focus: 2px #EE2326;
+      --border: #C0C0C0;
+      --border-hover: #D30000;
+      --background: #fff;
+      --disabled: #F6F8FF;
+      --disabled-inner: #E1E6F9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 24px;
+      outline: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin: 0;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition: background .3s, border-color .3s, box-shadow .2s;
+
+      &:after {
+        content: '';
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+      }
+
+      &:checked {
+        --b: var(--active);
+        --bc: var(--active);
+        --d-o: .3s;
+        --d-t: .6s;
+        --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+      }
+
+      &:disabled {
+        --b: var(--disabled);
+        cursor: not-allowed;
+        opacity: .9;
+
+        &:checked {
+          --b: var(--disabled-inner);
+          --bc: var(--border);
+        }
+
+        &+label {
+          cursor: not-allowed;
+        }
+      }
+
+      &:hover {
+        &:not(:checked) {
+          &:not(:disabled) {
+            --bc: var(--border-hover);
+          }
+        }
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 var(--focus);
+      }
+
+      &:not(.switch) {
+        width: 24px;
+
+        &:after {
+          opacity: var(--o, 0);
+        }
+
+        &:checked {
+          --o: 1;
+        }
+      }
+
+      &+label {
+        font-family: var(--font-tstar-bold);
+        font-size: 18px;
+        line-height: 24px;
+        color: #303030;
+        width: 100%;
+        height: 100%;
+        padding-right: 0;
+        vertical-align: middle;
+        display: table-cell;
+        text-align: center;
+        cursor: pointer;
+        // margin: 22px auto;
+        // padding-right: 1.5rem;
+      }
+    }
+
+    .exchange-banner input[type='radio'] {
+      border-radius: 50%;
+
+      &:after {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: var(--active-inner);
+        opacity: 0;
+        transform: scale(var(--s, .7));
+      }
+
+      &:checked {
+        --s: .35;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .exchange-banner input[type='radio'] {
+        position: absolute;
+        height: 18px;
+  
+        &:not(.switch) {
+          width: 18px;
+        }
+  
+        &+label {
+          font-family: var(--font-tstar-medium);
+          font-size: 16px;
+          line-height: 20px;
+          padding-right: 0;
+          width: 100%;
+          text-align: center;
+          margin: auto;
+        }
+      }
+  
+      .exchange-banner input[type='radio'] {
+        &:after {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }

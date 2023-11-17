@@ -1,0 +1,123 @@
+#sustainability-framework-container{
+    background-color: #F5F5F5;
+    padding: 0;
+    display: block;
+}
+#sustainability-framework-background{
+    background: #F5F5F5;
+}
+#sustainability-framework-container .sustainability-framework-wrapper{
+    display: flex;
+    padding: 10px 36px 35px 36px;
+    justify-content: center;
+    gap: 14px;
+}
+#sustainability-framework-container .sustainability-framework-wrapper .sustainability-framework-boxes{
+    background-color: #ffffff;
+    color: #303030;
+    width: 20%;
+    padding: 16px 8px 43px 8px;
+    box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.1);
+    border-radius: 12px;
+}
+#sustainability-framework-container .sustainability-framework-wrapper .icon-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#sustainability-framework-container .sustainability-framework-wrapper .sustainability-framework-boxes .framework-icons{
+    width: 35px;
+    height: 35px;
+}
+#sustainability-framework-container .sustainability-framework-wrapper .text-box{
+    padding: 0 8px;
+}
+#sustainability-framework-container .icon-box .icon-underline{
+    border: 1px solid rgba(192, 192, 192, 1);
+    background-color: rgba(192, 192, 192, 1);
+    width: 52.78%;
+    margin-top: 8px;
+}
+#sustainability-framework-container .icon-box .framework-heading{
+    padding: 12px 0px;
+    font-family: var(--font-tstar-heavy);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 24px;
+}
+#sustainability-framework-container .text-box .framework-text-ul li{
+    list-style-type: disc;
+    font-size:16px;
+}
+#sustainability-framework-container .text-box .framework-text-ul li p{
+    font-family: var(--font-tstar-medium);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+#sustainability-framework-container .sustainability-framework-wrapper .text-box .framework-text-ul{
+    padding-left: 14px;
+}
+
+@media(max-width:980px){
+    #sustainability-framework-container .sustainability-framework-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 27px 35px 27px;
+    }
+    #sustainability-framework-container .sustainability-framework-wrapper .sustainability-framework-boxes{
+        width: 31%;
+    }
+}
+@media(max-width:768px){
+    #sustainability-framework-container .icon-box .framework-heading{
+        padding: 12px 0px;
+        font-family: var(--font-tstar-heavy);
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 20px;
+    }
+    #sustainability-framework-container .text-box .framework-text-ul li p{
+        font-family: var(--font-tstar-medium);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    #sustainability-framework-container .text-box .framework-text-ul li{
+        font-size: 10px;
+    }
+    #sustainability-framework-container .icon-box .icon-underline{
+        width: 75%;
+    }
+}
+@media(max-width:610px){
+    #sustainability-framework-heading-cover{
+        padding: 0 16px !important;
+    }
+    #sustainability-framework-container .sustainability-framework-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 5px 16px 16px 16px;
+    }
+    #sustainability-framework-container .sustainability-framework-wrapper .sustainability-framework-boxes{
+        width: 48.1%;
+        padding: 8px 0;
+        border-radius: 8px;
+        height: 202px;
+    }
+    #sustainability-framework-container .sustainability-framework-wrapper .sustainability-framework-boxes .framework-icons{
+        width: 26.67px;
+        height: 26.67px;
+    }
+    #sustainability-framework-container .sustainability-framework-wrapper .text-box{
+        padding: 0 5px;
+    }
+    #sustainability-framework-container .icon-box .icon-underline{
+        width: 75%;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,16 @@
+<sly data-sly-test="${(wcmmode.edit || wcmmode.design) && !listUse }" class="author-note">
+    ${'Edit {0} Component' @ format=[component.title], i18n}
+</sly>
+
+<sly data-sly-use.listUse="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='exslides'}">
+    <div class="row exchange-choose-row">
+        <sly data-sly-list="${listUse}">
+            <div class="exchg-choose-col">
+                <img class="d-sm-block d-none exchange-choose-image" src="${item.properties.slideimgurl}">
+                <img class="d-sm-none d-block exchange-choose-image" src="${item.properties.slideimgurlmob}">
+                <h5 class="exchange-sell-heading exchange-choose-text-allign">${item.properties.exslidehead}</h5>
+                <p class="exchange-sell-subheading text-center w-100">${item.properties.exslidetext}</p>
+            </div>
+        </sly>
+    </div>
+</sly>

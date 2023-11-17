@@ -1,0 +1,1 @@
+$('.text .cmp-text:has(.contact-metrology)').addClass("container");

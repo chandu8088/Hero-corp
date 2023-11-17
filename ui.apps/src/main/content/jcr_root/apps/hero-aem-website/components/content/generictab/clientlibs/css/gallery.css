@@ -1,0 +1,17 @@
+#gallary-tab .nav-item{
+    margin-right: 2px;
+}
+
+#gallary-tab .common-tabs-main .nav-item .nav-link {
+    border-bottom: none;
+    background: #EDEDED;
+    padding: 10px 16px 6px;
+    width: fit-content;
+    color: #A5A5A5;
+}
+
+#gallary-tab .common-tabs-main .nav-item .nav-link.active {
+    color: #fff;
+    background: var(--cta-color-gradient, linear-gradient(135deg, #AC0000 0%, #F00 26.35%, #FF3B3B 50.83%, #F00 72.71%, #F00 100%));
+    backdrop-filter: blur(8px);
+}

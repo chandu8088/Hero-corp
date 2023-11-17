@@ -1,0 +1,3 @@
+#base=js
+image-text-carousel.js
+service-text-carousel.js

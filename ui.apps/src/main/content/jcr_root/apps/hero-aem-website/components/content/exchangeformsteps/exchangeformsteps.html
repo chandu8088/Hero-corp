@@ -1,0 +1,331 @@
+<p data-sly-test="${wcmmode.edit || wcmmode.design}" class="author-note">
+    ${'Edit {0} Component' @ format=[component.title], i18n}
+</p>
+
+<div class="exchange-banner">
+    <div>
+        <div id="multi-step-form-container">
+            <!-- Form Steps / Progress Bar -->
+            <ul id="multiStepperWrap" class="form-stepper form-stepper-horizontal text-center mx-auto">
+                <!-- Step 1 -->
+                <li id="clickStep1li" class="form-stepper-active text-center form-stepper-list" step="1">
+                    <a id="clickStep1a" class="mx-0">
+                        <span class="form-stepper-circle btn-navigate-form-step" step_number="1"
+                            navigation_from="steppers">
+                            <img src="${!properties.step1icon?'/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/vehicle-multistep.svg':properties.step1icon}"
+                                class="" alt="vehicle multistep"></span>
+                        <div class="label">${properties.step1title}</div>
+                    </a>
+                    <div class="exchg-multi-progress-bar">
+                        <div class="exchg-progresse-bar"></div>
+                    </div>
+                </li>
+                <!-- Step 2 -->
+                <li id="clickStep2li" class="form-stepper-unfinished text-center form-stepper-list" step="2">
+                    <a id="clickStep2a" class="mx-0">
+                        <span class="form-stepper-circle text-muted btn-navigate-form-step" step_number="2"
+                            navigation_from="steppers">
+                            <span><img
+                                    src="${!properties.step2icon?'/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/condition-multistep.svg':properties.step2icon}"
+                                    class="" alt="condition multistep"></span>
+                        </span>
+                        <div class="label text-muted">${properties.step2title}</div>
+                    </a>
+                    <div class="exchg-multi-progress-bar"></div>
+                </li>
+                <!-- Step 3 -->
+                <li id="clickStep3li" class="form-stepper-unfinished text-center form-stepper-list" step="3">
+                    <a id="clickStep3a" class="mx-0">
+                        <span class="form-stepper-circle text-muted btn-navigate-form-step" step_number="3"
+                            navigation_from="steppers">
+                            <span><img
+                                    src="${!properties.step3icon?'/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/customer-multistep.svg':properties.step3icon}"
+                                    class="" alt="customer multistep"></span>
+                        </span>
+                        <div class="label text-muted">${properties.step3title}</div>
+                    </a>
+                    <div class="exchg-multi-progress-bar"></div>
+                </li>
+                <!-- Step 4 -->
+                <li id="clickStep4li" class="form-stepper-unfinished text-center form-stepper-list" step="4">
+                    <a id="clickStep4a" class="mx-0">
+                        <span class="form-stepper-circle text-muted">
+                            <span><img
+                                    src="${!properties.step4icon?'/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/valuation-multistep.svg':properties.step4icon}"
+                                    class="" alt="valuation multistep"></span>
+                        </span>
+                        <div class="label text-muted">${properties.step4title}</div>
+                    </a>
+                    <div class="exchg-multi-progress-bar">
+                        <div class="exchg-progresse-bar"></div>
+                    </div>
+                </li>
+            </ul>
+            <!-- Step Wise Form Content -->
+            <div id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data" method="POST">
+                <!-- Step 1 Content -->
+                <section id="step-1" class="form-step">
+                    <div class="d-flex exchange-form-wrap justify-content-center">
+
+                        <!-- New User Step 1 -->
+
+                        <div class="d-flex flex-column exchange-bike-left-nav form-step-one"
+                            data-sly-use.listLeftnav1="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='vehicledetails'}"
+                            data-sly-list="${listLeftnav1}">
+                            <div class="flex-column exchg-left-nav-items ${itemList.count == 1 ? 'd-none' : 'd-flex'}"
+                                data-target="${item.properties.datatarget}">
+                                <div class="exchg-nav-heading">${item.properties.leftnavTitle @context='html'}</div>
+                                <div id="${item.properties.datatarget == 'exchangeList' ? 'selectedExchangeType' :(item.properties.datatarget == 'vehicleList' ? 'selectedVehicleType' : (item.properties.datatarget == 'brandList' ? 'selectedBrand' : (item.properties.datatarget == 'modelList' ? 'selectedModel' : (item.properties.datatarget == 'yearList' ? 'selectedYear' : (item.properties.datatarget == 'monthList' ? 'selectedMonth' : (item.properties.datatarget == 'stateList' ? 'selectedState' : (item.properties.datatarget == 'cityList' ? 'selectedCity' : '')))))))}"
+                                    class="exchg-nav-subheading"></div>
+                            </div>
+                        </div>
+
+                        <div id="exchangeList" class="flex-column exchg-vehicle-content d-none">
+                            <div class="exchange-sticky-header">
+                                <div class="exchg-content-title">${properties.veHeadline @context='html'}</div>
+                            </div>
+                            <div class="d-flex mt-sm-3 flex-wrap exchg-content-options-wrap">
+                            </div>
+                            <div class="d-flex exchg-tips-wrapper"
+                                data-sly-use.vtbottom="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='vtbottommulti'}"
+                                data-sly-list="${vtbottom}">
+                                <div class="hidden tips-inner-wrap">
+                                    <img src="${item.properties.noteicon}" class="exchg-tips-gif" alt="gif tips">
+                                    <div class="exchg-tips-text">${item.properties.vtbottomnote @context='html'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="vehicleList" class="d-flex flex-column exchg-vehicle-content">
+                            <div class="exchange-sticky-header">
+                                <div class="exchg-content-title">${properties.vtHeadline @context='html'}</div>
+                            </div>
+                            <div class="d-flex mt-sm-3 flex-wrap exchg-content-options-wrap">
+                                <div class="exchg-content-options exchg-options-alt">
+                                    <input id="vehicle1" type="radio" name="radio" value="Scooter"
+                                        data-target="brandList" data-from="vehicleList">
+                                    <label class="text-center m-auto" for="vehicle1"><img
+                                            src="${!properties.scootericon ?'/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/exchange-scooter-icon.png':properties.scootericon}"
+                                            class="vehicle-type-images"
+                                            alt="step 1 scooter">${properties.scootertitle}</label>
+                                </div>
+                                <div class="exchg-content-options exchg-options-alt">
+                                    <input id="vehicle2" type="radio" name="radio" value="Motorcycle"
+                                        data-target="brandList" data-from="vehicleList">
+                                    <label class="text-center m-auto" for="vehicle2"><img
+                                            src="${!properties.motoicon ?'/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/exchange-bike-icon.png':properties.motoicon}"
+                                            class="vehicle-type-images"
+                                            alt="step 2 bike">${properties.mototitle}</label>
+                                </div>
+                                <div class="exchg-content-options exchg-options-alt">
+                                    <input id="vehicle3" type="radio" name="radio" value="Moped" data-target="brandList"
+                                        data-from="vehicleList">
+                                    <label class="text-center m-auto" for="vehicle3"><img
+                                            src="${!properties.mopedicon ? '/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/exchange-moped-icon.png':properties.mopedicon}"
+                                            class="vehicle-type-images"
+                                            alt="step 3 moped">${properties.mopedtitle}</label>
+                                </div>
+                            </div>
+                            <div class="d-flex exchg-tips-wrapper"
+                                data-sly-use.vtbottom="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='vtbottommulti'}"
+                                data-sly-list="${vtbottom}">
+                                <div class="hidden tips-inner-wrap">
+                                    <img src="${item.properties.noteicon}" class="exchg-tips-gif" alt="gif tips">
+                                    <div class="exchg-tips-text">${item.properties.vtbottomnote @context='html'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="brandList" class="d-flex flex-column exchg-vehicle-content"
+                            data-component-relativePath="${currentNode.path @ addSelectors=['exchangebrandlist'],extension='json'}">
+                            <div class="exchange-sticky-header">
+                                <div class="exchg-content-title">${properties.bHeadline @ context ='html'}</div>
+                                <div class="searchInput">
+                                    <input type="text" placeholder="${properties.searchplaceholder}"
+                                        class="exchange-brand-search">
+                                    <div class="icon"><img
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/autocomplete-search-icon.svg"
+                                            class="mr-sm-0 mr-2" alt="search icon exchange"></div>
+                                </div>
+                                <div class="exchg-content-noresults d-none">No results found</div>
+                                <div class="exchg-content-subtitle">${properties.bsubhead}</div>
+                            </div>
+                            <div class="d-flex mt-sm-3 flex-wrap exchg-content-options-wrap">
+                            </div>
+                        </div>
+
+                        <div id="modelList" class="d-flex flex-column exchg-vehicle-content"
+                            data-component-relativePath="${currentNode.path @ addSelectors=['exchangemodellist'],extension='json'}">
+                            <div class="exchange-sticky-header">
+                                <div class="exchg-content-title">${properties.mHeadline @ context = 'html'}</div>
+                                <div class="searchInput">
+                                    <input type="text" placeholder="${properties.msearchplaceholder}"
+                                        class="exchange-model-search">
+                                    <div class="icon"><img
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/autocomplete-search-icon.svg"
+                                            class="mr-sm-0 mr-2" alt="search icon exchange"></div>
+                                </div>
+                                <div class="exchg-content-noresults d-none">No results found</div>
+                                <div class="exchg-content-subtitle">${properties.msubhead}</div>
+                            </div>
+                            <div class="d-flex mt-sm-3 flex-wrap exchg-content-options-wrap">
+                            </div>
+                        </div>
+
+                        <div id="stateList" class="d-flex flex-column exchg-vehicle-content"
+                            data-component-relativePath="${currentNode.path @ addSelectors=['exchangestatelist'],extension='json'}">
+                            <div class="exchange-sticky-header">
+                                <div class="exchg-content-title">${properties.stHeadline @ context = 'html'}</div>
+                                <div class="searchInput">
+                                    <input type="text" placeholder="${properties.stsearchplaceholder}"
+                                        class="exchange-state-search">
+                                    <div class="icon"><img
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/autocomplete-search-icon.svg"
+                                            class="mr-sm-0 mr-2" alt="search icon exchange"></div>
+                                </div>
+                                <div class="exchg-content-noresults d-none">No results found</div>
+                            </div>
+                            <div class="d-flex mt-sm-3 flex-wrap exchg-content-options-wrap">
+                            </div>
+                        </div>
+
+                        <div id="cityList" class="d-flex flex-column exchg-vehicle-content"
+                            data-component-relativePath="${currentNode.path @ addSelectors=['exchangecitylist'],extension='json'}">
+                            <div class="exchange-sticky-header">
+                                <div class="exchg-content-title">${properties.cHeadline @ context = 'html'}</div>
+                                <div class="searchInput">
+                                    <input type="text" placeholder="${properties.csearchplaceholder}"
+                                        class="exchange-city-search">
+                                    <div class="icon"><img
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/autocomplete-search-icon.svg"
+                                            class="mr-sm-0 mr-2" alt="search icon exchange"></div>
+                                </div>
+                                <div class="exchg-content-noresults d-none">No results found</div>
+                            </div>
+                            <div class="d-flex mt-sm-3 flex-wrap exchg-city-content-options-wrap">
+                            </div>
+                        </div>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="pincodeModal" tabindex="-1" role="dialog"
+                            aria-labelledby="examplePincodeModal" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered pincode-modal-dialog" role="document">
+                                <div class="modal-content pincode-modal-content">
+                                    <div
+                                        class="modal-header position-relative justify-content-center px-sm-4 pt-sm-4 pb-sm-0 border-bottom-0">
+                                        <h5 class="modal-title exchg-modal-header" id="examplePincodeModal">
+                                            ${properties.pinhead}
+                                        </h5>
+                                        <img src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/modal-close.svg"
+                                            class="exchange-cross-button" alt="modal close" data-dismiss="modal">
+                                    </div>
+                                    <div class="modal-body pincode-modal-body pt-sm-0">
+                                        <div class="exchg-pincode-wrap">
+                                            <span class="exchg-pincode-span">Pincode<sup>*</sup></span></span>
+                                            <input type="tel" class="exchange-pincode-search" required id="pincode"
+                                                name="pincode" placeholder="${properties.pinplaceholder}"
+                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                maxlength="6">
+                                            <label class="pincode-error-msg d-none">Please enter a valid pincode</label>
+                                        </div>
+                                        <div class="d-flex justify-content-center mb-sm-4">
+                                            <div class="btn callback-btn btn-white btn-navigate-form-step" data-dismiss="modal" id="ex-submit-city" step_number="2"  navigation_from="pincodestep">PROCEED</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="yearList" class="d-flex flex-column exchg-vehicle-content">
+                            <div class="exchange-sticky-header">
+                                <div class="exchg-content-title">${properties.yHeadline @ context = 'html'}</div>
+                                <div class="searchInput">
+                                    <input type="text" placeholder="${properties.ysearchplaceholder}"
+                                        class="exchange-year-search">
+                                    <div class="icon"><img
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/autocomplete-search-icon.svg"
+                                            class="mr-sm-0 mr-2" alt="search icon exchange"></div>
+                                </div>
+                                <div class="exchg-content-noresults d-none">No results found</div>
+                            </div>
+                            <div class="d-flex mt-sm-3 flex-wrap exchg-content-options-wrap">
+                            </div>
+                        </div>
+
+                        <div id="monthList" class="d-flex flex-column exchg-vehicle-content">
+                            <div class="exchange-sticky-header">
+                                <div class="exchg-content-title">${properties.moHeadline @ context = 'html'}</div>
+                            </div>
+                            <div class="d-flex mt-sm-3 flex-wrap exchg-content-options-wrap">
+                                <div class="exchg-content-options">
+                                    <input id="month1" type="radio" name="radioMonth" value="January" data-target="stateList"
+                                        data-from="monthList">
+                                    <label for="month1">January</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month2" type="radio" name="radioMonth" value="February" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month2">February</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month3" type="radio" name="radioMonth" value="March" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month3">March</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month4" type="radio" name="radioMonth" value="April" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month4">April</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month5" type="radio" name="radioMonth" value="May" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month5">May</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month6" type="radio" name="radioMonth" value="June" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month6">June</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month7" type="radio" name="radioMonth" value="July" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month7">July</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month8" type="radio" name="radioMonth" value="August" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month8">August</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month9" type="radio" name="radioMonth" value="September" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month9">September</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month10" type="radio" name="radioMonth" value="October" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month10">October</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month11" type="radio" name="radioMonth" value="November" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month11">November</label>
+                                </div>
+                                <div class="exchg-content-options">
+                                    <input id="month12" type="radio" name="radioMonth" value="December" data-from="monthList"
+                                        data-target="stateList">
+                                    <label for="month12">December</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <sly
+                    data-sly-include="/apps/hero-aem-website/components/content/exchangeformsteps/exchangefinalform.html">
+                </sly>
+            </div>
+        </div>
+    </div>
+</div>

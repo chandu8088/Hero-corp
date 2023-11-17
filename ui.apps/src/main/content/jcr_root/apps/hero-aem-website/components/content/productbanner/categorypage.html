@@ -1,0 +1,49 @@
+<div class="pbanner-capage" data-sly-test="${properties.variation == 'categorypage'}">
+
+    <div style="--background-url: url(${properties.backgroundimage @ context='uri'});">
+
+        <div class="banner-video">
+
+            <div class="overlay"></div>
+
+            <video class="w-100 d-block" autoplay="" muted="" loop="" disablepictureinpicture=""
+                disableremoteplayback="">
+                <source src="${properties.backprodvideo @context='html'}" type="video/webm">
+                <source src="${properties.backprodvideo @context='html'}" type="video/mp4">
+            </video>
+
+        </div>
+
+        <div class="banner-content">
+            <div class="container">
+                <h1 class="banner-heading">${properties.headingtext @context='html'}</h1>
+                <p class="banner-sub-heading">${properties.subheadingtext @context='html'}</p>
+
+                <div class="banner-bikes">
+                    <sly data-sly-use.listUse="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='bikedetails'}"
+                        data-sly-list="${listUse}">
+
+
+                        <div class="bike">
+                            <div class="bike-img">
+                                <img src="${item.properties.bikeimage @context='html'}" alt="xtreme-220s">
+                            </div>
+                            <div class="content">
+                                <h2>${item.properties.biketitle @context='html'}</h2>
+                                <p>${item.properties.bikesubtitle}</p>
+                                <div class="hover-content ">
+                                    <ul
+                                        class="actions d-flex align-items-center justify-content-center text-capitalize">
+                                        <li class="ml-3 btn-modal-open" data-toggle="modal"
+                                            data-target="${item.properties.linkTo2}">
+                                            ${item.properties.quicktext}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </sly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

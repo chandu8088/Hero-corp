@@ -1,0 +1,5 @@
+#base=js
+dropzone.min.js
+booktestride.js
+booktestridecampaign.js
+captcha.js

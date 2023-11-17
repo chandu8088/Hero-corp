@@ -1,0 +1,643 @@
+#prebook-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  background: #fffcf9 !important;
+  #dealer-address {
+    span::after {
+      display: none !important;
+    }
+  }
+  .checkbox--wrap {
+    margin-top: 16px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    a {
+      display: inline;
+      color: #f26321;
+    }
+
+    .control {
+      display: block;
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 5px;
+      padding-top: 0px;
+      font-size: 12px;
+      font-style: normal;
+      line-height: 20px;
+      color: #303030;
+      font-family: "1903Sans-Regular";
+    }
+
+    .control p {
+      display: block;
+      position: relative;
+      margin-bottom: 5px;
+      padding-top: 0px;
+      font-size: 12px;
+      font-style: normal;
+      line-height: 20px;
+      color: #303030;
+      font-family: "1903Sans-Regular";
+    }
+
+    .control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    .control_indicator {
+      cursor: pointer;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: white;
+      border: 1px solid #c0c0c0;
+      border-radius: 4px;
+    }
+
+    .control:hover input ~ .control_indicator,
+    .control input:focus ~ .control_indicator {
+      background: white;
+    }
+
+    .control input:checked ~ .control_indicator {
+      background: #f00;
+    }
+
+    .control:hover input:not([disabled]):checked ~ .control_indicator,
+    .control input:checked:focus ~ .control_indicator {
+      background: #0e6647d;
+    }
+
+    .control input:disabled ~ .control_indicator {
+      background: #e6e6e6;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .control_indicator:after {
+      box-sizing: unset;
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .control input:checked ~ .control_indicator:after {
+      display: block;
+    }
+    .control-checkbox {
+      p {
+        color: #303030;
+        font-family: var(--font-tstar-regular);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        span {
+          color: #009fda;
+        }
+      }
+    }
+
+    .control-checkbox .control_indicator:after {
+      left: 6px;
+      top: 3px;
+      width: 3px;
+      height: 8px;
+      border: solid #ffffff;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+
+    .control-checkbox input:disabled ~ .control_indicator:after {
+      border-color: #7b7b7b;
+    }
+  }
+  .btn {
+    padding: 12px 32px;
+    border: 1px solid #ee2326;
+    font-family: var(--font-tstar-bold);
+    font-weight: var(--font-weight-900);
+    font-size: var(--font-size20);
+    line-height: var(--line-height-24);
+    text-transform: uppercase;
+    background: #ffffff;
+    color: #ee2326;
+    border-radius: 4px;
+    box-shadow: none !important;
+
+    &:hover {
+      color: #ee2326;
+    }
+
+    &.btn-red-gradient {
+      background: var(--bg-red-gradient);
+      color: var(--text-color-white);
+      border: none;
+
+      &:hover {
+        color: var(--text-color-white);
+      }
+    }
+
+    &.campaign-btn {
+      font-size: var(--font-size18);
+      font-family: var(--font-tstar-heavy);
+      line-height: var(--line-height-16);
+      height: 45px;
+      margin-top: 12px;
+      border-radius: 4px;
+      gap: 10px;
+    }
+
+    &:disabled {
+      border: 0;
+      background: #a5a5a5;
+      color: #f5f5f7;
+    }
+  }
+  .campaign-text {
+    display: flex;
+    #prebookCheckbox {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+  #dealer-list {
+    padding: 0;
+    margin-top: 1.375rem;
+    max-height: 17.125rem;
+    overflow-y: scroll;
+  }
+  #dealer-locator-container {
+    font-family: var(--font-tstar-regular);
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    .selected-border {
+      border: 1px solid #303030 !important;
+    }
+    .dealer-locator-info {
+      padding: 0.625rem;
+      border-radius: 0.5rem;
+      border: 1px solid #c0c0c0;
+      background: #fff;
+      flex: calc(50% - 5px);
+      .dealer-locator-name,
+      .dealer-locator-phone {
+        font-family: var(--font-tstar-heavy);
+        color: #303030;
+        margin: 0;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 1.25rem; /* 142.857% */
+      }
+      .dealer-locator-phone {
+        margin-bottom: 0.25rem;
+      }
+      .dealer-locator-address {
+        color: #303030;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1rem; /* 133.333% */
+      }
+    }
+  }
+
+  h3.block-header {
+    width: 100%;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px;
+    font-family: var(--font-tstar-heavy);
+    text-transform: uppercase;
+    color: #303030;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .festive-accordion {
+    .accordion-card {
+      margin-bottom: 22px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .accordion--title {
+      padding: 22px;
+      background: #fff3e2;
+      border-radius: 12px;
+      display: flex;
+      position: relative;
+      cursor: pointer;
+      min-height: 68px;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        padding: 8px 12px;
+        min-height: 56px;
+      }
+
+      &.pe-none {
+        pointer-events: none;
+      }
+
+      .top--wrap {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      img {
+        margin-right: 14px;
+        width: 24px;
+        height: 24px;
+
+        @media (max-width: 768px) {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+        }
+      }
+
+      .headers {
+        h6 {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 24px;
+          font-family: var(--font-tstar-heavy);
+          padding: 0;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          font-family: var(--font-tstar-medium);
+          color: #303030;
+          display: flex;
+          text-transform: capitalize;
+
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+
+          span {
+            padding-right: 8px;
+            padding-left: 8px;
+            position: relative;
+            text-transform: capitalize;
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            &:last-child {
+              &::after {
+                display: none;
+              }
+            }
+
+            &::after {
+              content: "";
+              display: block;
+              height: 90%;
+              width: 1px;
+              background: #a5a5a5;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+
+              @media (max-width: 768px) {
+                height: 60%;
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+        &::after {
+          transform: translateY(-50%) rotate(45deg);
+          transition: 0.5s ease all;
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 22px;
+        top: 50%;
+        transition: 0.5s ease all;
+        transform: translateY(-50%);
+        background: url("/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/openicon.svg")
+          no-repeat;
+
+        @media (max-width: 768px) {
+          width: 20px;
+          height: 20px;
+          background-size: cover;
+          right: 12px;
+        }
+      }
+    }
+
+    .accordion--panel {
+      padding: 22px;
+      padding-bottom: 0;
+      display: none;
+
+      @media (max-width: 768px) {
+        padding: 16px 12px;
+        padding-bottom: 0;
+      }
+
+      .wrapper {
+        @media (max-width: 768px) {
+          padding: 0 !important;
+        }
+      }
+
+      .accordion-content-wrap {
+        flex-direction: column;
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+
+    .cust-drop-down {
+      position: relative;
+    }
+
+    input {
+      &:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
+      }
+    }
+
+    button {
+      background: transparent;
+      color: #a5a5a5;
+      border: 1px solid #c0c0c0;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      font-family: var(--font-tstar-medium);
+
+      &.active {
+        color: #303030;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .dropdown-select.btn-drop {
+      position: relative;
+      text-transform: capitalize;
+
+      &::before {
+        position: absolute;
+        height: 8px;
+        width: 14px;
+        content: "";
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url("/apps/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/dropdrown-arrow-black-icon.svg")
+          no-repeat;
+      }
+    }
+
+    .form-control {
+      padding: 12px 16px;
+      height: 44px;
+      border-radius: 8px;
+      border: 1px solid #c0c0c0;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      color: #303030;
+      font-family: var(--font-tstar-medium);
+
+      &::placeholder {
+        color: #a5a5a5;
+        font-size: 16px;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    input:-internal-autofill-selected {
+      background: transparent;
+    }
+
+    .form-span {
+      position: absolute;
+      top: -7px;
+      left: 20px;
+      background: white;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      font-family: var(--font-tstar-medium);
+    }
+
+    .invalid-otp-message {
+      font-family: var(--font-tstar-bold);
+      font-size: var(--font-size14);
+      color: #ee2326;
+      display: block;
+      padding-left: 16px;
+      position: relative;
+      margin-top: 5px;
+    }
+
+    label.error,
+    .err-here {
+      font-family: var(--font-tstar-bold);
+      font-size: var(--font-size14);
+      color: #ee2326;
+      display: block;
+      padding-left: 16px;
+      position: relative;
+      margin-top: 5px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 9px;
+        height: 9px;
+        background: url("/apps/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/error.svg")
+          no-repeat;
+        background-size: 100%;
+      }
+    }
+
+    .select-p {
+      position: absolute;
+      left: 17px;
+      top: -7px;
+      background-color: white;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      color: #303030;
+      font-family: var(--font-tstar-medium);
+
+      @media (max-width: 768px) {
+        font-size: 10px;
+        line-height: 12px;
+        top: -4px;
+      }
+    }
+
+    .send-otp-btn,
+    .send-otp-student {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      font-family: var(--font-tstar-medium);
+      color: #009fda;
+      display: none;
+
+      &:hover {
+        color: #009fda !important;
+      }
+
+      &.show {
+        display: block;
+      }
+    }
+
+    .valid--otp {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 19px;
+        top: 9px;
+        background: url("/apps/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/greencheck.svg")
+          no-repeat;
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
+
+      input {
+        border: 1px solid #038252;
+      }
+    }
+
+    ul {
+      width: 100%;
+      padding-top: 16px;
+      z-index: 99;
+      max-height: 192px;
+      overflow-y: scroll;
+      border-radius: 0px 0px 16px 16px;
+      box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.1),
+        0px 6px 12px -6px rgba(24, 39, 75, 0.1);
+
+      li {
+        padding: 6px 16px;
+        margin: 0 16px;
+        padding-bottom: 4px;
+        padding-top: 12px;
+        border-bottom: 1px solid rgba(192, 192, 192, 0.5);
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &:hover {
+          a {
+            color: #ee2326;
+            font-family: var(--font-tstar-heavy);
+          }
+        }
+
+        a {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          color: #303030;
+          font-family: var(--font-tstar-medium);
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .cust-form-group {
+    margin-bottom: 20px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.festive-padding {
+  padding: 22px !important;
+  border-radius: 16px !important;
+  background: #fffcf9 !important;
+  box-shadow: 0px 18px 88px -4px rgba(24, 39, 75, 0.14),
+    0px 8px 28px -6px rgba(24, 39, 75, 0.12) !important;
+}
+
+.festive-page-wrapper {
+  background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #ffeed4 100%);
+  margin-top: -10px;
+  padding-top: 22px;
+}

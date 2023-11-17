@@ -1,0 +1,241 @@
+<p data-sly-test="${wcmmode.edit || wcmmode.design}" class="author-note">
+   ${'Edit {0} Component' @ format=[component.title], i18n}
+</p>
+
+<div id="prebook-wrapper">
+   <div>
+      <h3 class="block-header">
+         ${properties.fesmainhead}
+      </h3>
+
+      <div class="festive-accordion">
+         <div class="accordion-card">
+            <div class="accordion--title">
+               <div class="top--wrap">
+                  <img
+                     src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/vehicle-acc1.svg"
+                     alt="">
+
+                  <div class="headers">
+                     <h6>${properties.fesacc1title}</h6>
+                     <p class="d-none grey-text"><span></span> <span></span> <span></span></p>
+                  </div>
+
+               </div>
+
+            </div>
+            <div class="accordion--panel">
+               <div class="accordion-content-wrap d-flex">
+                  <form action="" id="vehicle-form">
+                     <div class=" form group cust-form-group">
+                        <div class=" select-dropdown btn-drop-v1 cust-drop-down">
+                           <button class="dropdown-select btn-drop dropdown-toggle w-100 text-left" name="vehiclename"
+                              type="button" data-toggle="dropdown"
+                              data-default-label="${properties.fesmodelholder}">${properties.fesmodelholder}<span
+                                 class="caret select-span"></span>
+                           </button>
+                           <input type="hidden" required value="" data-validation-msg-req="${properties.fesmodelerror}"
+                              name="vehicleNameVal" />
+                           <ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+                              aria-labelledby="vehicleDropdown" style="">
+                           </ul>
+                           <span class="select-p">${properties.fesmodellabel}</span>
+                        </div>
+                     </div>
+
+                     <div class=" form group cust-form-group">
+                        <div class=" select-dropdown btn-drop-v1 cust-drop-down">
+                           <button class="dropdown-select btn-drop dropdown-toggle w-100 text-left" name="variantname"
+                              type="button" data-toggle="dropdown" data-default-label="${properties.fesvariantholder}"
+                              disabled>${properties.fesvariantholder}<span class="caret select-span"></span>
+                           </button>
+                           <input type="hidden" required value=""
+                              data-validation-msg-req="${properties.fesvarianterror}" name="variantNameVal" />
+                           <ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+                              aria-labelledby="variantDropdown" style="">
+                           </ul>
+                           <span class="select-p">${properties.fesvariantlabel}</span>
+                        </div>
+                     </div>
+
+                     <div class=" form group cust-form-group">
+                        <div class=" select-dropdown btn-drop-v1 cust-drop-down">
+                           <button class="dropdown-select btn-drop dropdown-toggle w-100 text-left" name="colorname"
+                              type="button" data-toggle="dropdown" data-default-label="${properties.fescolorholder}"
+                              disabled>${properties.fescolorholder}<span class="caret select-span"></span>
+                           </button>
+                           <input type="hidden" required value="" data-validation-msg-req="${properties.fescolorerror}"
+                              name="colorNameVal" />
+                           <ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+                              aria-labelledby="colorDropdown" style="">
+                              <li class="font-montserrat-regular font-weight-500 " value="blue">
+                                 <a href="javascript:void(0)">Blue</a>
+                              </li>
+                              <li class="font-montserrat-regular font-weight-500 " value="black">
+                                 <a href="javascript:void(0)">Black</a>
+                              </li>
+                           </ul>
+                           <span class="select-p">${properties.fescolorlabel}</span>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+
+         <div class="accordion-card">
+            <div class="accordion--title pe-none">
+               <div class="top--wrap">
+                  <img
+                     src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/location.svg"
+                     alt="">
+
+                  <div class="headers">
+                     <h6>${properties.fesacc2title}</h6>
+                     <p class="d-none grey-text"><span></span> <span></span></p>
+                  </div>
+
+               </div>
+
+            </div>
+            <div class="accordion--panel">
+               <div class="accordion-content-wrap d-flex">
+                  <form action="" id="location-form">
+                     <div class=" form group cust-form-group">
+                        <div class=" select-dropdown btn-drop-v1 cust-drop-down">
+                           <button class="dropdown-select btn-drop dropdown-toggle w-100 text-left" name="statename"
+                              type="button" data-toggle="dropdown"
+                              data-default-label="${properties.fesstateholder}">${properties.fesstateholder}<span
+                                 class="caret select-span"></span>
+                           </button>
+                           <input type="hidden" required value="" data-validation-msg-req="Select State name"
+                              name="stateNameVal" />
+                           <ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+                              aria-labelledby="stateDropdown" style="">
+                           </ul>
+                           <span class="select-p">${properties.fesstatelabel}</span>
+                        </div>
+                     </div>
+
+                     <div class=" form group cust-form-group mb-0">
+                        <div class=" select-dropdown btn-drop-v1 cust-drop-down">
+                           <button class="dropdown-select btn-drop dropdown-toggle w-100 text-left" type="button"
+                              name="cityname" data-toggle="dropdown" data-default-label="${properties.fescityholder}"
+                              disabled>${properties.fescityholder}<span class="caret select-span"></span>
+                           </button>
+                           <input type="hidden" required value="" data-validation-msg-req="Select City"
+                              name="cityNameVal" />
+                           <ul class="dropdown-menu cust-dropdown-menu campaign-dropdown" aria-labelledby="cityDropdown"
+                              style="">
+                           </ul>
+                           <span class="select-p">${properties.fescitylabel}</span>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+
+         <div class="accordion-card">
+            <div class="accordion--title pe-none">
+               <div class="top--wrap">
+                  <img
+                     src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/dealer-acc3.svg"
+                     alt="">
+
+                  <div class="headers">
+                     <h6>${properties.fesacc3title}</h6>
+                     <p class="grey-text d-none" id="dealer-address"><span></span> <span></span></p>
+                  </div>
+
+               </div>
+
+
+            </div>
+            <div class="accordion--panel" id="dealer-list">
+               <div class="accordion-content-wrap d-flex ">
+                  <div id="dealer-locator-container">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="accordion-card">
+            <div class="accordion--title pe-none">
+               <div class="top--wrap">
+                  <img
+                     src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/contactus.svg"
+                     alt="">
+
+                  <div class="headers">
+                     <h6>${properties.fesacc4title}</h6>
+                     <p class="grey-text d-none"><span></span> <span></span></p>
+                  </div>
+
+               </div>
+
+            </div>
+            <div class="accordion--panel">
+               <div class="accordion-content-wrap d-flex ">
+                  <form action="" id="doc--form">
+                     <div class="form-group cust-form-group  cust-form-control cust-input-padding">
+                        <span class="form-span">${properties.fesnamelabel}</span>
+                        <input type="text" class="form-control campaign-input cust-form-control" id="name"
+                           data-validation-msg-req="${properties.fesnameerror}"
+                           data-validation-msg-format="${properties.fesnameformat}" required
+                           placeholder="${properties.fesnamepholder}" name="fullname">
+                     </div>
+
+                     <div class="form-group cust-form-group">
+                        <span class="form-span">${properties.fesmobilelabel}</span>
+                        <input type="tel" class="form-control campaign-input cust-form-control mobile-number"
+                           id="number" data-validation-msg-req="${properties.fesmobileerror}"
+                           data-validation-msg-format="${properties.fesmobileformat}" required
+                           placeholder="${properties.fesmobilepholder}" name="mobileno"
+                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                           maxlength="10">
+                        <a href="javascript:void(0)" aa-data-attr="track_cta"
+                           class="test-drive-otp-link send-otp-btn">${properties.fesotpcta}</a>
+                     </div>
+
+                     <div class="form-group cust-form-group otp-form d-none">
+                        <span class="form-span">${properties.fesotplabel}</span>
+                        <input type="tel" class="form-control cust-form-control otp-value" required=""
+                           placeholder="${properties.fesotppholder}" data-validation-msg-req="${properties.fesotperror}"
+                           name="otp"
+                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                           maxlength="6">
+                        <label class="invalid-otp-message">${properties.fesotpinvalid}</label>
+                     </div>
+
+                     <div class="form-group cust-form-group otp-form">
+                        <span class="form-span">${properties.fesemaillabel}</span>
+                        <input type="tel" class="form-control cust-form-control otp-value" required=""
+                           placeholder="${properties.fesemailpholder}"
+                           data-validation-msg-req="${properties.fesemailerror}" name="email">
+                     </div>
+                     <input type="hidden" value="${properties.variationtype}" name="pageType" />
+                     <input type="hidden" value="${properties.modelName}" name="modelName" />
+                     <input type="hidden" value="${properties.defaultproduct || currentPage.path}" name="productpath" />
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="campaign--footer ">
+            <div class="checkbox--wrap">
+               <div class="control-group">
+                  <label class="control control-checkbox">
+                     ${properties.feschecktext @context= 'html'}
+                     <input type="checkbox" id="festpaynowcheck" />
+                     <div class="control_indicator"></div>
+                  </label>
+               </div>
+            </div>
+
+            <input disabled type="button" class="campaign-btn btn-red-gradient btn w-100" id="fest-sub-btn"
+               value="${properties.fesctalabel}" name="submit" />
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

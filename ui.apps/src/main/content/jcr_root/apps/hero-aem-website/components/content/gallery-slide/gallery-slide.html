@@ -1,0 +1,269 @@
+<sly data-sly-test="${(wcmmode.edit || wcmmode.design) && !listUse }" class="author-note">
+    ${'Edit {0} Component' @ format=[component.title], i18n}
+</sly>
+<sly data-sly-use.listUse="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='slides'}" data-sly-test="${properties.gallerytype != 'videogallery' }">
+    <div class="gallary-container">
+        <div class="gallary-wrapper">
+            <div class="gallary-carousel" id="gallery-slider">
+                <sly data-sly-list=${listUse}>
+                    <div class="gallery-slide">
+                        <div class="multi-img" data-sly-test="${item.properties.midimgcarousel != '1'}">
+                            <a class="gallery-slide-first" loading="lazy" href="${item.properties.firstimgurlpopup}"
+                                data-modal-index="${item.properties.dataindex0}">
+                                <img src="${item.properties.firstimgurl}" class="d-lg-block d-none ml-0" />
+                                <img src="${item.properties.firstimgurlmobile ? item.properties.firstimgurlmobile : item.properties.firstimgurl }"
+                                    class="d-lg-none d-block" />
+                            </a>
+                            <div class="gallery-slide-second">
+                                <a class="slide-mob slide-mob-first" loading="lazy"
+                                    href="${item.properties.imgurlpopup}"
+                                    data-modal-index="${item.properties.dataindex1}"><img
+                                        src="${item.properties.imgurl}" /></a>
+                                <a class="slide-mob slide-mob-second_1" loading="lazy"
+                                    href="${item.properties.imgurl2popup}"
+                                    data-modal-index="${item.properties.dataindex2}"><img
+                                        src="${item.properties.imgurl2}" /></a>
+                            </div>
+                            <div class="gallery-slide-third">
+                                <a class="slide-mob" loading="lazy" href="${item.properties.imgurl3popup}"
+                                    data-modal-index="${item.properties.dataindex3}"><img class="mr-lg-0"
+                                        src="${item.properties.imgurl3}" /></a>
+                                <a class="slide-mob mr-lg-0" loading="lazy" href="${item.properties.imgurl4popup}"
+                                    data-modal-index="${item.properties.dataindex4}"><img class="mr-lg-0"
+                                        src="${item.properties.imgurl4}" /></a>
+                            </div>
+                        </div>
+                        <div class="multi-img" data-sly-test="${item.properties.midimgcarousel == '1'}">
+                            <div class="gallery-slide-second">
+                                <a class="slide-mob slide-mob-first" loading="lazy"
+                                    href="${item.properties.imgurlpopup}"
+                                    data-modal-index="${item.properties.dataindex1}"><img class="ml-lg-0"
+                                        src="${item.properties.imgurl}" /></a>
+                                <a class="slide-mob slide-mob-second" loading="lazy"
+                                    href="${item.properties.imgurl2popup}"
+                                    data-modal-index="${item.properties.dataindex2}"><img class="ml-lg-0"
+                                        src="${item.properties.imgurl2}" /></a>
+                            </div>
+                            <a class="gallery-slide-first" loading="lazy" href="${item.properties.firstimgurlpopup}"
+                                data-modal-index="${item.properties.dataindex0}">
+                                <img src="${item.properties.firstimgurl}" class="d-lg-block d-none" />
+                                <img src="${item.properties.firstimgurlmobile ? item.properties.firstimgurlmobile : item.properties.firstimgurl}"
+                                    class="d-lg-none d-block" />
+                            </a>
+                            <div class="gallery-slide-third">
+                                <a class="slide-mob" loading="lazy" href="${item.properties.imgurl3popup}"
+                                    data-modal-index="${item.properties.dataindex3}"><img class="mr-lg-0"
+                                        src="${item.properties.imgurl3}" /></a>
+                                <a class="slide-mob" loading="lazy" href="${item.properties.imgurl4popup}"
+                                    data-modal-index="${item.properties.dataindex4}"><img class="mr-lg-0"
+                                        src="${item.properties.imgurl4}" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </sly>
+            </div>
+        </div>
+    </div>
+</sly>
+
+<div class="modal modal-landscape" id="fullscreenGallery" tabindex="-1" role="dialog" aria-hidden="true"
+    data-backdrop="static" aria-labelledby="galleryImage">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="gallary-carousel-mobile">
+                    <sly data-sly-list.parent="${resource.children}">
+                        <sly data-sly-test="${parent.name == 'slides'}">
+                            <sly data-sly-list.child="${parent.children}">
+                                <div class="gallary-carousel-mobile-slide">
+                                    <div class="gallary-carousel-mobile-image">
+                                        <span class="fullscreen-button">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/fullscreen-icon.svg" />
+                                        </span>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/gallery-close-icon.svg" />
+                                        </button>
+                                        <img src="${child.firstimgurlpopup}" alt="" class="popup-img" />
+                                        <span class="gallery-download-link"><img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/download-icon.svg"></span>
+                                    </div>
+                                </div>
+                                <div class="gallary-carousel-mobile-slide">
+                                    <div class="gallary-carousel-mobile-image">
+                                        <span class="fullscreen-button">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/fullscreen-icon.svg" />
+                                        </span>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/gallery-close-icon.svg" />
+                                        </button>
+                                        <img src="${child.imgurlpopup}" alt="" class="popup-img" />
+                                        <span class="gallery-download-link"><img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/download-icon.svg"></span>
+                                    </div>
+                                </div>
+                                <div class="gallary-carousel-mobile-slide">
+                                    <div class="gallary-carousel-mobile-image">
+                                        <span class="fullscreen-button">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/fullscreen-icon.svg" />
+                                        </span>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/gallery-close-icon.svg" />
+                                        </button>
+                                        <img src="${child.imgurl2popup}" alt="" class="popup-img" />
+                                        <span class="gallery-download-link"><img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/download-icon.svg"></span>
+                                    </div>
+                                </div>
+                                <div class="gallary-carousel-mobile-slide">
+                                    <div class="gallary-carousel-mobile-image">
+                                        <span class="fullscreen-button">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/fullscreen-icon.svg" />
+                                        </span>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/gallery-close-icon.svg" />
+                                        </button>
+                                        <img src="${child.imgurl3popup}" alt="" class="popup-img" />
+                                        <span class="gallery-download-link"><img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/download-icon.svg"></span>
+                                    </div>
+                                </div>
+                                <div class="gallary-carousel-mobile-slide">
+                                    <div class="gallary-carousel-mobile-image">
+                                        <span class="fullscreen-button">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/fullscreen-icon.svg" />
+                                        </span>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/gallery-close-icon.svg" />
+                                        </button>
+                                        <img src="${child.imgurl4popup}" alt="" class="popup-img" />
+                                        <span class="gallery-download-link"><img
+                                                src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/download-icon.svg"></span>
+                                    </div>
+                                </div>
+                            </sly>
+                        </sly>
+                    </sly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<sly data-sly-use.listUse="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='slides'}" data-sly-test="${properties.gallerytype != 'imagegallery' }">
+    <div class="gallary-container">
+        <div class="gallary-wrapper">
+            <div class="gallary-carousel" id="video-slider">
+                <sly data-sly-list=${listUse}>
+                    <div class="gallery-slide">
+                        <div class="multi-img" data-sly-test="${item.properties.midimgcarousel != '1'}">
+                            <a class="gallery-slide-first custom-cvg-popup" loading="lazy"
+                                href="${item.properties.youtubeurl1}">
+                                <img src="${item.properties.firstimgurl}" class="d-lg-block d-none ml-0" />
+                                <img src="${item.properties.firstimgurlmobile ? item.properties.firstimgurlmobile : item.properties.firstimgurl }"
+                                    class="d-lg-none d-block" />
+                                <div class="play-icon-video">
+                                    <img class="VG-play-button"
+                                        src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                </div>
+                            </a>
+                            <div class="gallery-slide-second">
+                                <a class="slide-mob slide-mob-first custom-cvg-popup" loading="lazy"
+                                    href="${item.properties.youtubeurl2}">
+                                    <img src="${item.properties.imgurl}" />
+                                    <div class="play-icon-video">
+                                        <img class="VG-play-button"
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                    </div>
+                                </a>
+                                <a class="slide-mob slide-mob-second_1 custom-cvg-popup" loading="lazy"
+                                    href="${item.properties.youtubeurl3}">
+                                    <img src="${item.properties.imgurl2}" />
+                                    <div class="play-icon-video">
+                                        <img class="VG-play-button"
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="gallery-slide-third">
+                                <a class="slide-mob slide-mob-first2 custom-cvg-popup" loading="lazy"
+                                    href="${item.properties.youtubeurl4}">
+                                    <img class="mr-lg-0" src="${item.properties.imgurl3}" />
+                                    <div class="play-icon-video">
+                                        <img class="VG-play-button"
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                    </div>
+                                </a>
+                                <a class="slide-mob slide-mob-second_2 mr-lg-0 custom-cvg-popup" loading="lazy"
+                                    href="${item.properties.youtubeurl5}">
+                                    <img class="mr-lg-0" src="${item.properties.imgurl4}" />
+                                    <div class="play-icon-video">
+                                        <img class="VG-play-button"
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="multi-img" data-sly-test="${item.properties.midimgcarousel == '1'}">
+                            <div class="gallery-slide-second">
+                                <a class="slide-mob slide-mob-first custom-cvg-popup" loading="lazy"
+                                    href="${item.properties.youtubeurl2}">
+                                    <img class="ml-lg-0" src="${item.properties.imgurl}" />
+                                    <div class="play-icon-video">
+                                        <img class="VG-play-button"
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                    </div>
+                                </a>
+                                <a class="slide-mob slide-mob-second custom-cvg-popup" loading="lazy"
+                                    href="${item.properties.youtubeurl3}">
+                                    <img class="ml-lg-0" src="${item.properties.imgurl2}" />
+                                    <div class="play-icon-video">
+                                        <img class="VG-play-button"
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="gallery-slide-first custom-cvg-popup" loading="lazy"
+                                href="${item.properties.youtubeurl1}">
+                                <img src="${item.properties.firstimgurl}" class="d-lg-block d-none" />
+                                <img src="${item.properties.firstimgurlmobile ? item.properties.firstimgurlmobile : item.properties.firstimgurl}"
+                                    class="d-lg-none d-block" />
+                                <div class="play-icon-video">
+                                    <img class="VG-play-button"
+                                        src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                </div>
+                            </a>
+                            <div class="gallery-slide-third">
+                                <a class="slide-mob slide-mob-first2 custom-cvg-popup" loading="lazy"
+                                    href="${item.properties.youtubeurl4}">
+                                    <img class="mr-lg-0" src="${item.properties.imgurl3}" />
+                                    <div class="play-icon-video">
+                                        <img class="VG-play-button"
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                    </div>
+                                </a>
+                                <a class="slide-mob slide-mob-second_2 custom-cvg-popup" loading="lazy"
+                                    href="${item.properties.youtubeurl5}">
+                                    <img class="mr-lg-0" src="${item.properties.imgurl4}" />
+                                    <div class="play-icon-video">
+                                        <img class="VG-play-button"
+                                            src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/Videoplayicon.svg">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </sly>
+            </div>
+        </div>
+    </div>
+</sly>

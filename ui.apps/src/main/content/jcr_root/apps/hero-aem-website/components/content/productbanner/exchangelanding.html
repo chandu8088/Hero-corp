@@ -1,0 +1,121 @@
+<div class="exchange-banner" data-sly-test="${properties.variation == 'exchangelanding'}">
+    <div class="exchange-banner-bg" >
+        <picture class="position-absolute landing-bg-image">
+            <img src="${properties.backgroundbanner @ context='uri'}" class="d-md-block d-none exchg-banner-desk-img" alt="">
+            <img src="${properties.backgroundmobbanner @ context='uri'}" alt="" class="d-md-none d-block exchg-banner-mob-img">
+        </picture>
+        <div class="exchange-form">
+            <input type="radio" class="ex-form-tab-toggle" name="ex-form-tab-toggle" id="tab1" checked>
+            <input type="radio" class="ex-form-tab-toggle" name="ex-form-tab-toggle" id="tab2">
+            <ul class="ex-form-heading ex-form-tab-list">
+                <li class="ex-form-tab-item">
+                    <label class="ex-form-tab-trigger" for="tab1">${properties.newtabtitle}</label>
+                </li>
+                <li class="ex-form-tab-item">
+                    <label class="ex-form-tab-trigger" for="tab2">${properties.existtabtitle}</label>
+                </li>
+            </ul>
+
+            <div class="ex-form-tab-container">
+                <div class="ex-form-tab-content">
+                    <div class="ex-form-subhead-label">${properties.newtabheadtext @ context ='html'}</div>
+                    <div class="d-flex justify-content-center ex-options-wrap">
+                        <div class="d-flex ex-new-options">
+                            <input id="scooter" class="landing-options" type="radio" name="radio" value="${properties.newtabscootertitle}" data-component-relativePath="/content/hero-aem-website/in/en-in/exchange/exchange-form.html">
+                            <label class="text-center m-auto" for="scooter"><img
+                                    src="${properties.newtabscootericon ? properties.newtabscootericon : '/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/exchange-scooter-icon.png'}"
+                                    class="mx-auto mb-1 ex-scooter-icon"
+                                    alt="step 1 scooter">${properties.newtabscootertitle}</label>
+                        </div>
+                        <div class="d-flex ex-new-options">
+                            <input id="bike" class="landing-options" type="radio" name="radio" value="${properties.newtabmototitle}" data-component-relativePath="/content/hero-aem-website/in/en-in/exchange/exchange-form.html">
+                            <label class="text-center m-auto" for="bike"><img
+                                    src="${properties.newtabmotoicon ? properties.newtabmotoicon : '/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/exchange-bike-icon.png'}"
+                                    class="mx-auto mb-1 ex-bike-icon"
+                                    alt="bike icon">${properties.newtabmototitle}</label>
+                        </div>
+                        <div class="d-flex ex-new-options">
+                            <input id="moped" class="landing-options" type="radio" name="radio" value="${properties.newtabmopedtitle}" data-component-relativePath="/content/hero-aem-website/in/en-in/exchange/exchange-form.html">
+                            <label class="text-center m-auto" for="moped"><img
+                                    src="${properties.newtabmopedicon ? properties.newtabmopedicon : '/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/exchange-moped-icon.png'}"
+                                    class="mx-auto mb-1 ex-bike-icon"
+                                    alt="bike icon">${properties.newtabmopedtitle}</label>
+                        </div>
+                    </div>
+                    <div class="landing-tips-wrapper" data-sly-use.vtbottom="${'/apps/hero-aem-website/utils/multifieldhelper.js' @ multifieldName='vtbottommulti'}"
+                    data-sly-list="${vtbottom}">
+                        <div class="hidden ex-bulb-wrap mb-1"><img
+                            src="${properties.newtabbottomicon ? properties.newtabbottomicon : '/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/exchange-bulb-icon.png'}"
+                            class="ex-bulb-icon" alt="bike icon">
+                        <div class="ex-bulb-text">${item.properties.vtbottomnote @ context ='html'}</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="ex-form-tab-content addressPan">
+                    <div class="ex-form-subhead-label">${properties.existtabheadtext @ context ='html'}</div>
+                    <form action="" class="suggestions-form" autocomplete="off" id="exchangeLoginForms">
+                        <div class="form--wrap">
+                            <div class="form-group cust-form-group position-relative">
+                                <span class="form-span exchange-span">${properties.existmobtitle}<sup>*</sup></span>
+                                <input type="tel" class="form-control campaign-input cust-form-control mobile-number "
+                                    id="mobnumber" required placeholder="${properties.mobileplaceholder}"
+                                    name="mobileno"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                    maxlength="10" data-validation-msg-format="Please enter valid mobile number">
+                                <a href="" class="position-absolute d-none" id="send-otp">Send OTP</a>
+                                <p class="otp--sent d-none">${properties.sentOtpPremia}</p>
+                                <div id="timer"></div>
+                                <label class="exchg-landing-err-mobile" style="display: none;">This mobile number is not registered in our database</label>
+                                <label class="exchg-landing-fail-mobile" style="display: none;">Server down. Please try again later</label>
+                                <label class="exchg-landing-success-mobile" style="display: none;">OTP sent successfully to your mobile no.</label>
+                                <!-- <span class="error--message">Required</span>
+                                <span class="validate--msg">Invalid Number</span> -->
+                            </div>
+                        </div>
+
+                        <div class="form--wrap" class="otp-form-wrap">
+                            <div class="form-group cust-form-group">
+                                <span class="form-span exchange-span">${properties.existotptitle}</span>
+                                <input type="tel" class="form-control campaign-input cust-form-control mobile-number otp-field "
+                                    required id="otpnumber" name="otp" placeholder="${properties.otpplaceholdertext}"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                    maxlength="6" data-validation-msg-format="Please enter valid mobile otp">
+                                <!-- <label class="exchg-landing-err-otp" style="display: none;">Please enter valid mobile otp</label> -->
+                                <p class="valid__otp d-none">
+                                    Valid OTP
+                                </p>
+                                <p class="invalid__otp d-none">
+                                    Invalid OTP
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form--wrap">
+                            <div class="form-group">
+                                <label class="form-checkbox-wrap ex-form-updates-label cust-form-group mb-0">${properties.checkbox1text @
+                                    context ='html'}
+                                    <input type="checkbox" id="exLoginWhatsapp" name="whatsapp">
+                                    <span class="form-checkbox-mark"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form--wrap">
+                            <label class="form-checkbox-wrap ex-form-updates-label mb-1 cust-form-group">${properties.checkbox2text @
+                                context ='html'}
+                                <input type="checkbox" checked="checked" id="exLoginAgree" name="agreement" required>
+                                <span class="form-checkbox-mark"></span>
+                            </label>
+                        </div>
+
+                        <div class="form--wrap">
+                            <input type="button" class="campaign-btn btn-red-gradient btn w-100 book-test-submit exchg-disable-login"
+                                id="campaign-sub-btn" value="SUBMIT" name="submit" data-component-relativePath="/content/hero-aem-website/in/en-in/exchange/exchange-form.html"/>
+                        </div>
+                        <div class="ex-form-cta-label">${properties.existbottomtext @ context ='html'}</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

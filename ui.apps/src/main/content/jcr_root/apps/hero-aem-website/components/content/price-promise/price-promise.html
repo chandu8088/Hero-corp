@@ -1,0 +1,351 @@
+<div id="price-promise" data-csvpath="${properties.csvPath}">
+	<div class="pp-container d-flex">
+		<div class="price-promise-top-wrap">
+			<p>
+				${properties.ppheadline}
+			</p>
+			<div class="form-comp-wrap w-100">
+				<form id="pp--form-wrap" class="d-flex addressPan">
+					<div class="form--wrap">
+						<div class=" form group cust-form-group">
+							<div class=" select-dropdown btn-drop-v1 cust-drop-down">
+								<button class="dropdown-select btn-drop  btn-primary  dropdown-toggle w-100 text-left"
+									name="statename" type="button" data-toggle="dropdown"
+									data-default-label="Select Your State">
+									<!-- ${properties.statelabel} --> Select Your State
+									<span class="caret select-span"></span>
+								</button>
+								<input type="hidden" required value=""
+									data-validation-msg-req="${properties.statevalmsg}" name="stateNameVal" />
+								<ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+									aria-labelledby="stateDropdown" style="">
+								</ul>
+								<span class="select-p"> Select State
+									<!-- ${properties.statelabel} -->
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="form--wrap">
+						<div class=" form group cust-form-group">
+							<div class=" select-dropdown btn-drop-v1 cust-drop-down">
+								<button class="dropdown-select btn-drop  btn-primary dropdown-toggle w-100 text-left"
+									type="button" name="cityname" data-toggle="dropdown"
+									data-default-label="Select Your City">
+									Select Your City
+									<span class="caret select-span"></span>
+								</button>
+								<input type="hidden" required value=""
+									data-validation-msg-req="${properties.cityvalmsg}" name="cityNameVal" />
+								<ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+									aria-labelledby="cityDropdown" style="">
+								</ul>
+								<span class="select-p">Select City</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="form--wrap">
+						<div class=" form group cust-form-group">
+							<div class=" select-dropdown btn-drop-v1 cust-drop-down">
+								<button class="dropdown-select btn-drop  btn-primary  dropdown-toggle w-100 text-left"
+									name="dealername" type="button" data-toggle="dropdown"
+									data-default-label="Select Your Dealer">
+									Select Your Dealer
+									<span class="caret select-span"></span>
+								</button>
+								<input type="hidden" id="dealer" required value=""
+									data-validation-msg-req="${properties.dealervalmsg}" name="dealerNameVal" />
+								<ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+									aria-labelledby="dealerDropdown" style="">
+								</ul>
+								<span class="select-p">
+									Select Dealer
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="form--wrap">
+						<div class="form group cust-form-group">
+							<div class=" select-dropdown btn-drop-v1 cust-drop-down">
+								<button class="dropdown-select btn-drop  btn-primary  dropdown-toggle w-100 text-left"
+									name="vehiclename" type="button" data-toggle="dropdown"
+									data-default-label="Select Your Vehicle Model">
+									Select Your Vehicle Model<span class="caret select-span"></span>
+								</button>
+								<input type="hidden" value="" name="vehicleModelNameVal" />
+								<ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+									aria-labelledby="vehiclemodelDropdown" style="" id="vehicle-dropdown">
+									<sly data-sly-list.parent="${resource.children}">
+										<sly data-sly-test="${parent.name == 'products'}">
+											<sly data-sly-list.children="${parent.children}">
+												<li class="font-montserrat-regular font-weight-500"
+													value="${children.vehicleName}">
+													<a href="javascript:void(0)">${children.vehicleName}</a>
+												</li>
+											</sly>
+										</sly>
+									</sly>
+									<!-- <li class="font-montserrat-regular font-weight-500" value="Paid Without Oil">
+										<a href="javascript:void(0)">Destini 125</a>
+									</li> -->
+								</ul>
+								<span class="select-p">Select Vehicle Model</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="form--wrap">
+						<div class="form group cust-form-group">
+							<div class=" select-dropdown btn-drop-v1 cust-drop-down">
+								<button class="dropdown-select btn-drop  btn-primary  dropdown-toggle w-100 text-left"
+									name="nos" type="button" data-toggle="dropdown"
+									data-default-label="Select Nature of Service">Select Nature of Service<span
+										class="caret select-span" id="nature-of-service"></span>
+								</button>
+								<input type="hidden" value="" name="nosNameVal" />
+								<ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+									aria-labelledby="tosDropdown" style="">
+									<li class="font-montserrat-regular font-weight-500" value="Paid Service">
+										<a href="javascript:void(0)">Paid Service</a>
+									</li>
+									<li class="font-montserrat-regular font-weight-500" value="FSC">
+										<a href="javascript:void(0)">Free Service</a>
+									</li>
+								</ul>
+								<span class="select-p">Nature of Service</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="form--wrap">
+						<div class="form group cust-form-group">
+							<div class=" select-dropdown btn-drop-v1 cust-drop-down">
+								<button class="dropdown-select btn-drop  btn-primary  dropdown-toggle w-100 text-left"
+									name="tos" type="button" data-toggle="dropdown" id="type-of-service"
+									data-default-label="Select Type of Service" disabled>
+									Select Type of Service
+									<span class="caret select-span"></span>
+								</button>
+								<input type="hidden" value="" name="tosNameVal" />
+								<ul class="dropdown-menu cust-dropdown-menu campaign-dropdown"
+									aria-labelledby="tosDropdown" style="">
+									<li class="font-montserrat-regular font-weight-500 Paid_Service d-none"
+										value="Paid With Oil">
+										<a href="javascript:void(0)">Paid With Oil</a>
+									</li>
+									<li class="font-montserrat-regular font-weight-500 Paid_Service d-none"
+										value="Paid Without Oil">
+										<a href="javascript:void(0)">Paid Without Oil</a>
+									</li>
+									<li class="font-montserrat-regular font-weight-500 Free_Service d-none"
+										value="FSC1">
+										<a href="javascript:void(0)">First Free Service</a>
+									</li>
+									<li class="font-montserrat-regular font-weight-500 Free_Service d-none"
+										value="FSC2">
+										<a href="javascript:void(0)">Second Free Service</a>
+									</li>
+									<li class="font-montserrat-regular font-weight-500 Free_Service d-none"
+										value="FSC3">
+										<a href="javascript:void(0)">Third Free Service</a>
+									</li>
+									<li class="font-montserrat-regular font-weight-500 Free_Service d-none"
+										value="FSC4">
+										<a href="javascript:void(0)">Fourth Free Service</a>
+									</li>
+									<li class="font-montserrat-regular font-weight-500 Free_Service d-none"
+										value="FSC5">
+										<a href="javascript:void(0)">Fifth Free Service</a>
+									</li>
+								</ul>
+								<span class="select-p">Type of Service</span>
+							</div>
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<input type="button" class="campaign-btn btn-red-gradient btn owner-manual-search btn-disabled"
+				id="pp-search-btn" value="search" name="search">
+		</div>
+	</div>
+</div>
+
+<div class="spare-section d-none">
+	<div class="amount-breakup">
+		<div class="break-up-header">
+			<img src="/content/dam/hero-aem-website/price-promise/Frame1410117014.svg">
+			Amount Break-up
+		</div>
+		<div id="price-promise-ab">
+			<div class="pp-accordion-container">
+				<div class="pp-parts-accordion">
+					<div class="accordion-card d-none" id="Parts">
+						<div class="accordion--title">
+							<img src="/content/dam/hero-aem-website/price-promise/fluent_search-20-regular.svg" />Parts
+							<div data-toggle="tooltip" data-placement="top" title="Select the Recommended Parts">
+								<img src="/content/dam/hero-aem-website/price-promise/Group33689.svg" />
+							</div>
+						</div>
+						<div class="accordion--list"></div>
+					</div>
+
+					<div class="accordion-card d-none" id="Labour">
+						<div class="accordion--title">
+							<img src="/content/dam/hero-aem-website/price-promise/fluent_search-20-regular.svg">Labour
+							<div data-toggle="tooltip" data-placement="top" title="Select the Recommended Services">
+								<img src="/content/dam/hero-aem-website/price-promise/Group33689.svg" />
+							</div>
+						</div>
+						<div class="accordion--list"></div>
+					</div>
+
+					<div class="accordion-card d-none" id="Add-On-Parts">
+						<div class="accordion--title">
+							<img src="/content/dam/hero-aem-website/price-promise/fluent_search-20-regular.svg">
+							Add-On Parts
+							<div data-toggle="tooltip" data-placement="top"
+								title="Select the Additional Recommended Parts">
+								<img src="/content/dam/hero-aem-website/price-promise/Group33689.svg" />
+							</div>
+						</div>
+						<div class="add-on-parts accordion--list">
+						</div>
+					</div>
+
+					<div class="accordion-card d-none" id="Value-Add-Services">
+						<div class="accordion--title">
+							<img src="/content/dam/hero-aem-website/price-promise/fluent_search-20-regular.svg" />
+							Value-Add Services
+							<div data-toggle="tooltip" data-placement="top" title="Select the Value Added Services">
+								<img src="/content/dam/hero-aem-website/price-promise/Group33689.svg" />
+							</div>
+						</div>
+						<div class="value-add-services accordion--list">
+							<!-- <sly data-sly-list.parent="${resource.children}">
+								<sly data-sly-test="${parent.name == 'prices'}">
+									<sly data-sly-list.children="${parent.children}">
+										<div class="accordion--panel">
+											<div class="accordion-content-wrap">
+												<div class="checkbox--wrap">
+													<div class="control-group">
+														<label class="control control-checkbox">
+															${children.description}
+															<input type="checkbox"
+																data-amt-target="add-services-${childrenList.index}" />
+															<div class="control_indicator"></div>
+														</label>
+													</div>
+												</div>
+												<div class="pp-cost">₹ <span>${children.prices}</span></div>
+											</div>
+										</div>
+									</sly>
+								</sly>
+							</sly> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="bookinglist-toggle-button bookinglist-toggle-button-top d-lg-none">
+		<img src="/etc.clientlibs/hero-aem-website/clientlibs/clientlib-site/resources/images/icons/select-icon.svg" alt="arrow" width="15px" height="15px"/>
+	</div>
+	<div class="total-amount-section mobile-total-amount-section">
+		<div class="pp-bike-details">
+			<div class="pp-description-container">
+				<!-- <div>
+					<img src="http://via.placeholder.com/139x83" alt="" class="pp-description-img" />
+				</div> -->
+				<div class="pp-description-text">
+					<h2 class="pp-description-text-bikename h4-bold-heading-std">HERO Splendor + </h2>
+					<p class="b1-text-std">Check your estimated price for service
+						and maintenance below.</p>
+				</div>
+			</div>
+			<div class="pp-total-container">
+				<div class="pp-total-amount">
+					<div>
+						<p class="h5-bold-heading-std">Estimated service cost</p>
+						<p class="total-amount h3-heavy-heading-std">₹ <span>0.00</span></p>
+					</div>
+					<div>
+						<a href="${properties.buttonCta}" class="pp-bookservice-btn btn disabled"
+							data-sly-test="${properties.buttonname}">
+							${properties.buttonname}
+						</a>
+					</div>
+				</div>
+				<div class="spare-parts-list">
+					<div class="checkbox--wrap termscondition termscondition-shadow">
+						<div class="control-group">
+							<label class="control control-checkbox">
+								${properties.termsconditionlabel @context='html'}
+								<input type="checkbox" />
+								<div class="control_indicator"></div>
+							</label>
+						</div>
+					</div>
+					<div class="pp-total-amount-summary d-none" id="pp-total-Value-Add-Services-list">
+						<p class="b2-text-std summary-color">Value-Add Services</p>
+						<div class="value-services accordion--list">
+							<!-- <sly data-sly-list.parent="${resource.children}">
+								<sly data-sly-test="${parent.name == 'prices'}">
+									<sly data-sly-list.children="${parent.children}">
+										<div class="pp-total-amount-summary-text d-none"
+											id="add-services-${childrenList.index}">
+											<p class="pp-total-amount-summary-label b1-bold-text-std">
+												${children.description}</p>
+											<p class="pp-total-amount-summary-amount b1-bold-text-std">₹
+												<span>${children.prices}</span>
+											</p>
+										</div>
+									</sly>
+								</sly>
+							</sly> -->
+						</div>
+					</div>
+					<div class="pp-total-amount-summary d-none" id="pp-total-Parts-list">
+						<p class="b2-text-std summary-color">Parts</p>
+						<div class="accordion--list"></div>
+					</div>
+					<div class="pp-total-amount-summary d-none" id="pp-total-Labour-list">
+						<p class="b2-text-std summary-color">Labour</p>
+						<div class="accordion--list"></div>
+					</div>
+					<div class="pp-total-amount-summary d-none" id="pp-total-Add-On-Parts-list">
+						<p class="b2-text-std summary-color">Add-On Parts</p>
+						<div class="addon-parts accordion--list">
+						</div>
+					</div>
+					<div class="pp-total-amount-summary d-none" id="pp-total-Price-list">
+						<div class="pp-total-amount-summary-text mb-0">
+							<p class="pp-total-amount-summary-label h4-heavy-heading-std">Total</p>
+							<p class="pp-total-amount-summary-amount h4-heavy-heading-std">₹ <span>0.00</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="pp-terms-condition-container">
+					${properties.termscondition @context='html'}
+					<!-- <h4 class="mb-3 h4-bold-heading-std">Terms & Conditions</h4>
+					<ul class="b2-text-std">
+						<li>Prices of Spare Parts and labour listed are without GST.</li>
+						<li>State specific taxes are not included in the calculations.</li>
+						<li>Prices are subject to change without prior notice.</li>
+						<li>For the models where the Service Cost is not shown, contact your nearest HMCL authorized
+							workshops.</li>
+						<li>Service Cost is based on the Two wheeler model variant, service interval, mileage and city
+							selected by you. Please select the correct details.</li>
+						<li>Consumables (e.g. Washing Liquid & Polish ) are not included in the cost and will be charged
+							separately.</li>
+					</ul> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

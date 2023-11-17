@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <hero-aem-website jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <content jcr:primaryType="nt:unstructured">
+                <image jcr:primaryType="nt:unstructured">
+                    <policy_651483963895698
+                        jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Image"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[320,480,600,800,1024,1200,1440]"
+                        allowUpload="false"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableAssetDelivery="true"
+                        isDecorative="false"
+                        jpegQuality="{Long}85"
+                        titleValueFromDAM="true"
+                        uuidDisabled="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <plugins jcr:primaryType="nt:unstructured">
+                            <crop
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <aspectRatios jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Wide Landscape"
+                                        ratio="0.6180"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Landscape"
+                                        ratio="0.8284"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Square"
+                                        ratio="1"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Portrait"
+                                        ratio="1.6180"/>
+                                </aspectRatios>
+                            </crop>
+                            <rotate
+                                jcr:primaryType="nt:unstructured"
+                                features="right"/>
+                            <flip
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                        </plugins>
+                    </policy_651483963895698>
+                </image>
+                <imagespecification jcr:primaryType="nt:unstructured">
+                    <policy_651483963895698
+                        jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Specification Image"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[145,282]"
+                        allowUpload="false"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableAssetDelivery="true"
+                        isDecorative="false"
+                        jpegQuality="{Long}85"
+                        titleValueFromDAM="true"
+                        uuidDisabled="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_651483963895698>
+                </imagespecification>
+                <productbanner jcr:primaryType="nt:unstructured">
+                    <policy_651483963895698
+                        jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Product Banner Image"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[300,414,514,1440]"
+                        allowUpload="false"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableAssetDelivery="true"
+                        isDecorative="false"
+                        jpegQuality="{Long}85"
+                        titleValueFromDAM="true"
+                        uuidDisabled="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_651483963895698>
+                </productbanner>
+                <tileteaser jcr:primaryType="nt:unstructured">
+                    <policy_651483963895698
+                        jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tile Teaser Image"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[190,340,386,475,640]"
+                        allowUpload="false"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableAssetDelivery="true"
+                        isDecorative="false"
+                        jpegQuality="{Long}85"
+                        titleValueFromDAM="true"
+                        uuidDisabled="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_651483963895698>
+                </tileteaser>
+                <adbanner jcr:primaryType="nt:unstructured">
+                    <policy_651483963895698
+                        jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Ad Banner Image"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[190,350]"
+                        allowUpload="false"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableAssetDelivery="true"
+                        isDecorative="false"
+                        jpegQuality="{Long}85"
+                        titleValueFromDAM="true"
+                        uuidDisabled="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_651483963895698>
+                </adbanner>
+                <textimage jcr:primaryType="nt:unstructured">
+                    <policy_651483963895698
+                        jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Text Image"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[190,340,386,475,640]"
+                        allowUpload="false"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableAssetDelivery="true"
+                        isDecorative="false"
+                        jpegQuality="{Long}85"
+                        titleValueFromDAM="true"
+                        uuidDisabled="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_651483963895698>
+                </textimage>
+                <text jcr:primaryType="nt:unstructured">
+                    <policy_641562756958017
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Text"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Quote"
+                                        tag="blockquote"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Preformatted"
+                                        tag="pre"/>
+                                </formats>
+                            </paraformat>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="-">
+                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                    <chars
+                                        jcr:primaryType="nt:unstructured"
+                                        override="true">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;copy;"
+                                            name="copyright"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;euro;"
+                                            name="euro"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;reg;"
+                                            name="registered"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;trade;"
+                                            name="trademark"/>
+                                    </chars>
+                                </specialCharsConfig>
+                            </misctools>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <undo
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="bold,italic"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="modifylink,unlink"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                        </rtePlugins>
+                    </policy_641562756958017>
+                </text>
+                <title jcr:primaryType="nt:unstructured">
+                    <policy_641475696923109
+                        jcr:description="Allows only H1 and disallows links for the main page title."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Title"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="h1"
+                        linkDisabled="true"
+                        type="h1">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_641475696923109>
+                    <policy_641528232375303
+                        jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Title"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        linkDisabled="false"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_641528232375303>
+                </title>
+                <teaser jcr:primaryType="nt:unstructured">
+                    <policy_1575031387650
+                        jcr:description="Sets the title size to H3."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Teaser"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        titleType="h3">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1575031387650>
+                </teaser>
+                <download jcr:primaryType="nt:unstructured">
+                    <policy_1575032193319
+                        jcr:description="Sets the title size to H3."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Download"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowUpload="false"
+                        displayFilename="true"
+                        displayFormat="true"
+                        displaySize="true"
+                        titleType="h3">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1575032193319>
+                </download>
+            </content>
+            <experiencefragment jcr:primaryType="nt:unstructured">
+                <policy_header
+                    cq:styleDefaultElement="header"
+                    jcr:description="Sets a &lt;header> element on the page header experience fragment."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Header"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_header>
+                <policy_footer
+                    cq:styleDefaultElement="footer"
+                    jcr:description="Sets a &lt;footer> element on the page footer experience fragment."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Footer"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_footer>
+            </experiencefragment>
+            <container jcr:primaryType="nt:unstructured">
+                <policy_1574694950110
+                    jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Root"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:Hero MotoCorp - Content,group:Hero MotoCorp - Structure]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575024218483
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="hero-aem-website/components/content/image"/>
+                            <mapping_1575030843388
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="hero-aem-website/components/experiencefragment"/>
+                            <mapping_1575030853128
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="hero-aem-website/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1574694950110>
+                <policy_1574695586800
+                    cq:styleDefaultElement="section"
+                    jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:lastModified="{Date}2022-08-18T09:33:58.799+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Home Page Containers"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="[group:Hero MotoCorp - Content]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="hero-aem-website/components/content/image"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="hero-aem-website/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="hero-aem-website/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Home Page Sections"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="home-main-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795084168"
+                                    cq:styleLabel="Carousel"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="help-offer-main"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795119891"
+                                    cq:styleLabel="Quick Links"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="explore-wrapper-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795121046"
+                                    cq:styleLabel="Explore Products"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="book-test-drive-section pb-4"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795122094"
+                                    cq:styleLabel="Test Ride"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="joyride-main"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795123209"
+                                    cq:styleLabel="History"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="be-hero-main mb-lg-4"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795283944"
+                                    cq:styleLabel="Be a Hero"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="events-section-main common-tabs-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795290818"
+                                    cq:styleLabel="Events"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1574695586800>
+                <policy_649128221558427
+                    cq:styleDefaultElement="main"
+                    jcr:description="Sets a &lt;main> element on the page content area."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Page Main"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:Hero MotoCorp - Content]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_649128221558427>
+                <policy_1575040440977
+                    jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="XF Root"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:Hero MotoCorp - Content,group:Hero MotoCorp - Structure]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575024218483
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="hero-aem-website/components/content/image"/>
+                            <mapping_1575030843388
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="hero-aem-website/components/experiencefragment"/>
+                            <mapping_1575030853128
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="hero-aem-website/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1575040440977>
+                <policy_1660795855600
+                    cq:styleDefaultElement="section"
+                    jcr:lastModified="{Date}2022-08-18T09:51:11.673+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="City Page Containers"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="group:Hero MotoCorp - Content">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="hero-aem-website/components/content/image"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="hero-aem-website/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="hero-aem-website/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Product Page Sections"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="home-main-section city-main-banner-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795084168"
+                                    cq:styleLabel="Carousel"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="bike-rotate-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795119891"
+                                    cq:styleLabel="Bike Rotation"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="splendor-feature-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795121046"
+                                    cq:styleLabel="Feature carousel"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="hero-ride-section grey-bg"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795122094"
+                                    cq:styleLabel="Ad Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="specification-section "
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795123209"
+                                    cq:styleLabel="Specification"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="prise-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795283944"
+                                    cq:styleLabel="Price Data"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="hero-exchange grey-bg"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795290818"
+                                    cq:styleLabel="Bike Exchange"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="emi-section splendor-black-emi"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795941874"
+                                    cq:styleLabel="EMI Section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item8
+                                    cq:styleClasses="compare-bike-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795954617"
+                                    cq:styleLabel="Product compare"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item9
+                                    cq:styleClasses="customer-review-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795962763"
+                                    cq:styleLabel="Customer Reviews"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item10
+                                    cq:styleClasses="book-test-drive-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795969470"
+                                    cq:styleLabel="Book Test Ride"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item11
+                                    cq:styleClasses="eshop-section position-relative"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795975221"
+                                    cq:styleLabel="E Shop Teaser"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item12
+                                    cq:styleClasses="near-you-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795991335"
+                                    cq:styleLabel="Dealer Locator"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1660795855600>
+                <policy_1660796734761
+                    cq:styleDefaultElement="section"
+                    jcr:lastModified="{Date}2022-08-18T10:42:43.341+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="City Plus Page Containers"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="group:Hero MotoCorp - Content">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="hero-aem-website/components/content/image"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="hero-aem-website/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="hero-aem-website/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Product Page Section"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="home-main-section city-bike-banner-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795084168"
+                                    cq:styleLabel="Carousel"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="explore-360-main next-section city-plus-explore-360-main"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795119891"
+                                    cq:styleLabel="360 Rotation"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="features-section-main dark-theme super-spender-plus"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795121046"
+                                    cq:styleLabel="Feature section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="hero-exchange red-theme no-mob-img-hide"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795290818"
+                                    cq:styleLabel="Bike Exchange"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="city-bike-specifications"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795123209"
+                                    cq:styleLabel="Specification"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="prise-section dark-theme"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795283944"
+                                    cq:styleLabel="Price Data"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="hero-exchange red-theme"
+                                    cq:styleId="1660796993324"
+                                    cq:styleLabel="Bike Exchange Red"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="hero-ride-section grey-bg"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795122094"
+                                    cq:styleLabel="Ad Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item8
+                                    cq:styleClasses="emi-section dark-theme splender-plus"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795941874"
+                                    cq:styleLabel="EMI Section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item9
+                                    cq:styleClasses="hero-exchange restart-india red-theme"
+                                    cq:styleId="1660797055151"
+                                    cq:styleLabel="Hero Exchange Restart India"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item10
+                                    cq:styleClasses="customer-review-section dark-theme"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795954617"
+                                    cq:styleLabel="Product compare"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item11
+                                    cq:styleClasses="book-test-drive-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795969470"
+                                    cq:styleLabel="Book Test Ride"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item12
+                                    cq:styleClasses="eshop-section position-relative super-spender-plus"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795975221"
+                                    cq:styleLabel="E Shop Teaser"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item13
+                                    cq:styleClasses="near-you-section dark-theme"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795991335"
+                                    cq:styleLabel="Dealer Locator"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item14
+                                    cq:styleClasses="space-extra"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660796926355"
+                                    cq:styleLabel="Additional Space"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1660796734761>
+                <policy_1660797311225
+                    cq:styleDefaultElement="section"
+                    jcr:lastModified="{Date}2022-08-18T10:11:31.666+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Sports Page Containers"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="group:Hero MotoCorp - Content">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="hero-aem-website/components/content/image"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="hero-aem-website/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="hero-aem-website/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Product Page Section"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="video-hero-section position-relative bg-white"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795084168"
+                                    cq:styleLabel="Hero Section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="bg-dark-2 booking-testRide"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660797646647"
+                                    cq:styleLabel="Carousel Test Ride"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="explore-360-main next-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795119891"
+                                    cq:styleLabel="Bike Rotation"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="features-section-main xtreme-220S"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660797457783"
+                                    cq:styleLabel="Feature Section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="book-test-drive-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795969470"
+                                    cq:styleLabel="Book Test Ride"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="booking-product-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795283944"
+                                    cq:styleLabel="Price Data"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="products-comparison-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795954617"
+                                    cq:styleLabel="Product compare"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="refundable-book-now bg-black py-4 text-white"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795121046"
+                                    cq:styleLabel="Refundable Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item8
+                                    cq:styleClasses="news-n-blogs bg-black"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795962763"
+                                    cq:styleLabel="Customer Reviews"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item9
+                                    cq:styleClasses="near-you-section dark-theme"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795991335"
+                                    cq:styleLabel="Dealer Locator"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1660797311225>
+                <policy_1660797747188
+                    cq:styleDefaultElement="section"
+                    jcr:lastModified="{Date}2022-08-18T10:18:09.678+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Scooter Page Containers"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="group:Hero MotoCorp - Content">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="hero-aem-website/components/content/image"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="hero-aem-website/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="hero-aem-website/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Product Page Section"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="carousel slide"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795084168"
+                                    cq:styleLabel="Carousel"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="explore-360-main next-section scooter-explore-360-main"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795119891"
+                                    cq:styleLabel="Bike Rotation"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="features-section-main scooter-features-main  pleasure-xtech"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795121046"
+                                    cq:styleLabel="Feature carousel"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="scooter-specifications"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795123209"
+                                    cq:styleLabel="Specification"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="hero-exchange yellow-bg"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795122094"
+                                    cq:styleLabel="Ad Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="product-highlighted-features"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660797878212"
+                                    cq:styleLabel="Highlighted Feature"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="carousel slide hero-connect-benefits"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660797917386"
+                                    cq:styleLabel="Hero Connect"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="designed-for-roads"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660797947615"
+                                    cq:styleLabel="Designed for Road"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item8
+                                    cq:styleClasses="prise-section scooter-price-maestro"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795283944"
+                                    cq:styleLabel="Price Data"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item9
+                                    cq:styleClasses="hero-exchange restart-india yellow-bg"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795290818"
+                                    cq:styleLabel="Bike Exchange"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item10
+                                    cq:styleClasses="emi-section emi-scooter-maestro pleasure-plus-xtech"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795941874"
+                                    cq:styleLabel="EMI Section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item11
+                                    cq:styleClasses="compare-bike-section compare-scooter-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795954617"
+                                    cq:styleLabel="Product compare"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item12
+                                    cq:styleClasses="book-test-drive-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795969470"
+                                    cq:styleLabel="Book Test Ride"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item13
+                                    cq:styleClasses="news-n-blogs news-n-blogs-scooter"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795962763"
+                                    cq:styleLabel="Customer Reviews"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item14
+                                    cq:styleClasses="near-you-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795991335"
+                                    cq:styleLabel="Dealer Locator"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item15
+                                    cq:styleClasses="specification-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660655991354"
+                                    cq:styleLabel="City Specification"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1660797747188>
+                <policy_284338206654800
+                    jcr:lastModified="{Date}2022-08-30T22:21:49.023+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Campaign Page Containers"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="group:Hero MotoCorp - Content"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="campaign-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1661878255649"
+                                    cq:styleLabel="Campaign Section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                 <item1
+                                    cq:styleClasses="campaign-thankyou"
+                                    cq:styleElement="div"
+                                    cq:styleId="1661878255234"
+                                    cq:styleLabel="Thankyou Section"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_284338206654800>
+            	<policy_1574695586909
+                    cq:styleDefaultElement="section"
+                    jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:lastModified="{Date}2022-11-02T12:33:24.593+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Static Page Containers"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="[group:Hero MotoCorp - Content]"
+                    layoutDisabled="false">
+                    <jcr:content
+                        jcr:mixinTypes="[]"
+                        jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="image/*"
+                                droptarget="image"
+                                resourceType="hero-aem-website/components/content/image"/>
+                            <mapping_1575030260142
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="content"
+                                assetMimetype="text/html"
+                                droptarget="experiencefragment"
+                                resourceType="hero-aem-website/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                jcr:primaryType="nt:unstructured"
+                                assetGroup="media"
+                                assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                droptarget="contentfragment"
+                                resourceType="hero-aem-website/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Static Page Sections"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="home-main-section city-main-banner-section"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795084168"
+                                    cq:styleLabel="Banner"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="overview"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795122094"
+                                    cq:styleLabel="Vision section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="Mission"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795123209"
+                                    cq:styleLabel="Mission section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="good-life-section text-center text-white white-theme"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795283944"
+                                    cq:styleLabel="Good Life section-values"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="joyride-main py-5 mb-lg-4 mb-4"
+                                    cq:styleElement="section"
+                                    cq:styleId="1660795290818"
+                                    cq:styleLabel="Joy ride section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="be-hero-main py-4 mb-lg-4"
+                                    cq:styleElement="section"
+                                    cq:styleId="1667372503787"
+                                    cq:styleLabel="Be a Hero section"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="who-we-are pt-2"
+                                    cq:styleElement="section"
+                                    cq:styleId="1667372524497"
+                                    cq:styleLabel="Who we are "
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item7
+                                    cq:styleClasses="explore"
+                                    cq:styleElement="section"
+                                    cq:styleId="1667372566750"
+                                    cq:styleLabel="Explore section"
+                                    jcr:primaryType="nt:unstructured"/>
+                               <item8
+                                    cq:styleClasses="profile-chairman"
+                                    cq:styleElement="section"
+                                    cq:styleId="1667372566751"
+                                    cq:styleLabel="Chairman Professional Profile section"
+                                    jcr:primaryType="nt:unstructured"/>
+                              <item9
+                                    cq:styleClasses="chairman-profile"
+                                    cq:styleElement="section"
+                                    cq:styleId="1667372566752"
+                                    cq:styleLabel="Chairman Personal profile section"
+                                    jcr:primaryType="nt:unstructured"/>
+                             <item10
+                                    cq:styleClasses="chairman-timeline"
+                                    cq:styleElement="section"
+                                    cq:styleId="1667372566753"
+                                    cq:styleLabel="Timeline section"
+                                    jcr:primaryType="nt:unstructured"/>
+                             <item11
+                                        cq:styleClasses="category-banner-section"
+                                        cq:styleElement="section"
+                                        cq:styleId="1667372566754"
+                                        cq:styleLabel="Category Banner"
+                                        jcr:primaryType="nt:unstructured"/>
+                             <item12
+                                        cq:styleClasses="book-test-drive-section pb-4"
+                                        cq:styleElement="section"
+                                        cq:styleId="1667372566755"
+                                        cq:styleLabel="Test Ride"
+                                        jcr:primaryType="nt:unstructured"/>
+                             <item13
+                                        cq:styleClasses="near-you-section"
+                                        cq:styleElement="section"
+                                        cq:styleId="1667372566756"
+                                        cq:styleLabel="Dealer Locator"
+                                        jcr:primaryType="nt:unstructured"/>
+                             <item14
+                                        cq:styleClasses="eshop-section position-relative"
+                                        cq:styleElement="section"
+                                        cq:styleId="1660795975221"
+                                        cq:styleLabel="E Shop Teaser"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1574695586909>
+            </container>
+            <structure jcr:primaryType="nt:unstructured">
+                <page jcr:primaryType="nt:unstructured">
+                    <policy
+                        jcr:description="Includes the required client libraries."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generic Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[hero-aem-website.dependencies,hero-aem-website.site,hero-aem-website.authenticatedpages,hero-aem-website.campaign]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy>
+                    <policy_static
+                        jcr:description="Includes the required client libraries."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Static Pages"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[hero-aem-website.dependencies,hero-aem-website.staticpages,hero-aem-website.site,hero-aem-website.authenticatedpages]"
+                        clientlibsAsync="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_static>
+                </page>
+                <productpage jcr:primaryType="nt:unstructured">
+                    <policy_1660799131384
+                        jcr:lastModified="{Date}2022-08-18T10:36:20.971+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="City Plus Page Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[hero-aem-website.dependencies,hero-aem-website.site]"
+                        clientlibsAsync="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1660799131384>
+                    <policy_16687687687
+                        jcr:lastModified="{Date}2022-08-18T10:36:20.971+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Product Page Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[hero-aem-website.dependencies,hero-aem-website.site,hero-aem-website.productpage]"
+                        clientlibsAsync="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_16687687687>
+                </productpage>
+            </structure>
+        </components>
+    </hero-aem-website>
+</jcr:root>

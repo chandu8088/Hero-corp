@@ -1,0 +1,21 @@
+<sly data-sly-test.configuration="${caconfig['com.hero.aem.core.services.caconfigs.PageCaConfig']}"
+     data-sly-use.listUse="${'/apps/hero-aem-website/utils/searchutils.js' @ path=configuration.siteRoot}"
+     data-sly-list="${listUse}">
+    <li class="font-montserrat-regular font-weight-500 " value="${item.name}" data-model-name="${item['jcr:content/pageTitle'] || item['jcr:content/jcr:title']}" data-product-path="${item.path}">
+        <a href="javascript:void(0)">${item['jcr:content/pageTitle'] || item['jcr:content/jcr:title']},${item.parent.parent.name == 'motorcycles' ? item.parent.parent.name : item.parent.name}</a>
+        <sly data-sly-use.nodepath="${'/apps/hero-aem-website/utils/replaceHelper.js' @ path=item.name}"/>
+            <sly data-sly-test.state="${request.requestPathInfo.selectors[1]}" data-sly-test.city="${request.requestPathInfo.selectors[2]}" data-sly-test.parentPath="${['/content/hmc/prices/in',nodepath,state,city] @ join='/'}"
+            data-sly-use.listUse1="${'/apps/hero-aem-website/utils/getdropdownvalues.js' @ parentPath=parentPath}">
+                <sly data-sly-list.price="${listUse1}">
+                    <li class="w-50 px-2 px-lg-0">
+                        <p class="b2-text-std">${price.properties.variant_desc}</p>
+                    </li>
+                    <li class="w-50 px-2 px-lg-3"
+                        data-sly-set.pageconfig="${caconfig['com.hero.aem.core.services.caconfigs.PageCaConfig']}">
+                        <p class="b2-text-std">${pageconfig.currencyUnit} ${price.properties.ex_showroom}</p>
+                    </li>
+                </sly>
+            </sly>
+        </sly>
+    </li>
+</sly>

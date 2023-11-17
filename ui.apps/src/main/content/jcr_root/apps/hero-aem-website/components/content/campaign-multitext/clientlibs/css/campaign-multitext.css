@@ -1,0 +1,189 @@
+#campaign-xoom-container {
+    background-color: #ededed;
+    padding-top: 40px;
+}
+#campaign-xoom-container.student-campaign-variation {
+    padding-top: 0;
+    margin-top: 22px;
+    border: 4px solid rgba(165, 165, 165, 0.1);
+    border-radius: 16px;
+}
+#campaign-xoom-container.student-campaign-variation.festive-campaign-variation {
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    background-color: var(--text-color-white);
+    background-image: linear-gradient(white, white), linear-gradient(180deg, #df7900 0%, #edcc1e 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.camp-xoom-bg {
+    background-color: #ededed !important;
+}
+#campaign-xoom-title {
+    font-size: 42px !important;
+}
+.campaign-xoom-content-wrapper {
+    display: flex;
+    padding: 38px;
+}
+#campaign-xoom-container.student-campaign-variation .campaign-xoom-content-wrapper {
+    padding: 14px 25px;
+    margin: 0 -13px;
+}
+#campaign-xoom-container.student-campaign-variation.festive-campaign-variation .campaign-xoom-content-wrapper {
+    padding: 14px 28px;
+    margin: 0;
+}
+.campaign-xoom-text-wrapper {
+    padding: 0px 21px;
+    text-align: center;
+    width: 25%;
+}
+#campaign-xoom-container.student-campaign-variation .campaign-xoom-text-wrapper {
+    width: 25%;
+    padding: 0 13px;
+}
+.break-line {
+    border: 1px solid #c0c0c0;
+}
+#campaign-xoom-container.student-campaign-variation .break-line {
+    transform: rotate(9.52deg);
+}
+#campaign-xoom-container.festive-campaign-variation .break-line {
+    border: none;
+    background-image: linear-gradient(180deg, #df7900 0%, #edcc1e 100%);
+    width: 1.558px;
+}
+#campaign-xoom-subtitle {
+    padding-bottom: 20px;
+    font-size: 28px !important;
+}
+#campaign-xoom-container.student-campaign-variation #campaign-xoom-subtitle {
+    font-style: italic;
+    padding-bottom: 0;
+    margin-bottom: 11px;
+    font-size: 32px !important;
+    line-height: 48px !important;
+}
+#campaign-xoom-container.student-campaign-variation.festive-campaign-variation #campaign-xoom-subtitle {
+    font-style: normal;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: var(--font-size18) !important;
+    line-height: 24px !important;
+    font-family: var(--font-tstar-medium) !important;
+    font-weight: 400;
+}
+#campaign-xoom-container.student-campaign-variation.festive-campaign-variation .campaign-xoom-content {
+    color: var(--text-color-red);
+    font-style: italic;
+    line-height: var(--line-height-48) !important;
+}
+.break-line:last-child {
+    display: none;
+}
+.font-tstar-regular {
+    font-family: var(--font-tstar-regular) !important;
+}
+.student-campaign-below-text .h3-heavy-heading-std#campaign-xoom-subtitle {
+    font-size: 32px !important;
+    line-height: 48px !important;
+}
+.student-campaign-below-text .student-header-below.h2-heading-std#campaign-xoom-title {
+    font-size: 48px !important;
+    line-height: 58px !important;
+    font-style: italic;
+}
+@media (max-width: 768px) {
+    .campaign-xoom-content-wrapper {
+        flex-direction: column;
+        padding: 0px;
+   }
+    #campaign-xoom-title {
+        font-size: 28px !important;
+   }
+    #campaign-xoom-container {
+        padding: 16px;
+   }
+    .campaign-xoom-text-wrapper {
+        padding: 0px;
+        width: 100%;
+   }
+    #campaign-xoom-subtitle {
+        padding-bottom: 12px;
+        padding-top: 18px;
+        text-align: left !important;
+        font-size: 24px !important;
+   }
+    .student-campaign-variation #campaign-xoom-subtitle {
+        padding-top: 0;
+   }
+    .campaign-xoom-content {
+        padding-bottom: 18px;
+        text-align: left !important;
+   }
+    #campaign-xoom-container.student-campaign-variation {
+        margin-top: 0;
+        border-radius: 0;
+   }
+    #campaign-xoom-container.student-campaign-variation .campaign-xoom-content-wrapper {
+        flex-direction: row;
+        padding: 16px;
+        transform: skewX(-9.52deg);
+        margin: 0;
+   }
+    #campaign-xoom-container.student-campaign-variation #campaign-xoom-subtitle {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        text-align: center !important;
+   }
+    .student-campaign-below-text h4.student-header-below.h2-heading-std#campaign-xoom-title {
+        font-size: 28px !important;
+        line-height: 40px !important;
+   }
+    #campaign-xoom-container.student-campaign-variation .campaign-xoom-content, #campaign-xoom-container.student-campaign-variation .campaign-xoom-text-wrapper p {
+        font-size: 10px !important;
+        line-height: 12px !important;
+        text-align: center !important;
+        padding-bottom: 0 !important;
+   }
+    #campaign-xoom-container.student-campaign-variation .break-line {
+        transform: rotate(0);
+        margin: 0 5.8px;
+   }
+    #campaign-xoom-container.student-campaign-variation {
+        padding: 0;
+   }
+    #campaign-xoom-container.student-campaign-variation .campaign-xoom-text-wrapper {
+        transform: skewX(9.52deg);
+        padding: 0 1px;
+   }
+    #campaign-xoom-container.student-campaign-variation.festive-campaign-variation .campaign-xoom-text-wrapper:nth-child(7) {
+        padding: 0 5px;
+   }
+    .student-campaign-below-text .h3-heavy-heading-std#campaign-xoom-subtitle {
+        font-size: 18px !important;
+        line-height: 24px !important;
+   }
+}
+@media (max-width: 991px) {
+    #campaign-xoom-container.student-campaign-variation.festive-campaign-variation #campaign-xoom-subtitle {
+        font-size: var(--font-size12) !important;
+        line-height: 16px !important;
+   }
+    #campaign-xoom-container.student-campaign-variation.festive-campaign-variation .campaign-xoom-content-wrapper {
+        padding: 14px 5px;
+   }
+    #campaign-xoom-container.student-campaign-variation.festive-campaign-variation .campaign-xoom-content {
+        font-size: 1rem !important;
+        line-height: 1.25rem !important;
+        padding: 0 5px;
+   }
+    .festive-page-wrapper .campaign-section .campaign-container .campaign-wrapper .campaign-right-content {
+        margin-bottom: 16px;
+   }
+    #campaign-xoom-container.student-campaign-variation.festive-campaign-variation {
+        margin: 32px 16px 0;
+        position: relative;
+   }
+}
